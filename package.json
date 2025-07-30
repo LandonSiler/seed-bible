@@ -8,6 +8,7 @@
     "package:seed-bible": "casualos pack-aux --overwrite ./packages/seed-bible ./dist/seed-bible.aux",
     "lint": "eslint packages",
     "lint:fix": "eslint packages --fix",
+    "check": "tsc-silent --project ./tsconfig.json --suppressConfig ./tsc-silent.config.js",
     "format": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,css}\"",
     "format:changed": "pretty-quick",
     "prepare": "husky"
