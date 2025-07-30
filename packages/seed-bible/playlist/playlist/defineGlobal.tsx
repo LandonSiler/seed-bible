@@ -6,7 +6,7 @@ globalThis.makingPlaylist = false;
 
 setTimeout(() => {
   globalThis.DragDrop = thisBot.DragDropWithGrouping();
-}, 100)
+}, 100);
 
 globalThis.ButtonStyle = {
   cursor: "pointer",
@@ -14,30 +14,32 @@ globalThis.ButtonStyle = {
   borderRadius: "40px",
   padding: "6px",
   fontSize: "14px",
-  marginLeft: "4px"
-}
+  marginLeft: "4px",
+};
 
 globalThis.CurrentViewerID = null;
 
 globalThis.Playlist = thisBot;
 
-const recored = getBot("system", 'main.Recorder')
+const recored = getBot("system", "main.Recorder");
 
 function getBooksDataForMenu(booksLink = false) {
-  const formMenuBot = getBot('system', 'baseElements.formMenu');
+  const formMenuBot = getBot("system", "baseElements.formMenu");
   if (booksLink) {
-    formMenuBot.tags['booksLink'] = booksLink
+    formMenuBot.tags["booksLink"] = booksLink;
   }
   const bookPromise = formMenuBot.bookData();
-  Promise.resolve(bookPromise).then((data) => {
-    recored.tags.menuData = [...data]
-    globalThis.BOOKID_DATA = data;
-  }).catch((e) => {
-    // os.toast("something went wrong");
-    if (recored.tags.menuData) {
-      globalThis.BOOKID_DATA = recored.tags.menuData
-    }
-  });
+  Promise.resolve(bookPromise)
+    .then((data) => {
+      recored.tags.menuData = [...data];
+      globalThis.BOOKID_DATA = data;
+    })
+    .catch((e) => {
+      // os.toast("something went wrong");
+      if (recored.tags.menuData) {
+        globalThis.BOOKID_DATA = recored.tags.menuData;
+      }
+    });
 }
 
 getBooksDataForMenu();
@@ -49,7 +51,7 @@ function findNameRank(book1, book2, returnRanks = false, isFindByRank = false) {
   let totalSectionCount = 0;
 
   // Iterate over each testament
-  thisBot.tags.bibleArrangementsArray[0].forEach(testament => {
+  thisBot.tags.bibleArrangementsArray[0].forEach((testament) => {
     // Iterate over sections in the testament
     const sectionKeys = Object.keys(testament.sections);
     totalSectionCount += sectionKeys.length;
@@ -65,12 +67,18 @@ function findNameRank(book1, book2, returnRanks = false, isFindByRank = false) {
         // Update rank and testament information for the matching name
         const key = isFindByRank ? rank : commonName;
         if (!nameRanks[key]) {
-          nameRanks[key] = { rank: 0, testament: [], sectionRank: 0, section: "" };
+          nameRanks[key] = {
+            rank: 0,
+            testament: [],
+            sectionRank: 0,
+            section: "",
+          };
         }
         nameRanks[key].rank = rank;
         nameRanks[key].commonName = commonName;
         nameRanks[key].testament = testament.name;
-        nameRanks[key].sectionRank = totalSectionCount - (sectionKeys.length - sectionIndex);
+        nameRanks[key].sectionRank =
+          totalSectionCount - (sectionKeys.length - sectionIndex);
         nameRanks[key].section = sectionKeys[sectionIndex];
         nameRanks[key].chapters = book.numberOfChapters;
         nameRanks[key].startingIndex = book.startingIndex;
@@ -86,25 +94,24 @@ function findNameRank(book1, book2, returnRanks = false, isFindByRank = false) {
       rank: nameRanks[book1].rank,
       testament: nameRanks[book1].testament,
       section: nameRanks[book1].section,
-      chapters: nameRanks[book1].chapters
+      chapters: nameRanks[book1].chapters,
     };
   }
   return {
     [book1]: {
       rank: nameRanks[book1].rank,
       testament: nameRanks[book1].testament,
-      chapters: nameRanks[book1].chapters
+      chapters: nameRanks[book1].chapters,
     },
     [book2]: {
       rank: nameRanks[book2].rank,
       testament: nameRanks[book2].testament,
-      chapters: nameRanks[book2].chapters
-    }
-  }
+      chapters: nameRanks[book2].chapters,
+    },
+  };
 }
 
 globalThis.findNameRank = findNameRank;
-
 
 function getSectionRanking() {
   const nameRanks = {};
@@ -112,7 +119,7 @@ function getSectionRanking() {
   let totalSectionCount = 0;
 
   // Iterate over each testament
-  thisBot.tags.bibleArrangementsArray[0].forEach(testament => {
+  thisBot.tags.bibleArrangementsArray[0].forEach((testament) => {
     // Iterate over sections in the testament
     const sectionKeys = Object.keys(testament.sections);
     totalSectionCount += sectionKeys.length;
@@ -122,26 +129,23 @@ function getSectionRanking() {
       if (!nameRanks[sectionName]) {
         nameRanks[sectionName] = { sectionRank: 0, section: "" };
       }
-      nameRanks[sectionName].sectionRank = totalSectionCount - (sectionKeys.length - sectionIndex);
+      nameRanks[sectionName].sectionRank =
+        totalSectionCount - (sectionKeys.length - sectionIndex);
       nameRanks[sectionName].section = sectionName;
       nameRanks[sectionName].testament = testament.name;
     });
-
   });
 
   return nameRanks;
 }
 globalThis.getSectionRanking = getSectionRanking;
 
-
-
 const SELECTIONTYPE = {
-  "TESTAMENT": "TESTAMENT",
-  "SECTION": "SECTION",
-  "BOOK": "BOOK"
-}
+  TESTAMENT: "TESTAMENT",
+  SECTION: "SECTION",
+  BOOK: "BOOK",
+};
 globalThis.SELECTIONTYPE = SELECTIONTYPE;
-
 
 function getSectionBookRage(sectionRank) {
   let startIdx = 0;
@@ -151,7 +155,7 @@ function getSectionBookRage(sectionRank) {
   let totalSectionCount = 0;
 
   // Iterate over each testament
-  thisBot.tags.bibleArrangementsArray[0].forEach(testament => {
+  thisBot.tags.bibleArrangementsArray[0].forEach((testament) => {
     // Iterate over sections in the testament
     const sectionKeys = Object.keys(testament.sections);
     totalSectionCount += sectionKeys.length;
@@ -163,7 +167,6 @@ function getSectionBookRage(sectionRank) {
       }
       totalBooks += section.length;
     });
-
   });
 
   return [startIdx, endIdx];
@@ -171,10 +174,10 @@ function getSectionBookRage(sectionRank) {
 
 globalThis.getSectionBookRage = getSectionBookRage;
 
-
 globalThis.IMGS = {
-  AOLABSRC: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/dc29f5accefe0b99744180cce15d27f2aadb4953f75912e736501bb632e64845.png"
-}
+  AOLABSRC:
+    "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/dc29f5accefe0b99744180cce15d27f2aadb4953f75912e736501bb632e64845.png",
+};
 
 globalThis.CONSTANTS = {
   YT_PREFIX: "https://www.youtube.com/embed",
@@ -182,32 +185,31 @@ globalThis.CONSTANTS = {
     TESTAMENT: "testament",
     SECTION: "section",
     BOOK: "book",
-  }
-}
-
+  },
+};
 
 globalThis.objectComparator = (firstData, secondData, keysComparator = []) => {
   if (!secondData) return false;
   if (keysComparator) {
-    return keysComparator.some(key => {
+    return keysComparator.some((key) => {
       return firstData[key] === secondData[key];
-    })
+    });
   }
   let isSame = true;
-  Object.keys(firstData).forEach(key => {
+  Object.keys(firstData).forEach((key) => {
     if (typeof firstData[key] !== "object") {
-      isSame = (isSame && firstData[key] === secondData[key])
+      isSame = isSame && firstData[key] === secondData[key];
     } else {
-      isSame = objectComparator(firstData[key], secondData[key])
+      isSame = objectComparator(firstData[key], secondData[key]);
     }
-  })
+  });
   return isSame;
-}
+};
 
 globalThis.createUUID = () => {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0;
+    const v = c === "x" ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
 };
@@ -218,47 +220,53 @@ globalThis.playListDB = [];
 
 // Regex Testing
 globalThis.isValidGoogleSheetsUrl = (url) => {
-  const regex = /https:\/\/docs\.google\.com\/spreadsheets\/(?:u\/\d\/)?d\/[a-zA-Z0-9-_]+\/(?:edit|htmlview)(?:\?[^#]*)?(?:#gid=\d+)?$/;
+  const regex =
+    /https:\/\/docs\.google\.com\/spreadsheets\/(?:u\/\d\/)?d\/[a-zA-Z0-9-_]+\/(?:edit|htmlview)(?:\?[^#]*)?(?:#gid=\d+)?$/;
   return regex.test(url);
-}
-
+};
 
 globalThis.extractIdFromUrl = (url) => {
-  const regex = /https:\/\/docs\.google\.com\/spreadsheets(?:\/u\/\d+)?\/d\/([^\/]+)\/(?:edit|htmlview)/;
+  const regex =
+    /https:\/\/docs\.google\.com\/spreadsheets(?:\/u\/\d+)?\/d\/([^\/]+)\/(?:edit|htmlview)/;
   const match = url.match(regex);
   return match && match[1];
-}
+};
 
 globalThis.validateUrl = (url) => {
-  const videoRegex = /^https?:\/\/(?:www\.|player\.)?vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:$|\/)/;
-  const ytShortsRegex = /^https?:\/\/(?:www\.|m\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/;
+  const videoRegex =
+    /^https?:\/\/(?:www\.|player\.)?vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:$|\/)/;
+  const ytShortsRegex =
+    /^https?:\/\/(?:www\.|m\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/;
   const iframeRegex = /^https?:\/\/(?:www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\/?.*/;
 
   try {
     const parsedUrl = new URL(url);
 
     // YouTube watch?v= case
-    if (parsedUrl.hostname.includes('youtube.com') && parsedUrl.pathname === '/watch') {
-      const videoId = parsedUrl.searchParams.get('v');
+    if (
+      parsedUrl.hostname.includes("youtube.com") &&
+      parsedUrl.pathname === "/watch"
+    ) {
+      const videoId = parsedUrl.searchParams.get("v");
       if (videoId) {
-        return { isValid: true, type: 'youtube', videoId };
+        return { isValid: true, type: "youtube", videoId };
       }
     }
 
     // YouTube Shorts
     const ytShortsMatch = ytShortsRegex.exec(url);
     if (ytShortsMatch) {
-      return { isValid: true, type: 'youtube', videoId: ytShortsMatch[1] };
+      return { isValid: true, type: "youtube", videoId: ytShortsMatch[1] };
     }
 
     // Vimeo
     if (videoRegex.test(url)) {
-      return { isValid: true, type: 'video' };
+      return { isValid: true, type: "video" };
     }
 
     // Generic iframe
     if (iframeRegex.test(url)) {
-      return { isValid: true, type: 'iframe' };
+      return { isValid: true, type: "iframe" };
     }
   } catch (err) {
     // Invalid URL
@@ -283,17 +291,17 @@ globalThis.getPsalmsBookName = (chapter) => {
     BookNumber = 1;
   }
   return `${BookNumber} Psalms`;
-}
+};
 
 globalThis.getPsalmsBookData = (chapter) => {
   // const psalmsDivision = [0, 41 , 72, 89, 106, 150];
   // Define the divisions of the Psalms books and their total verses
   const psalmsBooks = [
-    { start: 1, end: 41, totalVerse: 1013 },   // Book 1
-    { start: 42, end: 72, totalVerse: 986 },   // Book 2
-    { start: 73, end: 89, totalVerse: 478 },   // Book 3
-    { start: 90, end: 106, totalVerse: 425 },  // Book 4
-    { start: 107, end: 150, totalVerse: 2461 } // Book 5
+    { start: 1, end: 41, totalVerse: 1013 }, // Book 1
+    { start: 42, end: 72, totalVerse: 986 }, // Book 2
+    { start: 73, end: 89, totalVerse: 478 }, // Book 3
+    { start: 90, end: 106, totalVerse: 425 }, // Book 4
+    { start: 107, end: 150, totalVerse: 2461 }, // Book 5
   ];
 
   // Determine the book based on the chapter
@@ -311,16 +319,16 @@ globalThis.getPsalmsBookData = (chapter) => {
   // Return the result object
   return {
     startChapter: book.start,
-    numberOfChapters: (book.end - book.start + 1),
+    numberOfChapters: book.end - book.start + 1,
     totalVerse: book.totalVerse,
     firstChapterApiLink,
-    lastChapterApiLink
+    lastChapterApiLink,
   };
-}
+};
 
 const COPY_OBJECT = (value, seen = new Map()) => {
   // Check for non-objects and null
-  if (value === null || typeof value !== 'object') {
+  if (value === null || typeof value !== "object") {
     return value;
   }
 
@@ -377,22 +385,42 @@ const COPY_OBJECT = (value, seen = new Map()) => {
   }
 
   return copy;
-}
+};
 
 globalThis.CLONE_DATA = COPY_OBJECT;
 
 globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
   const monthsFull = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   const monthsShort = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   // Ensure the input is a valid date string in the format YYYY-MM-DD
-  const [yearr, monthh, dayy] = dateInput.split('-').map(ele => Number(ele));
+  const [yearr, monthh, dayy] = dateInput.split("-").map((ele) => Number(ele));
   // const utcTimestamp = Date.UTC(yearr, monthh - 1, dayy); // Month is 0-based
   // const date = new Date(utcTimestamp);
   if (isNaN(dayy)) {
@@ -405,7 +433,7 @@ globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
   const monthFull = monthsFull[monthh - 1];
 
   const formats = {
-    "DEFAULT": `${monthShort} - ${day} - ${year}`, // Default format
+    DEFAULT: `${monthShort} - ${day} - ${year}`, // Default format
     "YYYY-MM-DD": `${year}-${month}-${day}`,
     "DD-MM-YYYY": `${day}-${month}-${year}`,
     "MM-DD-YYYY": `${month}-${day}-${year}`,
@@ -419,13 +447,13 @@ globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
     "DD MMMM YYYY": `${day} ${monthFull} ${year}`,
     "MMM DD, YYYY": `${monthShort} ${day}, ${year}`,
     "DD MMM YYYY": `${day} ${monthShort} ${year}`,
-    "YYYYMMDD": `${year}${month}${day}`,
-    "DDMMYYYY": `${day}${month}${year}`,
-    "MMDDYYYY": `${month}${day}${year}`,
+    YYYYMMDD: `${year}${month}${day}`,
+    DDMMYYYY: `${day}${month}${year}`,
+    MMDDYYYY: `${month}${day}${year}`,
     "MMMM DD": `${monthFull} ${day}`, // Ex: January 15
     "DD MMMM": `${day} ${monthFull}`, // Ex: 15 January
     "MMM DD": `${monthShort} ${day}`, // Ex: Jan 15
-    "DD MMM": `${day} ${monthShort}`  // Ex: 15 Jan
+    "DD MMM": `${day} ${monthShort}`, // Ex: 15 Jan
   };
 
   return formats[format] || formats["DEFAULT"];
@@ -441,23 +469,26 @@ globalThis.FORMAT_YYYY_MM_DD = function formatDateToYYYYMMDD(dateInput) {
     day = String(dateInput.getUTCDate()).padStart(2, "0");
   } else if (typeof dateInput === "string") {
     // If the input is a string, assume it's in YYYY-MM-DD format
-    const [yearStr, monthStr, dayStr] = dateInput.split('-');
+    const [yearStr, monthStr, dayStr] = dateInput.split("-");
     year = Number(yearStr);
     month = String(Number(monthStr)).padStart(2, "0"); // Ensure two digits
     day = String(Number(dayStr)).padStart(2, "0"); // Ensure two digits
 
     // Validate the parsed values
     if (isNaN(year) || isNaN(month) || isNaN(day)) {
-      throw new Error("Invalid date input: String must be in YYYY-MM-DD format.");
+      throw new Error(
+        "Invalid date input: String must be in YYYY-MM-DD format."
+      );
     }
   } else {
-    throw new Error("Invalid date input: Expected a Date object or a string in YYYY-MM-DD format.");
+    throw new Error(
+      "Invalid date input: Expected a Date object or a string in YYYY-MM-DD format."
+    );
   }
 
   // Return the formatted date
   return `${year}-${month}-${day}`;
 };
-
 
 const prompt = `You are a Bible study assistant. Generate a JSON array representing a Bible playlist based on the theme: $text$. Output only valid JSON. No explanation, no extra text.
 

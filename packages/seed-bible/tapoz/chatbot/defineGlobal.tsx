@@ -1,1 +1,1 @@
-globalThis.Tapoz = thisBot
+globalThis.Tapoz = thisBot;

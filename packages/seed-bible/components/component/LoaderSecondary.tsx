@@ -1,7 +1,7 @@
 const LoaderSecondary = () => {
-    return <>
-        <style>{
-            `
+  return (
+    <>
+      <style>{`
                 .loader {
                     width: 1.5rem;
                     padding: 4px;
@@ -18,12 +18,10 @@ const LoaderSecondary = () => {
                     animation: l3 1s infinite linear;
                 }
                 @keyframes l3 {to{transform: rotate(1turn)}}
-            `
-        }</style>
-        <div
-            className="loader"
-        />
+            `}</style>
+      <div className="loader" />
     </>
-}
+  );
+};
 
 return LoaderSecondary;

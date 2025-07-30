@@ -5,7 +5,7 @@
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   display: flex;
   flex-direction: column;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   border-left: 1px solid #e0e0e0;
   background-color: var(--themeSideMenu) !important;
 }
@@ -13,7 +13,6 @@
 .spin {
   animation: spin 1s linear infinite;
 }
-
 
 .settings-header {
   display: flex;
@@ -187,7 +186,6 @@
   background-color: var(--gray2-color);
 }
 
-
 .sub-settings-list {
   margin-left: 30px;
 }
@@ -207,7 +205,6 @@
   margin-bottom: 15px;
 }
 
-
 .activeAccount {
   padding: 10px;
   display: flex;
@@ -218,7 +215,7 @@
 }
 
 .create-profile-btn {
-  background-color: #4459F3;
+  background-color: #4459f3;
   color: white;
   border: none;
   /* border-radius: 8px; */
@@ -234,14 +231,12 @@
 }
 
 .create-profile-btn:hover {
-  background-color: #4459F3;
+  background-color: #4459f3;
 }
 
 .create-profile-btn:active {
   transform: translateY(1px);
 }
-
-
 
 .form-input {
   width: 100%;
