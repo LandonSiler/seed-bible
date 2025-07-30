@@ -100,7 +100,7 @@ const allowedCharacters = [
 ];
 if (
   !searchBarFocused &&
-  allowedCharacters.includes(that.keys[[0]]) &&
+  allowedCharacters.includes(that.keys[0]) &&
   setOpenSidebar &&
   setOpenSearchBar &&
   setQuery

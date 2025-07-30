@@ -30,7 +30,7 @@ const CreateAccountSettings = () => {
       os.log(address, "address");
       setLocation(address);
     } else {
-      os.tost("Could not get geolocation");
+      os.toast("Could not get geolocation");
     }
   }
   async function init() {
