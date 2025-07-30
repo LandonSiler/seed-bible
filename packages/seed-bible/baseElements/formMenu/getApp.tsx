@@ -1,6 +1,10 @@
 const { useState, useEffect, useCallback, useMemo } = os.appHooks;
 const css = thisBot.tags["App.css"];
 
+declare global {
+  var updateCustomHeight: ((height: number) => void) | undefined;
+}
+
 const App = ({ chapter }) => {
   const [open, setOpen] = useState(false);
   const [bookName, setBookName] = useState("");

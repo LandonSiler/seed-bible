@@ -26,6 +26,6 @@
   },
   "include": [
     "packages",
-    "typings",
+    "typings/**/*.d.ts",
   ]
 }

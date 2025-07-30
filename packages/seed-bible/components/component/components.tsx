@@ -15,6 +15,31 @@ const LoaderSecondary = thisBot.LoaderSecondary();
 const ImageWrapper = thisBot.ImageWrapper();
 const Chips = thisBot.Chips();
 
+declare global {
+    function ShowNotification(that: any): any;
+    function ComponentsBot(that: any): any;
+    function ImageWrapper(that: any): any;
+    var Components: Components;
+}
+
+declare interface Components {
+    Modal: typeof Modal;
+    Button: typeof Button;
+    GlassButton: typeof GlassButton;
+    FloatingBanner: typeof FloatingBanner;
+    Confetti: typeof Confetti;
+    ButtonsCover: typeof ButtonsCover;
+    Input: typeof Input;
+    Loader: typeof Loader;
+    Highlighter: typeof Highlighter;
+    ModalStepper: typeof ModalStepper;
+    Select: typeof Select;
+    Tooltip: typeof Tooltip;
+    Checkbox: typeof Checkbox;
+    LoaderSecondary: typeof LoaderSecondary;
+    Chips: typeof Chips;
+}
+
 globalThis.ShowNotification = thisBot.ShowNotification;
 globalThis.ComponentsBot = thisBot;
 globalThis.ImageWrapper = ImageWrapper;

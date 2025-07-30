@@ -1,9 +1,13 @@
+declare global {
+  var LocaleStorage: typeof thisBot;
+}
+
 if (thisBot.tags.system !== "storage.tempStorageBot") {
   globalThis.LocaleStorage = thisBot;
   thisBot.visitedExperinces();
   thisBot.historySaver();
   thisBot.progressSaver();
-  this.iconsSaver();
+  thisBot.iconsSaver();
 }
 
 const localStorage = getBot("system", "storage.localStorage");

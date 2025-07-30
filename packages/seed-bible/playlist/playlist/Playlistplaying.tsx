@@ -64,6 +64,18 @@ const readingPlanEnabled = playlist.readingPlanEnabled;
 
 const currentFormat = playlist.dateFormat;
 
+declare global {
+  var IS_PLAYLIST_ACTIVE: number;
+  var READING_PLAN_WORK: boolean;
+  var ScrollTimerPlaylist: any;
+  var SetCurreIndexPlaylist: any;
+  var HandleOnButtonPress: any;
+  var ModifyTransformedHistory: any;
+  var IsPlaylistPlaying: any;
+  var SetQueue: any;
+  var SetPlayingList: any;
+}
+
 const getCurrentItem = (key, index, playlists, subIndex) => {
   const list = thisBot.groupVerse(playlists[key]?.list);
 

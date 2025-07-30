@@ -7,6 +7,16 @@ if (typeof introductionSearchBar === "undefined") {
   globalThis.introductionSearchBar = thisBot;
 }
 
+declare global {
+  function setOptions(value: boolean): void;
+  function SetExperiences(value: any): void;
+  function setOpenSidebar(value: boolean): void;
+  var openSidebar: boolean;
+  var currentExperience: number;
+  function setCurrentExperience(value: number): void;
+  var introductionSearchBar: Bot;
+}
+
 masks["constants"] = [];
 if (!masks["currentTraySwap"]) {
   masks["currentTraySwap"] = 0;

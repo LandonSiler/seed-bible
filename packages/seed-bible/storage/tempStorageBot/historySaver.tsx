@@ -40,6 +40,14 @@ const setCollections = (newCollections = {}, id = "default") => {
   setTag(thisBot, `${id}Collections`, newCollections);
 };
 
+declare global {
+  function setHistoryLocale(newHistory: any[], id: string): void;
+  function setPlaylistLocale(newHistory: any[], id: string): void;
+  function setPlaylistsLocale(newHistory: any[]): void;
+  function setCollectionsLocale(newCollections: any, id?: string): void;
+  var defaultcurrentHistory: any[];
+}
+
 globalThis.setPlaylistLocale = setPlaylist;
 globalThis.setPlaylistsLocale = setPlaylists;
 globalThis.setCollectionsLocale = setCollections;
@@ -126,6 +134,12 @@ Object.keys(parallelPlaylistPresent).forEach((id) => {
     : (getTag(thisBot, `${id}playlistList`) || []).map((ele) => ele);
   // console.log("ID", id, globalThis[`${id}playlists`]);
 });
+
+declare global {
+  var defaultplaylists: any[];
+  var PlaylistsGroups: any;
+  var COLLECTIONS: any;
+}
 
 globalThis["defaultplaylists"] = playlistsPresent;
 globalThis.PlaylistsGroups = parallelPlaylistPresent;

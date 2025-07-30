@@ -1,6 +1,45 @@
 // scannedURL = new URL(that);
 // let targetRecord = scannedURL.searchParams.get("inst");
 
+declare global {
+  var MOBILE_VIEWPORT_THRESHOLD: number;
+  var makingPlaylist: boolean;
+  var DragDrop: any;
+  var ButtonStyle: any;
+  var CurrentViewerID: any;
+  var Playlist: Bot;
+  var BOOKID_DATA: any;
+  var findNameRank: any;
+  var getSectionRanking: any;
+  var CLONE_DATA: typeof COPY_OBJECT;
+  var FORMAT_DATE: (dateInput: string, format?: string) => string;
+  var FORMAT_YYYY_MM_DD: (dateInput: Date | string) => string;
+  var SYSTEM_PROMPT: string;
+  var SELECTIONTYPE: {
+    TESTAMENT: "TESTAMENT";
+    SECTION: "SECTION";
+    BOOK: "BOOK";
+  };
+  var pseudoIndentifier: string;
+  var playListDB: any[];
+
+  function objectComparator(
+    firstData: any,
+    secondData: any,
+    keysComparator?: string[]
+  ): boolean;
+  function createUUID(): string;
+  function getPsalmsBookData(chapter: number): any;
+  function getPsalmsBookName(chapter: number): string;
+  function validateUrl(url: string): {
+    isValid: boolean;
+    type: string | null;
+    videoId?: string;
+  };
+  function extractIdFromUrl(url: string): string | null;
+  function isValidGoogleSheetsUrl(url: string): boolean;
+}
+
 globalThis.MOBILE_VIEWPORT_THRESHOLD = 600;
 globalThis.makingPlaylist = false;
 

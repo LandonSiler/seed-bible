@@ -22,6 +22,20 @@ globalThis.OpenPrevChapter = () => {};
 globalThis.SpaceLayouts = {}; // To store layout per space
 globalThis.SpaceScreens = {}; // Already used for screen count
 
+declare global {
+  var Open: () => void;
+  var OpenNextChapter: () => void;
+  var OpenPrevChapter: () => void;
+  var SpaceLayouts: Record<string, any>;
+  var SpaceScreens: Record<string, number>;
+  var AddApplication: (app: any) => void;
+  var RemoveApplication: (app: any) => void;
+  var RemoveApplicationByID: (id: string) => void;
+  var ReplaceApplication: (oldApp: any, newApp: any) => void;
+  var PanelTabsMap: Record<string, any>;
+  var UpdateTab: (tab: any) => void;
+}
+
 const Main = () => {
   const { screens, fullScreen, setFullScreen } = useBibleContext();
   const { collapsed, sidebarWidth, setSidebarWidth, themeColors } =

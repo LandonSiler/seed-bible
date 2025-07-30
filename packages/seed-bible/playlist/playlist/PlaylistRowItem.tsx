@@ -92,7 +92,7 @@ const getPosition = () => {
   const edgeThreshold = 200; // Distance from edges to adjust position
   const safeMargin = "2rem"; // Fixed margin when near edges
 
-  const position = {};
+  const position: any = {};
 
   // Horizontal positioning
   if (width - pointerX < edgeThreshold) {

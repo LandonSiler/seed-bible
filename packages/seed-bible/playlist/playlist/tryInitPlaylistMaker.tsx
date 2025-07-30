@@ -5,6 +5,14 @@ os.registerApp("quitGame");
 
 const { Button } = Components;
 
+declare global {
+  var makingPlaylist: boolean;
+  var PlaylistsGroups: Record<string, any>;
+  var IS_PLAYLIST_ACTIVE: boolean;
+  var SET_SHOW_CHECK: ((value: boolean) => void) | undefined;
+  var updateCustomHeight: ((height: number) => void) | undefined;
+}
+
 if (globalThis.makingPlaylist) {
   globalThis.makingPlaylist = false;
   return;

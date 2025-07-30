@@ -7,7 +7,7 @@ const secret_key = "2U838B2Q0G9KR4FXREBL";
 
 const TapozChat = ({ id }) => {
   const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState("");
+  const [loading, setLoading] = useState(false);
   const [chatText, setChatText] = useState("");
 
   const handleSend = async () => {

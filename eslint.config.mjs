@@ -58,11 +58,12 @@ export default defineConfig([
             'no-case-declarations': 'warn',
             'no-control-regex': 'warn',
             'no-empty-pattern': 'warn',
+            '@typescript-eslint/no-explicit-any': 'off',
 
 
             // 'css/no-important': 'off',
 
-            // '@typescript-eslint/no-explicit-any': 'off',
+            
             // '@typescript-eslint/no-empty-object-type': [
             //     'error',
             //     { allowInterfaces: 'always' },
