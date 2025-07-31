@@ -23,7 +23,7 @@ const PlaylistContainer = ({ id, setOpenModal, active, playingPlaylist }) => {
           flexDirection: "column",
           // minWidth: `min(396p    flex-gro            flexGrow: '1',
           width: "100%",
-          padding: "12px",
+          padding: "12px"
         }}
       >
         {!creatingPlaylist && false && (
@@ -39,7 +39,7 @@ const PlaylistContainer = ({ id, setOpenModal, active, playingPlaylist }) => {
                   if (id === "default")
                     return ShowNotification({
                       message: "Cannot Delete Original Playlist!",
-                      severity: "error",
+                      severity: "error"
                     });
                   SetPlaylistGroups((prev) => {
                     const old = { ...prev };

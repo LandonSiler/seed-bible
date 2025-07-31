@@ -14,26 +14,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -46,21 +46,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -70,9 +70,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -85,31 +85,31 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/life-of-abraham-timeline.html",
-                content: "Abraham Timeline",
+                content: "Abraham Timeline"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/basicart/who-was-melchizedek.html",
-                content: "Who Was Melchizedek?",
+                content: "Who Was Melchizedek?"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: " Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: " Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -119,21 +119,21 @@ const data = [
           {
             type: "para",
             content:
-              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           },
           {
             type: "para",
             content:
-              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel).",
+              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel)."
           },
           {
             type: "para",
             content:
-              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded.",
-          },
-        ],
-      },
-    ],
+              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Abraham 2",
@@ -150,26 +150,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -182,21 +182,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -206,9 +206,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -221,31 +221,31 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/life-of-abraham-timeline.html",
-                content: "Abraham Timeline",
+                content: "Abraham Timeline"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/basicart/who-was-melchizedek.html",
-                content: "Who Was Melchizedek?",
+                content: "Who Was Melchizedek?"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: " Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: " Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -255,21 +255,21 @@ const data = [
           {
             type: "para",
             content:
-              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           },
           {
             type: "para",
             content:
-              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel).",
+              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel)."
           },
           {
             type: "para",
             content:
-              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded.",
-          },
-        ],
-      },
-    ],
+              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Abraham 3",
@@ -286,26 +286,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -318,21 +318,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -342,9 +342,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -357,31 +357,31 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/life-of-abraham-timeline.html",
-                content: "Abraham Timeline",
+                content: "Abraham Timeline"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/basicart/who-was-melchizedek.html",
-                content: "Who Was Melchizedek?",
+                content: "Who Was Melchizedek?"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: " Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: " Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -391,21 +391,21 @@ const data = [
           {
             type: "para",
             content:
-              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           },
           {
             type: "para",
             content:
-              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel).",
+              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel)."
           },
           {
             type: "para",
             content:
-              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded.",
-          },
-        ],
-      },
-    ],
+              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Abraham 4",
@@ -422,26 +422,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -454,21 +454,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -478,9 +478,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -493,31 +493,31 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/life-of-abraham-timeline.html",
-                content: "Abraham Timeline",
+                content: "Abraham Timeline"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/basicart/who-was-melchizedek.html",
-                content: "Who Was Melchizedek?",
+                content: "Who Was Melchizedek?"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: " Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: " Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -527,21 +527,21 @@ const data = [
           {
             type: "para",
             content:
-              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           },
           {
             type: "para",
             content:
-              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel).",
+              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel)."
           },
           {
             type: "para",
             content:
-              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded.",
-          },
-        ],
-      },
-    ],
+              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Abraham 5",
@@ -558,26 +558,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -590,21 +590,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -614,9 +614,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -629,31 +629,31 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/life-of-abraham-timeline.html",
-                content: "Abraham Timeline",
+                content: "Abraham Timeline"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/basicart/who-was-melchizedek.html",
-                content: "Who Was Melchizedek?",
+                content: "Who Was Melchizedek?"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: " Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: " Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -663,21 +663,21 @@ const data = [
           {
             type: "para",
             content:
-              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Demo Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           },
           {
             type: "para",
             content:
-              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel).",
+              "It is through Abraham, the spiritual father of faithful Christians (Romans 4:16) and 'Friend of God' (James 2:23), that God started what would become the nation of Israel through his grandson Jacob (the founder of the twelve tribes of Israel)."
           },
           {
             type: "para",
             content:
-              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded.",
-          },
-        ],
-      },
-    ],
+              "Abraham was originally named Abram (Genesis 17:1-5). He left his home in Ur of the Chaldees to live in Haran, but soon moved from there to live in the land of Canaan. ﻿Sarah, whose original name was Sarai, was the wife of Abraham. After God healed her so that she could have a family, she gave birth at 90 to Isaac. Sarah is the only woman in the Bible where her age at death, one-hundred and twenty-seven (127), is recorded."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Sarah",
@@ -694,26 +694,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -726,21 +726,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -750,9 +750,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -765,31 +765,31 @@ const data = [
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/sarah/",
-                content: "Sarah in the Bible: a princess",
+                content: "Sarah in the Bible: a princess"
               },
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/rebekah/",
-                content: "Rebekah in the Bible",
+                content: "Rebekah in the Bible"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: "Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: "Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -799,21 +799,21 @@ const data = [
           {
             type: "para",
             content:
-              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15).",
+              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15)."
           },
           {
             type: "para",
             content:
-              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”",
+              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”"
           },
           {
             type: "para",
             content:
-              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12).",
-          },
-        ],
-      },
-    ],
+              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12)."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Sarah 2",
@@ -830,26 +830,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -862,21 +862,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -886,9 +886,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -901,31 +901,31 @@ const data = [
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/sarah/",
-                content: "Sarah in the Bible: a princess",
+                content: "Sarah in the Bible: a princess"
               },
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/rebekah/",
-                content: "Rebekah in the Bible",
+                content: "Rebekah in the Bible"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: "Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: "Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -935,21 +935,21 @@ const data = [
           {
             type: "para",
             content:
-              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15).",
+              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15)."
           },
           {
             type: "para",
             content:
-              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”",
+              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”"
           },
           {
             type: "para",
             content:
-              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12).",
-          },
-        ],
-      },
-    ],
+              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12)."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Sarah 3",
@@ -966,26 +966,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -998,21 +998,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -1022,9 +1022,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -1037,31 +1037,31 @@ const data = [
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/sarah/",
-                content: "Sarah in the Bible: a princess",
+                content: "Sarah in the Bible: a princess"
               },
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/rebekah/",
-                content: "Rebekah in the Bible",
+                content: "Rebekah in the Bible"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: "Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: "Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -1071,21 +1071,21 @@ const data = [
           {
             type: "para",
             content:
-              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15).",
+              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15)."
           },
           {
             type: "para",
             content:
-              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”",
+              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”"
           },
           {
             type: "para",
             content:
-              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12).",
-          },
-        ],
-      },
-    ],
+              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12)."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Sarah 4",
@@ -1102,26 +1102,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -1134,21 +1134,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -1158,9 +1158,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -1173,31 +1173,31 @@ const data = [
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/sarah/",
-                content: "Sarah in the Bible: a princess",
+                content: "Sarah in the Bible: a princess"
               },
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/rebekah/",
-                content: "Rebekah in the Bible",
+                content: "Rebekah in the Bible"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: "Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: "Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -1207,21 +1207,21 @@ const data = [
           {
             type: "para",
             content:
-              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15).",
+              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15)."
           },
           {
             type: "para",
             content:
-              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”",
+              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”"
           },
           {
             type: "para",
             content:
-              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12).",
-          },
-        ],
-      },
-    ],
+              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12)."
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Sarah 5",
@@ -1238,26 +1238,26 @@ const data = [
               {
                 type: "a",
                 link: "#",
-                content: "# Abraham",
+                content: "# Abraham"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Sarah",
+                content: "# Sarah"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Issac",
+                content: "# Issac"
               },
               {
                 type: "a",
                 link: "#",
-                content: "# Jacob",
-              },
-            ],
-          },
-        ],
+                content: "# Jacob"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "quick_reference",
@@ -1270,21 +1270,21 @@ const data = [
               {
                 type: "a",
                 link: "https://www.biblestudy.org/",
-                content: "Bible Study",
+                content: "Bible Study"
               },
               {
                 type: "a",
                 link: "https://en.wikipedia.org/wiki/Patriarchs_(Bible)",
-                content: "Wikipedia",
+                content: "Wikipedia"
               },
               {
                 type: "a",
                 link: "https://britishbibleschool.com/",
-                content: "Bible School",
-              },
-            ],
-          },
-        ],
+                content: "Bible School"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "attach_file",
@@ -1294,9 +1294,9 @@ const data = [
           {
             type: "img",
             link: "https://www.biblestudy.org/maps/lineage-from-abraham-to-jesus.webp",
-            content: "Lineage",
-          },
-        ],
+            content: "Lineage"
+          }
+        ]
       },
       {
         sideIcon: "Topic",
@@ -1309,31 +1309,31 @@ const data = [
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/sarah/",
-                content: "Sarah in the Bible: a princess",
+                content: "Sarah in the Bible: a princess"
               },
               {
                 type: "a",
                 link: "https://lifehopeandtruth.com/change/faith/women-of-faith/rebekah/",
-                content: "Rebekah in the Bible",
+                content: "Rebekah in the Bible"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/where-did-abraham-live.html",
-                content: "Abraham's Home",
+                content: "Abraham's Home"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/maps/journey-of-abraham-to-promised-land-and-egypt.html",
-                content: "Journey to Canaan",
+                content: "Journey to Canaan"
               },
               {
                 type: "a",
                 link: "https://www.biblestudy.org/question/abraham-meets-jesus.html",
-                content: "Meeting Jesus",
-              },
-            ],
-          },
-        ],
+                content: "Meeting Jesus"
+              }
+            ]
+          }
+        ]
       },
       {
         sideIcon: "Info",
@@ -1343,24 +1343,24 @@ const data = [
           {
             type: "para",
             content:
-              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15).",
+              "Sarah is the only woman in the Bible whose name was changed by God. She was first called Sarai—meaning “my princess”—but God changed her name to Sarah—signifying “princess” to all (Soncino Commentary, comments on Genesis 17:15)."
           },
           {
             type: "para",
             content:
-              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”",
+              "Why did this name change occur? God reveals that answer in verse 16: “And I will bless her and also give you [Abraham] a son by her; then I will bless her, and she shall be a mother of nations; kings of peoples shall be from her.”"
           },
           {
             type: "para",
             content:
-              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12).",
-          },
-        ],
-      },
-    ],
-  },
+              "“By faith Sarah herself also received strength to conceive seed, and she bore a child when she was past the age, because she judged Him faithful who had promised. Therefore from one man, and him as good as dead, were born as many as the stars in multitude—innumerable as the sand which is on the seashore” (Hebrews 11:11-12)."
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 return {
-  data,
+  data
 };

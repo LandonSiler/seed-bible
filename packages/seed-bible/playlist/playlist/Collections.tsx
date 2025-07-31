@@ -12,7 +12,7 @@ const ButtonStyle = {
   borderRadius: "40px",
   padding: "6px",
   fontSize: "24px",
-  marginLeft: "4px",
+  marginLeft: "4px"
 };
 
 const PlaylistLinkedContainer = ({ playlist }) => {
@@ -41,13 +41,13 @@ const CollectionsContainer = ({
   collection,
   currentCollection,
   collectionName,
-  setCurrentCollection,
+  setCurrentCollection
 }) => {
   const [view, setview] = useState(0);
 
   const COLLECTIONS_OPTIONS = Object.keys(collections).map((ele) => ({
     label: collections[ele].name,
-    value: ele,
+    value: ele
   }));
 
   return (
@@ -60,7 +60,7 @@ const CollectionsContainer = ({
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-between"
             }}
           >
             <Select
@@ -78,7 +78,7 @@ const CollectionsContainer = ({
                 globalThis.EDIT_COLLECTION_ID = currentCollection;
                 thisBot.PlaylistLinkModal({
                   currentCollection: collection,
-                  name: collectionName,
+                  name: collectionName
                 });
               }}
               secondary
@@ -110,7 +110,7 @@ const CollectionsContainer = ({
                 display: "flex",
                 alignItems: "flex-start",
                 justifyContent: "space-between",
-                flexDirection: "column",
+                flexDirection: "column"
               }}
             >
               {collection.map((coll) => (
@@ -122,7 +122,7 @@ const CollectionsContainer = ({
                     maxHeight: "90dvh",
                     width: "100%",
                     overflow: "auto",
-                    position: "relative",
+                    position: "relative"
                   }}
                 >
                   <PlaylistLinkedContainer playlist={coll} />
@@ -133,7 +133,7 @@ const CollectionsContainer = ({
           <p
             onClick={() => {
               thisBot.PlaylistLinkModal({
-                idsMap: [],
+                idsMap: []
               });
             }}
             className="playlist-action secondary self-start"

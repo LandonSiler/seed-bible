@@ -44,17 +44,17 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
         Color.configure({ types: ["textStyle"] }),
         TextAlign.configure({
           types: ["heading", "paragraph"],
-          defaultAlignment: "left",
+          defaultAlignment: "left"
         }),
         Underline,
         Superscript,
         Subscript,
-        Highlight.configure({ multicolor: true }),
+        Highlight.configure({ multicolor: true })
         // CustomStyle,
       ],
       onUpdate({ editor }) {
         onChange?.(editor.getHTML());
-      },
+      }
     });
     editorRef.current.editor = editor;
     return () => editor.destroy();
@@ -73,7 +73,7 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
         margin: "20px auto",
         border: "1px solid #ccc",
         fontFamily: "Arial, sans-serif",
-        background: "white",
+        background: "white"
       }}
     >
       <div style={toolbarStyle}>
@@ -180,7 +180,7 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
               else if (val === "blockquote") exec("toggleBlockquote");
               else
                 exec("toggleHeading", {
-                  level: parseInt(val.replace("h", "")),
+                  level: parseInt(val.replace("h", ""))
                 });
             }}
           >
@@ -195,7 +195,7 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
             style={dropdownStyle}
             onChange={(e) =>
               exec("setMark", "customStyle", {
-                style: `font-family: ${e.target.value};`,
+                style: `font-family: ${e.target.value};`
               })
             }
           >
@@ -215,10 +215,10 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
                 3: "1em",
                 4: "1.25em",
                 5: "1.5em",
-                6: "2em",
+                6: "2em"
               };
               exec("setMark", "customStyle", {
-                style: `font-size: ${map[e.target.value] || "1em"}`,
+                style: `font-size: ${map[e.target.value] || "1em"}`
               });
             }}
           >
@@ -251,7 +251,7 @@ function MiniTextEditor({ initialHtml = "", onChange }) {
           minHeight: "200px",
           padding: "15px",
           outline: "none",
-          lineHeight: "1.5",
+          lineHeight: "1.5"
         }}
       />
     </div>
@@ -265,21 +265,21 @@ const iconBtnStyle = {
   border: "none",
   background: "none",
   cursor: "pointer",
-  color: "#333",
+  color: "#333"
 };
 
 const toolbarGroupStyle = {
   display: "flex",
   alignItems: "center",
   gap: "6px",
-  flexWrap: "wrap",
+  flexWrap: "wrap"
 };
 
 const labelStyle = {
   fontSize: "14px",
   color: "#555",
   fontWeight: "bold",
-  marginRight: "4px",
+  marginRight: "4px"
 };
 
 const circleColorInputStyle = {
@@ -287,7 +287,7 @@ const circleColorInputStyle = {
   height: "28px",
   borderRadius: "50%",
   border: "none",
-  cursor: "pointer",
+  cursor: "pointer"
 };
 
 const dropdownStyle = {
@@ -295,7 +295,7 @@ const dropdownStyle = {
   fontSize: "14px",
   padding: "2px 6px",
   border: "1px solid #ccc",
-  borderRadius: "4px",
+  borderRadius: "4px"
 };
 
 const toolbarStyle = {
@@ -306,6 +306,6 @@ const toolbarStyle = {
   flexWrap: "wrap",
   alignItems: "center",
   gap: "12px",
-  justifyContent: "space-between",
+  justifyContent: "space-between"
 };
 export { MiniTextEditor };

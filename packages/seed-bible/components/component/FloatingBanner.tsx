@@ -3,7 +3,7 @@ const FloatingBanner = ({
   doNotFloat = false,
   bgColor = "white",
   color = "black",
-  zIndex = 99000,
+  zIndex = 99000
 }) => {
   return (
     <>

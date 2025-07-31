@@ -27,7 +27,7 @@ function parseContent(content) {
         currentSection = {
           heading: "",
           number: currentSection.number + 1,
-          verses: [],
+          verses: []
         };
       }
       currentSection.heading = parseText(sectionContent);
@@ -46,7 +46,7 @@ function useBibleData({
   initialTranslation = "BSB",
   initialBookId = "GEN",
   initialChapter = 1,
-  tab = null,
+  tab = null
 } = {}) {
   const { updateTab } = useTabsContext();
 
@@ -85,7 +85,7 @@ function useBibleData({
           prevChapter:
             json?.data?.previousChapterApiLink || json?.previousChapterApiLink,
           numberOfChapters:
-            json?.data?.book?.numberOfChapters || json?.numberOfChapters,
+            json?.data?.book?.numberOfChapters || json?.numberOfChapters
         };
 
         setData(fullData);
@@ -168,7 +168,7 @@ function useBibleData({
     open,
     openNextChapter,
     openPrevChapter,
-    changeTranslation,
+    changeTranslation
   };
 }
 

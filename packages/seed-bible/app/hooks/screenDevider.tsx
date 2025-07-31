@@ -13,7 +13,7 @@ const DivSpliter = ({
   containerWidth = 800, // Maximum container width
   containerHeight = 600, // Maximum container height
   appWidth,
-  onResize = () => {}, // Callback for parent to track resizing
+  onResize = () => {} // Callback for parent to track resizing
 }) => {
   const [width, setWidth] = useState(300);
   const [height, setHeight] = useState(initialHeight);
@@ -57,7 +57,7 @@ const DivSpliter = ({
         height: `100dvh`,
         position: "relative",
         overflow: "hidden",
-        transition: isDragging ? "none" : "width 0.3s", // Only animate when not dragging
+        transition: isDragging ? "none" : "width 0.3s" // Only animate when not dragging
       }}
       onMouseMove={handleDragMove}
       onMouseUp={handleDragEnd}
@@ -66,7 +66,7 @@ const DivSpliter = ({
         style={{
           flex: "none",
           width: split ? `${width}px` : "100%",
-          backgroundColor: "",
+          backgroundColor: ""
         }}
       >
         {children}
@@ -80,7 +80,7 @@ const DivSpliter = ({
             position: "absolute",
             bottom: 0,
             left: `${width}px`,
-            height: "98%",
+            height: "98%"
           }}
           onMouseDown={handleDragStart}
         />
@@ -91,7 +91,7 @@ const DivSpliter = ({
             height: "100%",
             width: "100%",
             background: "white",
-            padding: "10px",
+            padding: "10px"
           }}
         >
           {otherTab}

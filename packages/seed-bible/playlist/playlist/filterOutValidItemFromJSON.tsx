@@ -24,7 +24,7 @@ if (Array.isArray(items)) {
 
     filterdArray.push({
       ...ele,
-      id: createUUID(),
+      id: createUUID()
     });
   });
 }

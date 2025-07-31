@@ -9,7 +9,7 @@ import {
   ThreeScreenIcon,
   QuadScreenIcon,
   SingleScreenIcon,
-  MenuIcon,
+  MenuIcon
 } from "app.components.icons";
 const MenuOptions = {
   type: "normal",
@@ -17,23 +17,23 @@ const MenuOptions = {
     {
       icon: <MenuIcon name="logout" />,
       title: "Join a Lobby",
-      onClick: () => {},
+      onClick: () => {}
     },
     { type: "line" },
     { icon: <MenuIcon name="search" />, title: "Search", onClick: () => {} },
     {
       icon: <MenuIcon name="extension" />,
       title: "Extensions",
-      onClick: () => {},
+      onClick: () => {}
     },
     { type: "line" },
     {
       icon: <MenuIcon name="bug_report" />,
       title: "Report a bug",
-      onClick: () => {},
+      onClick: () => {}
     },
-    { icon: <MenuIcon name="help" />, title: "Help", onClick: () => {} },
-  ],
+    { icon: <MenuIcon name="help" />, title: "Help", onClick: () => {} }
+  ]
 };
 
 openPopupSettings(MenuOptions);

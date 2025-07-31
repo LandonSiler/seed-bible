@@ -17,7 +17,7 @@ const Select = ({
   placeholder,
   errorMessage = "",
   regex = /^.*$/,
-  styleCont = {},
+  styleCont = {}
 }) => {
   const [error, setError] = useState(false);
   const [hide, setHide] = useState(hidden);

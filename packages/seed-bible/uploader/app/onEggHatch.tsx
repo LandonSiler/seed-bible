@@ -7,7 +7,7 @@ if (alreadyUsed) {
 }
 const input = await os.showInput("", {
   title: "Publish",
-  confirmText: "Yes",
+  confirmText: "Yes"
 });
 // os.toast(name);
 thisBot.tags.used = true;

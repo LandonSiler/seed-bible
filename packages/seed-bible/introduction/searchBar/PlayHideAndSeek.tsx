@@ -96,7 +96,7 @@ const startGuideAnimation = async () => {
     {
       x: middleBot.tags[dimension + "X"] + 4,
       y: middleBot.tags[dimension + "Y"],
-      z: middleBot.tags[dimension + "Z"] + 16,
+      z: middleBot.tags[dimension + "Z"] + 16
     },
     {
       duration: 0.6,
@@ -104,8 +104,8 @@ const startGuideAnimation = async () => {
       zoom: 2.5,
       easing: {
         type: "sinusoidal",
-        mode: "inout",
-      },
+        mode: "inout"
+      }
     }
   );
   await os.sleep(800);
@@ -135,7 +135,7 @@ const onNextClick = async () => {
     bookRank: booksDetails.rank,
     winMessage: "",
     creatorName: "",
-    GAME_MODE: globalThis.GAME_MODES.HOTSEAT,
+    GAME_MODE: globalThis.GAME_MODES.HOTSEAT
   });
   if (globalThis.hideSeekPlaying) startGameBot.interact();
 };
@@ -150,7 +150,7 @@ const onMakeMyOwn = async () => {
     isInitialized: true,
     isActive: true,
     creator: null,
-    GAME_MODE: globalThis.GAME_MODES.HOTSEAT,
+    GAME_MODE: globalThis.GAME_MODES.HOTSEAT
   });
   // destoryAndClose();
   if (globalThis.hideSeekPlaying) createButton.showSelectBookMessage();
@@ -268,7 +268,7 @@ const QuitGame = () => {
           position: "fixed",
           top: "20px",
           right: "20px",
-          zIndex: "99",
+          zIndex: "99"
         }}
       >
         <Button

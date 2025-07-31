@@ -75,7 +75,7 @@ function parseBibleReference(filename) {
       "prophets",
       "gospels",
       "paul letters",
-      "letters",
+      "letters"
     ];
 
     if (testaments.includes(bookName)) {
@@ -83,7 +83,7 @@ function parseBibleReference(filename) {
       result.push({
         type: "testament",
         testament: bookName,
-        shortAbr: bookPart,
+        shortAbr: bookPart
       });
     }
 
@@ -131,7 +131,7 @@ function parseBibleReference(filename) {
           totalVerseInChapter:
             thisBot.tags.verseChapterBookMap[tempBookName || bookName][
               chapters[0]
-            ],
+            ]
         });
       } else {
         // If no verse part, return chapters
@@ -139,7 +139,7 @@ function parseBibleReference(filename) {
           type: "chapter",
           book: bookName,
           chapter: chapters,
-          shortAbr: bookPart,
+          shortAbr: bookPart
         });
       }
     } else {

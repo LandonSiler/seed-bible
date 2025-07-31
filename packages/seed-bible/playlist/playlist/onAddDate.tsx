@@ -27,7 +27,7 @@ const AddDateModal = () => {
           margin: "10px 0",
           padding: "8px",
           width: "100%",
-          boxSizing: "border-box",
+          boxSizing: "border-box"
         }}
       />
       <ButtonsCover>

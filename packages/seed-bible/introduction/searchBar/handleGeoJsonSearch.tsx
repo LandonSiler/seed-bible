@@ -12,7 +12,7 @@ if (that.place.place === that.place.geojson) {
 if (geoJson.status === 200) {
   whisper(getBot("system", "ext_geoImporter.importer"), "loadMap", {
     file: geoJson.data,
-    loadGame: that?.loadGame ? true : false,
+    loadGame: that?.loadGame ? true : false
   });
 } else {
   os.toast("Something went wrong while retrieving the data");

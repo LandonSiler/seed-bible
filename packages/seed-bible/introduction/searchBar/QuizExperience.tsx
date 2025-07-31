@@ -130,7 +130,7 @@ const App = () => {
                     display: "grid",
                     placeItems: "center",
                     height: "100%",
-                    width: "100%",
+                    width: "100%"
                   }}
                 >
                   <img src={AOLABSRC} alt="AO" className="img-loader" />
@@ -190,7 +190,7 @@ const OptionComponent = ({ options, handleCheck, index, points, quiz }) => {
     "1": "a",
     "2": "b",
     "3": "c",
-    "4": "d",
+    "4": "d"
   };
   useEffect(() => {
     if (
@@ -236,7 +236,7 @@ const OptionComponent = ({ options, handleCheck, index, points, quiz }) => {
           return (
             <div
               style={{
-                backgroundColor: determineColor({ option }),
+                backgroundColor: determineColor({ option })
               }}
               class="option smoothTrans"
               key={subIndex}
@@ -255,7 +255,7 @@ const OptionComponent = ({ options, handleCheck, index, points, quiz }) => {
                   width: "16px",
                   backgroundColor: option.selected ? "#00E676" : "white",
                   border: "1px solid black",
-                  borderRadius: "5px",
+                  borderRadius: "5px"
                 }}
               />
             </div>
@@ -284,7 +284,7 @@ const OptionComponent = ({ options, handleCheck, index, points, quiz }) => {
                     : "white",
               width: "100%",
               marginTop: "5px",
-              borderRadius: "5px",
+              borderRadius: "5px"
             }}
             disabled={points}
           />

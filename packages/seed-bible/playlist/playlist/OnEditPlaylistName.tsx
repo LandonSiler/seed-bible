@@ -6,7 +6,7 @@ const {
   description,
   icon,
   isCustomColor,
-  selectedTags,
+  selectedTags
 } = that;
 
 const playlists = globalThis[`${parentId}playlists`];

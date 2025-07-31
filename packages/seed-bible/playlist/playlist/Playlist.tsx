@@ -52,24 +52,24 @@ function getSortedDateFormats(selectedValue) {
     { label: "MMM - DD - YYYY", value: "DEFAULT" },
     { label: "MMMM DD", value: "MMMM DD" }, // Ex: January 15
     { label: "DD MMMM", value: "DD MMMM" }, // Ex: 15 January
-    { label: "MMM DD", value: "MMM DD" }, // Ex: Jan 15
+    { label: "MMM DD", value: "MMM DD" } // Ex: Jan 15
   ];
   return [
     ...DATE_FORMAT_OPTIONS.filter((option) => option.value === selectedValue),
-    ...DATE_FORMAT_OPTIONS.filter((option) => option.value !== selectedValue),
+    ...DATE_FORMAT_OPTIONS.filter((option) => option.value !== selectedValue)
   ];
 }
 
 const PROMPT_OPTIONS = [
   { label: "Prompt", value: "prompt" },
-  { label: "System Prompt", value: "system-prompt" },
+  { label: "System Prompt", value: "system-prompt" }
 ];
 
 const Playlist = ({
   id,
   playingPlaylist,
   creatingPlaylist,
-  setCreatingPlaylist,
+  setCreatingPlaylist
 }) => {
   const { onSave, onClose } = thisBot.ControlButtons({ id });
   const [hasGenrated, setHasGenrated] = useState(false);
@@ -132,7 +132,7 @@ const Playlist = ({
     name,
     description: des,
     isCustomIcon,
-    selectedTags,
+    selectedTags
   }) => {
     setName(name);
     if (isCustomColor) setCustomColor(color);
@@ -351,13 +351,13 @@ const Playlist = ({
     if (!nameValue)
       return ShowNotification({
         message: "Playlist Name not found!",
-        severity: "error",
+        severity: "error"
       });
     const names = playLists.map((ele) => ele.name);
     if (names.includes(nameValue) && !isEdit.current) {
       ShowNotification({
         message: "Playlist Name already present!",
-        severity: "error",
+        severity: "error"
       });
       return true;
     }
@@ -370,10 +370,10 @@ const Playlist = ({
         content: title,
         additionalInfo: {
           link,
-          ...linkState,
+          ...linkState
         },
-        type: linkState.type === "text" ? "heading" : "attachment-link",
-      },
+        type: linkState.type === "text" ? "heading" : "attachment-link"
+      }
     });
     setOpenAttachLink(false);
   };
@@ -381,7 +381,7 @@ const Playlist = ({
   const massAdd = (items) => {
     items.forEach((item) => {
       thisBot.tryAddDataToPlaylist({
-        dataItem: { ...item },
+        dataItem: { ...item }
       });
     });
     setOpenAttachLink(false);
@@ -395,13 +395,13 @@ const Playlist = ({
           dataItem: {
             content: FORMAT_DATE(date || new Date()),
             additionalInfo: {
-              date: FORMAT_YYYY_MM_DD(date || new Date()),
+              date: FORMAT_YYYY_MM_DD(date || new Date())
             },
-            type: "date",
-          },
+            type: "date"
+          }
         });
         setOpenAttachLink(false);
-      },
+      }
     });
   };
 
@@ -433,7 +433,7 @@ const Playlist = ({
         list.forEach((ele) => {
           listToDownload.push({
             ...ele,
-            id: createUUID(),
+            id: createUUID()
           });
         });
       }
@@ -446,7 +446,7 @@ const Playlist = ({
 
   const onBulkAddToCollection = () => {
     thisBot.PlaylistLinkModal({
-      idsMap: selectedPlaylist,
+      idsMap: selectedPlaylist
     });
   };
 
@@ -455,7 +455,7 @@ const Playlist = ({
     if (loading) {
       return ShowNotification({
         message: "Regenration in progress!",
-        severity: "error",
+        severity: "error"
       });
     }
     const oldData = JSON.stringify(playList);
@@ -464,14 +464,14 @@ const Playlist = ({
     try {
       const { allItems } = await thisBot.RegenratePlaylistWithNewCommand({
         oldData,
-        command: regenrationCommand,
+        command: regenrationCommand
       });
       console.log("allItems", allItems);
       setLoading(false);
       if (!allItems?.length) {
         ShowNotification({
           message: "Unable to generate playlist.Please Try Again!",
-          severity: "error",
+          severity: "error"
         });
         return;
       }
@@ -483,7 +483,7 @@ const Playlist = ({
       setLoading(false);
       return ShowNotification({
         message: "Regenration in Failed!",
-        severity: "error",
+        severity: "error"
       });
     }
   };
@@ -529,7 +529,7 @@ const Playlist = ({
         <Input
           icon="search"
           style={{
-            marginBottom: "0",
+            marginBottom: "0"
           }}
           value={query}
           onChangeListener={(text) => setQuery(text)}
@@ -544,7 +544,7 @@ const Playlist = ({
               secondary
               style={{
                 borderBottom: "1px solid #E1E3EA",
-                marginBottom: "0.5rem",
+                marginBottom: "0.5rem"
               }}
             >
               <Button onClick={onBulkDelete} secondaryAlt color="#C20104">
@@ -572,7 +572,7 @@ const Playlist = ({
             style={{
               height: "100%",
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column"
             }}
           >
             <div
@@ -592,7 +592,7 @@ const Playlist = ({
                       style={{
                         fontSize: "20px",
                         backgroundColor: "#D36433",
-                        color: "white",
+                        color: "white"
                       }}
                       class="material-symbols-outlined unfollow"
                     >
@@ -610,7 +610,7 @@ const Playlist = ({
                     style={{
                       fontSize: "12px",
                       fontWeight: "600",
-                      marginLeft: "4px",
+                      marginLeft: "4px"
                     }}
                     for="playlistInclude"
                   >
@@ -638,7 +638,7 @@ const Playlist = ({
                   className="align-center"
                   style={{
                     cursor: "pointer",
-                    marginLeft: "1rem",
+                    marginLeft: "1rem"
                   }}
                   onClick={() => {
                     if (readingPlan) {
@@ -652,7 +652,7 @@ const Playlist = ({
                       style={{
                         fontSize: "20px",
                         backgroundColor: "#D36433",
-                        color: "white",
+                        color: "white"
                       }}
                       class="material-symbols-outlined unfollow"
                     >
@@ -670,7 +670,7 @@ const Playlist = ({
                     style={{
                       fontSize: "12px",
                       fontWeight: "600",
-                      marginLeft: "4px",
+                      marginLeft: "4px"
                     }}
                     for="playlistInclude"
                   >
@@ -725,7 +725,7 @@ const Playlist = ({
                 alignItems: "center",
                 gap: "1rem",
                 justifyContent: "space-between",
-                width: "100%",
+                width: "100%"
               }}
             >
               <Input
@@ -747,7 +747,7 @@ const Playlist = ({
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                width: "100%",
+                width: "100%"
               }}
             >
               <Button
@@ -929,7 +929,7 @@ const Playlist = ({
               alignItems: "center",
               justifyContent: "space-between",
               flexDirection: "column",
-              marginTop: openModalName ? "0" : "auto",
+              marginTop: openModalName ? "0" : "auto"
             }}
           >
             {playLists.length < 0 && (
@@ -937,7 +937,7 @@ const Playlist = ({
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "8px"
                 }}
               >
                 <input
@@ -952,7 +952,7 @@ const Playlist = ({
                   style={{
                     fontSize: "14px",
                     fontWeight: "600",
-                    marginLeft: "12px",
+                    marginLeft: "12px"
                   }}
                   for="mergeMode"
                 >
@@ -1047,7 +1047,7 @@ const Playlist = ({
                         ShowNotification({
                           message:
                             "Please enter some text for Playlist Generation!",
-                          severity: "error",
+                          severity: "error"
                         });
                         return;
                       }
@@ -1059,17 +1059,17 @@ const Playlist = ({
                           allItems,
                           suggestedColor,
                           suggestedIcon,
-                          suggestedDescription,
+                          suggestedDescription
                         } = await thisBot.buildPlaylistFromAI({
                           text: genDetails,
-                          prompt: systemPrompt,
+                          prompt: systemPrompt
                         });
                         if (!allItems?.length) {
                           setLoading(false);
                           ShowNotification({
                             message:
                               "Unable to generate playlist.Please Try Again!",
-                            severity: "error",
+                            severity: "error"
                           });
                           return;
                         }
@@ -1085,7 +1085,7 @@ const Playlist = ({
                         ShowNotification({
                           message:
                             "Unable to generate playlist.Please Try Again!",
-                          severity: "error",
+                          severity: "error"
                         });
                         setLoading(false);
                       }

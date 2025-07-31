@@ -71,7 +71,7 @@ const History = ({ id }) => {
               onClick={() => {
                 onHanldeAddToPlaylistClick({
                   dataItem: history,
-                  bulkAdd: true,
+                  bulkAdd: true
                 });
               }}
             >

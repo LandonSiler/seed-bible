@@ -9,7 +9,7 @@ const ButtonStyle = {
   borderRadius: "40px",
   // padding: "6px",
   fontSize: "1.75rem",
-  color: "inherit",
+  color: "inherit"
 };
 
 const startEditingPlaylist = (
@@ -48,7 +48,7 @@ const startEditingPlaylist = (
     id: parentId,
     name: name,
     description: description,
-    icon: icon,
+    icon: icon
   });
 
   if (isCustomColor) globalThis[`${parentId}setCustomColor`](color);
@@ -155,7 +155,7 @@ const PlaylistRowItem = ({
   isCustomColor = false,
   description = "",
   isCustomIcon = false,
-  selectedTags,
+  selectedTags
 }) => {
   const isCustomIcons = icon.startsWith("https") || isCustomIcon;
 
@@ -302,7 +302,7 @@ const PlaylistRowItem = ({
       return ShowNotification({
         message:
           "Playlist Can only be shared in published pattern. Please try export.",
-        severity: "error",
+        severity: "error"
       });
     }
     setLoading(true);
@@ -318,7 +318,7 @@ const PlaylistRowItem = ({
       color,
       isCustomColor,
       description,
-      icons: globalThis.PREDEFINED_ICONS,
+      icons: globalThis.PREDEFINED_ICONS
     };
     const sanitizedItem = sanitizeObject(playlistObj);
     // console.log(sanitizedItem, "sanitizedItem");
@@ -335,11 +335,11 @@ const PlaylistRowItem = ({
         url: `https://theographic-bible-api.netlify.app/api/playlist/postPlaylist`,
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         data: {
-          query: stringItems,
-        },
+          query: stringItems
+        }
       })
       .then((dbRes) => {
         const shareURL = `https://ao.bot/?${key}=${deployBot}&sharedPlaylist=${dbRes.data.data.uid}`;
@@ -348,14 +348,14 @@ const PlaylistRowItem = ({
         setCopyURL(shareURL);
         ShowNotification({
           message: "Share URL Copied to textboard.",
-          severity: "success",
+          severity: "success"
         });
         setLoading(false);
       })
       .catch(() => {
         ShowNotification({
           message: "Unable to copy playlist. Please try again!",
-          severity: "error",
+          severity: "error"
         });
         setLoading(false);
       });
@@ -368,7 +368,7 @@ const PlaylistRowItem = ({
   const onClickLinkPlaylist = () => {
     thisBot.PlaylistLinkModal({
       id,
-      parentId,
+      parentId
     });
   };
 
@@ -433,7 +433,7 @@ const PlaylistRowItem = ({
             alignItems: "center",
             width: "100%",
             position: "relative",
-            zIndex: "2",
+            zIndex: "2"
           }}
         >
           {selectPlaylist && (
@@ -443,7 +443,7 @@ const PlaylistRowItem = ({
               style={{
                 marginLeft: "10px",
                 marginTop: "6px",
-                marginRight: "10px",
+                marginRight: "10px"
               }}
             />
           )}
@@ -485,14 +485,14 @@ const PlaylistRowItem = ({
               display: "flex",
               height: "max-content",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-between"
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
+                alignItems: "flex-start"
               }}
             >
               <b style={{ textAlign: "left" }}>{name}</b>
@@ -506,7 +506,7 @@ const PlaylistRowItem = ({
                 style={{
                   transform: id === opendedList ? "rotateZ(180deg)" : "",
                   margin: "0",
-                  fontSize: "24px",
+                  fontSize: "24px"
                 }}
                 class="material-symbols-outlined unfollow"
               >
@@ -526,7 +526,7 @@ const PlaylistRowItem = ({
             alignItems: "center",
             gap: "0.25rem",
             color: "#D36433",
-            zIndex: "11",
+            zIndex: "11"
           }}
         >
           {loading && <LoaderSecondary />}
@@ -536,13 +536,13 @@ const PlaylistRowItem = ({
               style={{
                 fontSize: "1.5rem",
                 color: "inherit",
-                cursor: "pointer",
+                cursor: "pointer"
               }}
               onClick={() => {
                 os.setClipboard(copyURL);
                 ShowNotification({
                   message: "Share URL Copied to textboard.",
-                  severity: "success",
+                  severity: "success"
                 });
               }}
             >
@@ -572,7 +572,7 @@ const PlaylistRowItem = ({
                   top: "51%",
                   position: "absolute",
                   right: "0%",
-                  transform: `translate(0%, -50%)`,
+                  transform: `translate(0%, -50%)`
                 }}
                 class="material-symbols-outlined unfollow"
                 onClick={() => {
@@ -581,7 +581,7 @@ const PlaylistRowItem = ({
                     startIndex: playListSubIndex !== null ? index : 0,
                     startSubIndex: playListSubIndex !== null ? 0 : -1,
                     parentId,
-                    name: name,
+                    name: name
                   });
                   setIsPlay(true);
                   setTimeout(() => {
@@ -606,7 +606,7 @@ const PlaylistRowItem = ({
                 <span
                   style={{
                     ...ButtonStyle,
-                    color: "#139981",
+                    color: "#139981"
                   }}
                   onClick={() => {
                     // os.unregisterApp("playing-playlist");
@@ -622,7 +622,7 @@ const PlaylistRowItem = ({
                   style={{
                     fontSize: "12px",
                     fontWeight: "400",
-                    color: "#139981",
+                    color: "#139981"
                   }}
                 >
                   Now Playing
@@ -637,7 +637,7 @@ const PlaylistRowItem = ({
             transition: "all 0.2s linear",
             overflow: "hidden",
             padding: "0 10px",
-            zIndex: "1",
+            zIndex: "1"
           }}
         >
           {(checklistEnabled || readingPlanEnabled) && !viewOnly && (
@@ -698,7 +698,7 @@ const PlaylistRowItem = ({
             onClick={() => setShowMoreOptions(false)}
             style={{
               ...getPosition(),
-              width: "200px",
+              width: "200px"
             }}
             className="overlay linked-item-custom"
           >
@@ -717,7 +717,7 @@ const PlaylistRowItem = ({
                       isCustomColor,
                       color,
                       isCustomIcon,
-                      selectedTags,
+                      selectedTags
                     });
                     setShowMoreOptions(false);
                   }}
@@ -814,12 +814,12 @@ const PlaylistRowItem = ({
                     if (isNested)
                       return ShowNotification({
                         message: "Cannot merge nested playlists!",
-                        severity: "error",
+                        severity: "error"
                       });
 
                     openMergeModal({
                       id,
-                      parentId,
+                      parentId
                     });
                   }}
                 >

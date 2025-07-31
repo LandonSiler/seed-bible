@@ -8,7 +8,7 @@ import SettingsSidebar from "app.components.settings";
 import {
   TextSettings,
   defaultTextConfig,
-  exportTextConfigToCSS,
+  exportTextConfigToCSS
 } from "app.components.textSettings";
 const SearchBar = getBot("system", "introduction.searchBar").SearchBar();
 import { useSideBarContext } from "app.hooks.sideBar";

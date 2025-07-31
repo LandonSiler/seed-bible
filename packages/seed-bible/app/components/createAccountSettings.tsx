@@ -9,7 +9,7 @@ import {
   ToolbarIcon,
   Panal,
   Playlist,
-  AiChatIcon,
+  AiChatIcon
 } from "app.components.icons";
 import { useSideBarContext } from "app.hooks.sideBar";
 const { useState, useEffect } = os.appHooks;
@@ -66,12 +66,12 @@ const CreateAccountSettings = () => {
       if (data.success) {
         await os.recordData(tags.key, authBot.id, {
           photoLink: result.url,
-          ...data.data,
+          ...data.data
         });
         setImg(result.url);
       } else {
         await os.recordData(tags.key, authBot.id, {
-          photoLink: result.url,
+          photoLink: result.url
         });
         setImg(result.url);
       }
@@ -80,7 +80,7 @@ const CreateAccountSettings = () => {
       os.log(result);
       const img = result.existingFileUrl;
       await os.recordData(tags.key, authBot.id, {
-        photoLink: img,
+        photoLink: img
       });
       setImg(result.existingFileUrl);
       // os.toast("Failed " + result.errorMessage);
@@ -98,13 +98,13 @@ const CreateAccountSettings = () => {
       profileName,
       description,
       location,
-      uid,
+      uid
     };
     const data = await os.getData(tags.key, authBot.id);
     if (data.success) {
       const result = await os.recordData(tags.key, authBot.id, {
         ...data.data,
-        ...payload,
+        ...payload
       });
 
       if (result?.success) {
@@ -148,7 +148,7 @@ const CreateAccountSettings = () => {
           "align-items": "center",
           "justify-content": "center",
           width: "100%",
-          gap: "25px",
+          gap: "25px"
         }}
       >
         <img
@@ -156,7 +156,7 @@ const CreateAccountSettings = () => {
             "border-radius": "50%",
             height: "50px",
             width: "50px",
-            border: "1px solid #4459F3",
+            border: "1px solid #4459F3"
           }}
           src={img}
         />
@@ -167,7 +167,7 @@ const CreateAccountSettings = () => {
             border: "1px solid #4459F3",
             width: "100px",
             height: "30px",
-            color: "#4459F3",
+            color: "#4459F3"
           }}
         >
           Add picture
@@ -234,7 +234,7 @@ const CreateAccountSettings = () => {
           border: "none",
           padding: "10px 20px",
           borderRadius: "6px",
-          cursor: "pointer",
+          cursor: "pointer"
         }}
       >
         Save Profile

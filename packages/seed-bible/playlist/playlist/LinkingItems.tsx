@@ -15,7 +15,7 @@ const Linking = ({ data, linkingMode, playlistName, playListId }) => {
                 globalThis.onCurrentCollectionEdit({
                   data,
                   playlistName,
-                  playListId,
+                  playListId
                 });
               }
             } else {
@@ -23,7 +23,7 @@ const Linking = ({ data, linkingMode, playlistName, playListId }) => {
               this.CURRENT_ACTIVE_LINK_ITEM_FLOAT = {
                 ...data,
                 playlistName,
-                playListId,
+                playListId
               };
             }
           }}
@@ -44,7 +44,7 @@ const Linking = ({ data, linkingMode, playlistName, playListId }) => {
               items: links,
               removeID: data.id,
               playListId,
-              linkingMode,
+              linkingMode
             })
           }
         >

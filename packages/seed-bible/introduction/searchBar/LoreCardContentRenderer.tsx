@@ -46,5 +46,5 @@ const LoreCardContentRenderer = ({ type, content, link }) => {
 };
 
 return {
-  LoreCardContentRenderer,
+  LoreCardContentRenderer
 };

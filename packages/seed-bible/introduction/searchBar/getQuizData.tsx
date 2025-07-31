@@ -41,17 +41,17 @@ if (quizData) {
     for (let i = 0; i < QUIZJson.length; i++) {
       QUIZJson[i]["options"] = [
         {
-          v: QUIZJson[i]["option1"],
+          v: QUIZJson[i]["option1"]
         },
         {
-          v: QUIZJson[i]["option2"],
+          v: QUIZJson[i]["option2"]
         },
         {
-          v: QUIZJson[i]["option3"],
+          v: QUIZJson[i]["option3"]
         },
         {
-          v: QUIZJson[i]["option4"],
-        },
+          v: QUIZJson[i]["option4"]
+        }
       ];
       delete QUIZJson[i]["option1"];
       delete QUIZJson[i]["option2"];

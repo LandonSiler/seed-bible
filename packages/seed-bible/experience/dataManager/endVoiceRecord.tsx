@@ -9,7 +9,7 @@ if (setData) {
     setData(base64);
     ShowNotification({
       message: `Voice Recording Completed.`,
-      severity: "success",
+      severity: "success"
     });
   });
 }

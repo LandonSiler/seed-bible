@@ -10,7 +10,7 @@ import {
   ToolbarIcon,
   Panal,
   Playlist,
-  AiChatIcon,
+  AiChatIcon
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 import { useSideBarContext } from "app.hooks.sideBar";
@@ -24,20 +24,20 @@ const CanvasAiSettings = () => {
   const [chatAIOptions, setChatAIOptions] = useState([
     {
       title: "GPT4",
-      value: "gpt-4",
+      value: "gpt-4"
     },
     {
       title: "GPT3",
-      value: "gpt-3.5-turbo",
+      value: "gpt-3.5-turbo"
     },
     {
       title: "Claude",
-      value: "claude-3-5-sonnet-20240620",
-    },
+      value: "claude-3-5-sonnet-20240620"
+    }
   ]);
   const [selectedChatAI, setSelectedChatAI] = useState({
     title: "GPT4",
-    value: "gpt-4",
+    value: "gpt-4"
   });
   const [chatPrompt, setChatPrompt] = useState("");
 
@@ -45,20 +45,20 @@ const CanvasAiSettings = () => {
   const [imageAIOptions, setImageAIOptions] = useState([
     {
       title: "dallE 3",
-      value: "dall-e-2",
+      value: "dall-e-2"
     },
     {
       title: "dallE 2",
-      value: "dall-e-2",
+      value: "dall-e-2"
     },
     {
       title: "StabilityAI",
-      value: "stabilityAi",
-    },
+      value: "stabilityAi"
+    }
   ]);
   const [selectedImageAI, setSelectedImageAI] = useState({
     title: "dallE 3",
-    value: "dall-e-2",
+    value: "dall-e-2"
   });
   const [imagePrompt, setImagePrompt] = useState("");
 
@@ -67,50 +67,50 @@ const CanvasAiSettings = () => {
   const [assistantAIOptions, setAssistantAIOptions] = useState([
     {
       title: "GPT4",
-      value: "gpt-4",
+      value: "gpt-4"
     },
     {
       title: "GPT3",
-      value: "gpt-3.5-turbo",
+      value: "gpt-3.5-turbo"
     },
     {
       title: "Claude",
-      value: "claude-3-5-sonnet-20240620",
-    },
+      value: "claude-3-5-sonnet-20240620"
+    }
   ]);
   const [selectedAssistantAI, setSelectedAssistantAI] = useState({
     title: "GPT4",
-    value: "gpt-4",
+    value: "gpt-4"
   });
   const [assistantVoiceOptions, setAssistantVoiceOptions] = useState([
     {
       title: "Alloy",
-      value: "alloy",
+      value: "alloy"
     },
     {
       title: "Echo",
-      value: "echo",
+      value: "echo"
     },
     {
       title: "Fable",
-      value: "fable",
+      value: "fable"
     },
     {
       title: "Onyx",
-      value: "onyx",
+      value: "onyx"
     },
     {
       title: "Nova",
-      value: "nova",
+      value: "nova"
     },
     {
       title: "Shimmer",
-      value: "shimmer",
-    },
+      value: "shimmer"
+    }
   ]);
   const [selectedAssistantVoice, setSelectedAssistantVoice] = useState({
     title: "Alloy",
-    value: "alloy",
+    value: "alloy"
   });
 
   const [switcher, setSwitcher] = useState(1);

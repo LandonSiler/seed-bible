@@ -16,7 +16,7 @@ const Tabs = ({ tabs, onTabChange }) => {
           style={{
             ...styles.tab,
             ...(activeTab === tab ? styles.activeTab : {}),
-            width: `${100 / tabs.length}%`,
+            width: `${100 / tabs.length}%`
           }}
           onClick={() => handleTabClick(tab)}
         >
@@ -36,7 +36,7 @@ const styles = {
     width: "100%",
     padding: "0.60rem",
     borderRadius: "4px",
-    margin: "1rem 0",
+    margin: "1rem 0"
   },
   tab: {
     padding: "0.75rem 1.25rem",
@@ -46,12 +46,12 @@ const styles = {
     color: "#333",
     fontWeight: "bold",
     transition: "background-color 0.3s, color 0.3s",
-    textAlign: "center",
+    textAlign: "center"
   },
   activeTab: {
     backgroundColor: "#fff",
-    color: "#D36433",
-  },
+    color: "#D36433"
+  }
 };
 
 return Tabs;

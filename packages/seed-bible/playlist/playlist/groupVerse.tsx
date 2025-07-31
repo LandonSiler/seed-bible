@@ -41,7 +41,7 @@ const checkAndAddData = (data = undefined) => {
         ? `${bookName} ${lastItem.additionalInfo.chapter}:${lastGroup[0].additionalInfo.verse}-${lastItem.additionalInfo.verse}`
         : `${bookName}${chapterRange}`,
       additionalInfo: [...lastGroup],
-      id: `${pseudoIndentifier}${lastGroup[0].id}`,
+      id: `${pseudoIndentifier}${lastGroup[0].id}`
     });
     lastGroup = [];
   } else {

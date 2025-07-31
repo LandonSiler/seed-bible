@@ -62,7 +62,7 @@ const MergeModal = () => {
                 const oldItem = old[dragItemIndex];
                 old[dragOverItemIndex].list.push({
                   type: "playlist",
-                  ...oldItem,
+                  ...oldItem
                 });
                 old[dragOverItemIndex].nesting += 1;
                 old.splice(dragItemIndex, 1);

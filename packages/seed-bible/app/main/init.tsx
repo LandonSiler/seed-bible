@@ -6,5 +6,5 @@ const localStorage = getBot("system", "app.localStorage");
 if (!localStorage)
   create({
     system: "app.localStorage",
-    space: "local",
+    space: "local"
   });

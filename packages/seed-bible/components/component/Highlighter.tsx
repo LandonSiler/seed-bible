@@ -4,7 +4,7 @@ const Highlighter = ({
   children,
   positionX = "0",
   positionY = "0",
-  clipPathMessage = "polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(65% + 20px) calc(100% - 20px), 75% 100%, 64% calc(100% - 20px), 0% calc(100% - 20px))",
+  clipPathMessage = "polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(65% + 20px) calc(100% - 20px), 75% 100%, 64% calc(100% - 20px), 0% calc(100% - 20px))"
 }) => {
   return (
     <>
@@ -12,7 +12,7 @@ const Highlighter = ({
       <div
         style={{
           zIndex: "99999",
-          backgroundColor: "transparent",
+          backgroundColor: "transparent"
         }}
         onClick={onClose}
         className="backdrop"
@@ -21,7 +21,7 @@ const Highlighter = ({
         style={{
           backgroundColor: "rgba(0,0,0,0.4)",
           clipPath:
-            clipPath || "circle(30px at calc(100% - 25px) calc(100% - 25px))",
+            clipPath || "circle(30px at calc(100% - 25px) calc(100% - 25px))"
         }}
         onClick={onClose}
         className="backdrop"
@@ -36,13 +36,13 @@ const Highlighter = ({
           bottom: positionY,
           padding: "4px 8px",
           borderRadius: "4px",
-          backgroundColor: "white",
+          backgroundColor: "white"
         }}
       >
         <div
           style={{
             marginBottom: "20px",
-            padding: "12px",
+            padding: "12px"
           }}
         >
           {children}

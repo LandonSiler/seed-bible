@@ -10,7 +10,7 @@ const GlassButton = ({ children, onClick, isDisabled, style = {} }) => {
           onClick(e);
         }}
         style={{
-          ...style,
+          ...style
         }}
       >
         {children}

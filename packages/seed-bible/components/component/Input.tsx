@@ -10,7 +10,7 @@ const Input = ({
   placeholder,
   errorMessage = "",
   type = "text",
-  regex = /^.*$/,
+  regex = /^.*$/
 }) => {
   const [error, setError] = useState(false);
 
@@ -35,7 +35,7 @@ const Input = ({
               position: "absolute",
               top: "50%",
               left: "8px",
-              transform: `translateY(-50%)`,
+              transform: `translateY(-50%)`
             }}
             onClick={() => {
               setHide((p) => !p);

@@ -13,7 +13,7 @@ const LoreCardItem = ({
   id,
   index,
   subCard,
-  setSubCard,
+  setSubCard
 }) => {
   const currentData = useMemo(
     () => (selectedCard === id ? subCard : 4),
@@ -36,7 +36,7 @@ const LoreCardItem = ({
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "1rem 2rem 0rem 2rem",
+            padding: "1rem 2rem 0rem 2rem"
           }}
         >
           <h3 className="heading__teritary title">{title}</h3>
@@ -55,7 +55,7 @@ const LoreCardItem = ({
               }}
               style={{
                 backgroundColor:
-                  currentData === data.id && selectedCard === id ? "gold" : "",
+                  currentData === data.id && selectedCard === id ? "gold" : ""
               }}
             >
               <span
@@ -78,5 +78,5 @@ const LoreCardItem = ({
 };
 
 return {
-  LoreCardItem,
+  LoreCardItem
 };

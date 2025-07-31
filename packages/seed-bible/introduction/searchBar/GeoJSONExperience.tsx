@@ -7,7 +7,7 @@ const App = ({ from }) => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [allPlaces, setAllPlaces] = useState([
-    ...Object.values(tags["places-new"]),
+    ...Object.values(tags["places-new"])
   ]);
   const forwardBtnRef = useRef(null);
 
@@ -73,7 +73,7 @@ const App = ({ from }) => {
         AddApplication({
           id,
           App: <App initPage={2} id={id} />,
-          minWidth: "23rem",
+          minWidth: "23rem"
         });
       }
 

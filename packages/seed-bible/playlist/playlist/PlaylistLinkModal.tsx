@@ -7,7 +7,7 @@ const ButtonStyle = {
   borderRadius: "40px",
   padding: "6px",
   fontSize: "14px",
-  marginLeft: "4px",
+  marginLeft: "4px"
 };
 
 const onClose = () => {
@@ -70,7 +70,7 @@ const PlaylistLinkModal = () => {
     playListId,
     isDelete = false,
     index,
-    removeID,
+    removeID
   }) => {
     const currentData = thisBot.CURRENT_ACTIVE_LINK_ITEM_FLOAT;
     if (currentData?.id === data.id) {
@@ -78,7 +78,7 @@ const PlaylistLinkModal = () => {
       thisBot.cursorReset();
       return ShowNotification({
         message: "Cannot Link with itself!",
-        severity: "error",
+        severity: "error"
       });
     }
     if (isDelete) {
@@ -112,13 +112,13 @@ const PlaylistLinkModal = () => {
               if (isPresent) {
                 ShowNotification({
                   message: "Already Linked with the Item!",
-                  severity: "error",
+                  severity: "error"
                 });
               } else {
                 old[firstI].list[secondIndex].links.push({
                   ...data,
                   playlistName,
-                  playListId,
+                  playListId
                 });
               }
             } else {
@@ -126,8 +126,8 @@ const PlaylistLinkModal = () => {
                 {
                   ...data,
                   playlistName,
-                  playListId,
-                },
+                  playListId
+                }
               ];
             }
           }
@@ -149,13 +149,13 @@ const PlaylistLinkModal = () => {
 
   const PLAYBACK_OPTIONS = Object.keys(allPlaylistGroups).map((id, i) => ({
     label: `Playback List ${i + 1}`,
-    value: id,
+    value: id
   }));
 
   const PLAYLIST_OPTIONS = (globalThis[`${playbackListID}playlists`] || []).map(
     (playlist) => ({
       label: playlist.name,
-      value: playlist.id,
+      value: playlist.id
     })
   );
 
@@ -169,7 +169,7 @@ const PlaylistLinkModal = () => {
     if (!name)
       return ShowNotification({
         message: "Please Enter a Name!",
-        severity: "error",
+        severity: "error"
       });
     const namesPresent = Object.keys(globalThis.COLLECTIONS || {})
       .map((ele) => globalThis.COLLECTIONS[ele].name)
@@ -181,7 +181,7 @@ const PlaylistLinkModal = () => {
     )
       return ShowNotification({
         message: "Name Already Present!",
-        severity: "error",
+        severity: "error"
       });
     const idNew = globalThis.EDIT_COLLECTION_ID || createUUID();
     if (globalThis.COLLECTIONS) {
@@ -189,15 +189,15 @@ const PlaylistLinkModal = () => {
         ...globalThis.COLLECTIONS,
         [idNew]: {
           collection,
-          name: name.trim(),
-        },
+          name: name.trim()
+        }
       };
     } else {
       globalThis.COLLECTIONS = {
         [idNew]: {
           collection,
-          name: name.trim(),
-        },
+          name: name.trim()
+        }
       };
     }
     if (globalThis.COLLECTION_SETTER) {
@@ -214,7 +214,7 @@ const PlaylistLinkModal = () => {
         title={initialName ? "Edit Your Collection" : "Add To Collection"}
         showIcon={false}
         styles={{
-          width: `${Math.max(collection.length ? 1 : 1, 1) * 396 + 36}px`,
+          width: `${Math.max(collection.length ? 1 : 1, 1) * 396 + 36}px`
         }}
         onClose={onClose}
       >
@@ -228,7 +228,7 @@ const PlaylistLinkModal = () => {
             display: "flex",
             alignItems: "flex-start",
             justifyContent: "space-between",
-            flexDirection: "column",
+            flexDirection: "column"
           }}
         >
           {collection.map((coll) => (
@@ -239,7 +239,7 @@ const PlaylistLinkModal = () => {
                 maxHeight: "90dvh",
                 width: "100%",
                 overflow: "auto",
-                position: "relative",
+                position: "relative"
               }}
             >
               <PlaylistLinkedContainer playlist={coll} />
@@ -250,13 +250,13 @@ const PlaylistLinkModal = () => {
                   top: "15px",
                   right: "15px",
                   background: "white",
-                  ...ButtonStyle,
+                  ...ButtonStyle
                 }}
                 onClick={() => {
                   if (that.id === coll.id)
                     return ShowNotification({
                       message: "Cannot Delete Original Playlist!",
-                      severity: "error",
+                      severity: "error"
                     });
                   setCollection((prev) => prev.filter((c) => c.id !== coll.id));
                 }}
@@ -293,7 +293,7 @@ const PlaylistLinkModal = () => {
               name="Select Playback List:"
               options={[
                 { disabled: true, value: "", label: "Select Parallel List" },
-                ...PLAYBACK_OPTIONS,
+                ...PLAYBACK_OPTIONS
               ]}
             />
           </div>
@@ -308,7 +308,7 @@ const PlaylistLinkModal = () => {
               name="Select Playlist:"
               options={[
                 { disabled: true, value: "", label: "Select Playlist List" },
-                ...PLAYLIST_OPTIONS,
+                ...PLAYLIST_OPTIONS
               ]}
             />
           </div>
@@ -325,7 +325,7 @@ const PlaylistLinkModal = () => {
                 if (collection.findIndex((pl) => pl.id === playlistId) > -1)
                   return ShowNotification({
                     message: "Playlist Already Present!",
-                    severity: "error",
+                    severity: "error"
                   });
                 const pl = globalThis[`${playbackListID}playlists`].find(
                   ({ id }) => id === playlistId

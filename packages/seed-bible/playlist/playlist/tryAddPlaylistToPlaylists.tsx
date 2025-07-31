@@ -29,7 +29,7 @@ if (globalThis.makingPlaylist) {
     isCustomColor,
     isCustomIcon,
     description,
-    selectedTags,
+    selectedTags
   };
 
   if (isEditModeSubID) {

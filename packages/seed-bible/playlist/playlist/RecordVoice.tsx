@@ -124,7 +124,7 @@ const RecordingVoiceUI = ({ data, setData }) => {
                       i < playCount
                         ? getColor(i, dataFreq.current.length)
                         : "transparent",
-                    height: `${_}%`,
+                    height: `${_}%`
                   }}
                   className={`bar static-bar`}
                 ></div>

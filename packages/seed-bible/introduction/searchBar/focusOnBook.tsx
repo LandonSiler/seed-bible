@@ -91,7 +91,7 @@ const interactWithBook = () => {
   if (bookBot) {
     os.focusOn(bookBot, {
       duration: 1,
-      easing: "quadratic",
+      easing: "quadratic"
       // zoom: 10
     }).then(async () => {
       // os.log(commonName,'commonName')

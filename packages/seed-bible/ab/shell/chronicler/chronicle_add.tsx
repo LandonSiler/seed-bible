@@ -41,7 +41,7 @@ if (!targetBook || !targetChapter || !authBot || !bookMatch || !dataToSave) {
 
 let recordKey = targetRecordKey;
 let fileUpload = await os.recordFile(recordKey, dataToSave, {
-  description: targetRecordKey,
+  description: targetRecordKey
 });
 
 //console.log(`${tags.system}_${tagName} fileUpload: `, fileUpload);
@@ -52,7 +52,7 @@ if (!fileUpload.success && fileUpload.errorCode == "record_not_found") {
   recordKey = recordName.recordKey;
 
   fileUpload = await os.recordFile(recordKey, dataToSave, {
-    description: targetRecordKey,
+    description: targetRecordKey
   });
 }
 
@@ -64,7 +64,7 @@ if (!fileUpload.success) {
   await os.grantInstAdminPermission(recordKey);
 
   fileUpload = await os.recordFile(recordKey, dataToSave, {
-    description: targetRecordKey,
+    description: targetRecordKey
   });
 }
 
@@ -123,7 +123,7 @@ if (!that.privateChronicle) {
     await os.grantInstAdminPermission(authBot.id);
 
     await os.recordData(authBot.id, "chronicler_lastUpdate", date, {
-      markers: ["publicRead"],
+      markers: ["publicRead"]
     });
   }
 }
@@ -136,5 +136,5 @@ return {
   address: location,
   fileURL: fileUpload.url,
   time: date,
-  version: chroniclerData.urlArray.length,
+  version: chroniclerData.urlArray.length
 };

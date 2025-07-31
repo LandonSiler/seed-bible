@@ -76,7 +76,7 @@ const openBook = async (commonName, chapter = 1, verse = []) => {
     await os
       .focusOn(bookBot, {
         duration: 1,
-        easing: "quadratic",
+        easing: "quadratic"
       })
       .then(async () => {
         await openBookHelper(bookBot, commonName, chapter, verse);

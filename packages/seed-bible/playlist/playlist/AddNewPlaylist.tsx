@@ -12,7 +12,7 @@ const predefinedColors = [
   "#D364338A",
   "#13998196",
   "#9B44F326",
-  "#97B197",
+  "#97B197"
 ];
 const predefinedIconsOptions = [
   "subscriptions",
@@ -20,7 +20,7 @@ const predefinedIconsOptions = [
   "video_library",
   "slow_motion_video",
   "play_lesson",
-  "auto_read_play",
+  "auto_read_play"
 ];
 
 const Tabs = await thisBot.Tabs();
@@ -53,7 +53,7 @@ const AddNewPlaylist = ({
   customIcon,
   setCustomIcon,
   selectedTags,
-  setTags,
+  setTags
 }) => {
   const [activeTab, setActiveTab] = useState(tabsVals[0]);
 
@@ -94,7 +94,7 @@ const AddNewPlaylist = ({
         isCustomColor: customColor === selectedColor,
         icon: selectedIcon,
         description,
-        selectedTags,
+        selectedTags
       });
       setOpenModalName(false);
       return;
@@ -120,7 +120,7 @@ const AddNewPlaylist = ({
         } else {
           ShowNotification({
             message: "Upload a File to Import Data!",
-            severity: "error",
+            severity: "error"
           });
         }
       }
@@ -137,7 +137,7 @@ const AddNewPlaylist = ({
         isCustomColor: customColor === selectedColor,
         icon: selectedIcon,
         description,
-        selectedTags,
+        selectedTags
       });
       setOpenModalName(false);
       return;
@@ -147,12 +147,12 @@ const AddNewPlaylist = ({
       if (!description) {
         return ShowNotification({
           message: "Please fill description for auto generation!",
-          severity: "error",
+          severity: "error"
         });
       }
       setLoading(true);
       const { suggestedName, allItems } = await thisBot.buildPlaylistFromAI({
-        text: description,
+        text: description
       });
       if (!name) setName(suggestedName);
       if (checkNameDuplicate(name || suggestedName)) {
@@ -163,7 +163,7 @@ const AddNewPlaylist = ({
         setLoading(false);
         return ShowNotification({
           message: "Couldn't auto find any items for the given description!",
-          severity: "error",
+          severity: "error"
         });
       }
       startCreatingPlaylist(name || suggestedName, allItems, id);
@@ -334,20 +334,20 @@ const AddNewPlaylist = ({
                       } else {
                         ShowNotification({
                           message: "No Valid JSON Found!",
-                          severity: "error",
+                          severity: "error"
                         });
                       }
                     } else {
                       return ShowNotification({
                         message: "Please Upload JSON format!",
-                        severity: "error",
+                        severity: "error"
                       });
                     }
                   } catch (err) {
                     console.log("UPLOAED JSON ERROR", err);
                     ShowNotification({
                       message: "Unable to process the file!",
-                      severity: "error",
+                      severity: "error"
                     });
                   }
                 }}
@@ -371,7 +371,7 @@ const AddNewPlaylist = ({
             display: "flex",
             gap: "10px",
             marginBottom: "10px",
-            padding: "0.5rem 0",
+            padding: "0.5rem 0"
           }}
         >
           {predefinedColors.map((color, index) => (
@@ -388,7 +388,7 @@ const AddNewPlaylist = ({
                 cursor: "pointer",
                 borderRadius: "50%",
                 display: "grid",
-                placeItems: "center",
+                placeItems: "center"
               }}
               onClick={() => setSelectedColor(color)}
             >
@@ -412,7 +412,7 @@ const AddNewPlaylist = ({
               borderRadius: "50%",
               position: "relative",
               display: "grid",
-              placeItems: "center",
+              placeItems: "center"
             }}
             onClick={() => setSelectedColor(customColor)}
           >
@@ -429,7 +429,7 @@ const AddNewPlaylist = ({
                 left: "0",
                 width: "100%",
                 height: "100%",
-                opacity: "0",
+                opacity: "0"
               }}
             />
             <span class="big-bold material-symbols-outlined unfollow color-inherit">
@@ -445,7 +445,7 @@ const AddNewPlaylist = ({
             gap: "10px",
             marginBottom: "10px",
             flexWrap: "wrap",
-            padding: "0.5rem 0",
+            padding: "0.5rem 0"
           }}
         >
           {predefinedIcons.map((icon, index) => {
@@ -464,7 +464,7 @@ const AddNewPlaylist = ({
                   cursor: "pointer",
                   display: "grid",
                   placeItems: "center",
-                  borderRadius: "50%",
+                  borderRadius: "50%"
                 }}
                 onClick={() => setSelectedIcon(icon)}
               >
@@ -477,7 +477,7 @@ const AddNewPlaylist = ({
                     src={icon}
                     style={{
                       width: "80%",
-                      borderRadius: "50%",
+                      borderRadius: "50%"
                     }}
                     class="big-bold material-symbols-outlined unfollow color-inherit"
                   />
@@ -498,7 +498,7 @@ const AddNewPlaylist = ({
               borderRadius: "50%",
               position: "relative",
               display: "grid",
-              placeItems: "center",
+              placeItems: "center"
             }}
             onClick={() => setSelectedIcon(customIcon)}
           >
@@ -510,14 +510,14 @@ const AddNewPlaylist = ({
                 if (!file) {
                   return ShowNotification({
                     message: "No File Uploaded!",
-                    severity: "error",
+                    severity: "error"
                   });
                 }
 
                 if (!file?.mimeType.startsWith("image/")) {
                   return ShowNotification({
                     message: "Please Upload Image format!",
-                    severity: "error",
+                    severity: "error"
                   });
                 }
 
@@ -525,7 +525,7 @@ const AddNewPlaylist = ({
                   globalThis.RECORD_STOREKEY,
                   file.data,
                   {
-                    name: file.name,
+                    name: file.name
                   }
                 );
 
@@ -534,7 +534,7 @@ const AddNewPlaylist = ({
                 if (!url) {
                   return ShowNotification({
                     message: "Failed to upload File!",
-                    severity: "error",
+                    severity: "error"
                   });
                 }
 
@@ -555,14 +555,14 @@ const AddNewPlaylist = ({
                 left: "0",
                 width: "100%",
                 height: "100%",
-                opacity: "0",
+                opacity: "0"
               }}
             />
             <img
               src={customIcon}
               style={{
                 width: "80%",
-                borderRadius: "50%",
+                borderRadius: "50%"
               }}
               class="big-bold material-symbols-outlined unfollow color-inherit"
             />
@@ -583,7 +583,7 @@ const AddNewPlaylist = ({
             <Checkbox
               style={{
                 height: "18px",
-                marginRight: "0.5rem",
+                marginRight: "0.5rem"
               }}
               checked={isChecked}
               small
@@ -609,7 +609,7 @@ const AddNewPlaylist = ({
               if (!nameFinal) {
                 return ShowNotification({
                   message: "Tag Name Missing!",
-                  severity: "error",
+                  severity: "error"
                 });
               }
               if (
@@ -618,7 +618,7 @@ const AddNewPlaylist = ({
                 return ShowNotification({
                   message:
                     "Tag Can Only Consist of Number, Aplhabets, Spaces, -!",
-                  severity: "error",
+                  severity: "error"
                 });
               }
               setTags((prev) => {
@@ -627,7 +627,7 @@ const AddNewPlaylist = ({
                 if (index > -1) {
                   ShowNotification({
                     message: "Tag Already Present!",
-                    severity: "error",
+                    severity: "error"
                   });
                 } else {
                   old.push(nameFinal);
@@ -665,24 +665,24 @@ const AddNewPlaylist = ({
               if (loading) {
                 return ShowNotification({
                   message: "Save in progress!",
-                  severity: "error",
+                  severity: "error"
                 });
               }
               if (!name?.trim())
                 return ShowNotification({
                   message: "Enter Playlist Name!",
-                  severity: "error",
+                  severity: "error"
                 });
               if (!link.trim() && !isActiveTabManual() && isActiveSheetImport)
                 return ShowNotification({
                   message: "Enter Link to Import Playlist!",
-                  severity: "error",
+                  severity: "error"
                 });
               if (!isActiveTabManual() && !isActiveSheetImport) {
                 if (uploadedFileData.length < 1) {
                   return ShowNotification({
                     message: "Upload a File to Import Data!",
-                    severity: "error",
+                    severity: "error"
                   });
                 }
               }

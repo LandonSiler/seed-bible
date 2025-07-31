@@ -48,11 +48,11 @@ that.results?.forEach((item) => {
               isValid,
               link: item.link,
               type,
-              videoId: videoId,
+              videoId: videoId
             },
             content: item.content,
             id: createUUID(),
-            type: "attachment-link",
+            type: "attachment-link"
           });
         }
         break;
@@ -63,11 +63,11 @@ that.results?.forEach((item) => {
             additionalInfo: {
               isValid,
               link: item.link,
-              type,
+              type
             },
             content: item.content,
             id: createUUID(),
-            type: "attachment-link",
+            type: "attachment-link"
           });
         }
         break;
@@ -76,11 +76,11 @@ that.results?.forEach((item) => {
           additionalInfo: {
             link: "",
             isValid: true,
-            type: "text",
+            type: "text"
           },
           type: "heading",
           content: item.content,
-          id: createUUID(),
+          id: createUUID()
         });
         break;
       case "date":
@@ -88,7 +88,7 @@ that.results?.forEach((item) => {
           additionalInfo: { date: item.date },
           content: FORMAT_DATE(item.date || new Date()),
           id: createUUID(),
-          type: "date",
+          type: "date"
         });
         break;
     }
@@ -142,7 +142,7 @@ that.results?.forEach((item) => {
             chapterNo: chapter,
             id: bookData.id,
             numberOfChapters: bookData.numberOfChapters,
-            translationId: bookData.translationId,
+            translationId: bookData.translationId
           },
           data: {
             book: bookData.commonName,
@@ -150,15 +150,15 @@ that.results?.forEach((item) => {
             chapter: chapter,
             viewerId: CurrentViewerID,
             verse: vrs,
-            verseNumber: vrs,
+            verseNumber: vrs
           },
-          verse: vrs,
+          verse: vrs
         },
 
         content: `${bookData.commonName} ${chapter}:${vrs}`,
         id: createUUID(),
         prefix: "",
-        type: "verse",
+        type: "verse"
       };
       allItems.push(newItem);
     });
@@ -193,13 +193,13 @@ that.results?.forEach((item) => {
             translationId: bookData.translationId,
             numberOfChapters: bookData.numberOfChapters,
             chapter: chpt,
-            viewerId: CurrentViewerID,
-          },
+            viewerId: CurrentViewerID
+          }
         },
         content: `${bookData.commonName} ${chpt}`,
         id: createUUID(),
         prefix: "",
-        type: "chapter",
+        type: "chapter"
       };
       allItems.push(newItem);
     });

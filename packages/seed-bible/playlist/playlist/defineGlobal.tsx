@@ -14,7 +14,7 @@ globalThis.ButtonStyle = {
   borderRadius: "40px",
   padding: "6px",
   fontSize: "14px",
-  marginLeft: "4px",
+  marginLeft: "4px"
 };
 
 globalThis.CurrentViewerID = null;
@@ -71,7 +71,7 @@ function findNameRank(book1, book2, returnRanks = false, isFindByRank = false) {
             rank: 0,
             testament: [],
             sectionRank: 0,
-            section: "",
+            section: ""
           };
         }
         nameRanks[key].rank = rank;
@@ -94,20 +94,20 @@ function findNameRank(book1, book2, returnRanks = false, isFindByRank = false) {
       rank: nameRanks[book1].rank,
       testament: nameRanks[book1].testament,
       section: nameRanks[book1].section,
-      chapters: nameRanks[book1].chapters,
+      chapters: nameRanks[book1].chapters
     };
   }
   return {
     [book1]: {
       rank: nameRanks[book1].rank,
       testament: nameRanks[book1].testament,
-      chapters: nameRanks[book1].chapters,
+      chapters: nameRanks[book1].chapters
     },
     [book2]: {
       rank: nameRanks[book2].rank,
       testament: nameRanks[book2].testament,
-      chapters: nameRanks[book2].chapters,
-    },
+      chapters: nameRanks[book2].chapters
+    }
   };
 }
 
@@ -143,7 +143,7 @@ globalThis.getSectionRanking = getSectionRanking;
 const SELECTIONTYPE = {
   TESTAMENT: "TESTAMENT",
   SECTION: "SECTION",
-  BOOK: "BOOK",
+  BOOK: "BOOK"
 };
 globalThis.SELECTIONTYPE = SELECTIONTYPE;
 
@@ -176,7 +176,7 @@ globalThis.getSectionBookRage = getSectionBookRage;
 
 globalThis.IMGS = {
   AOLABSRC:
-    "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/dc29f5accefe0b99744180cce15d27f2aadb4953f75912e736501bb632e64845.png",
+    "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/dc29f5accefe0b99744180cce15d27f2aadb4953f75912e736501bb632e64845.png"
 };
 
 globalThis.CONSTANTS = {
@@ -184,8 +184,8 @@ globalThis.CONSTANTS = {
   BOT_TYPE: {
     TESTAMENT: "testament",
     SECTION: "section",
-    BOOK: "book",
-  },
+    BOOK: "book"
+  }
 };
 
 globalThis.objectComparator = (firstData, secondData, keysComparator = []) => {
@@ -301,7 +301,7 @@ globalThis.getPsalmsBookData = (chapter) => {
     { start: 42, end: 72, totalVerse: 986 }, // Book 2
     { start: 73, end: 89, totalVerse: 478 }, // Book 3
     { start: 90, end: 106, totalVerse: 425 }, // Book 4
-    { start: 107, end: 150, totalVerse: 2461 }, // Book 5
+    { start: 107, end: 150, totalVerse: 2461 } // Book 5
   ];
 
   // Determine the book based on the chapter
@@ -322,7 +322,7 @@ globalThis.getPsalmsBookData = (chapter) => {
     numberOfChapters: book.end - book.start + 1,
     totalVerse: book.totalVerse,
     firstChapterApiLink,
-    lastChapterApiLink,
+    lastChapterApiLink
   };
 };
 
@@ -402,7 +402,7 @@ globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
     "September",
     "October",
     "November",
-    "December",
+    "December"
   ];
   const monthsShort = [
     "Jan",
@@ -416,7 +416,7 @@ globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
     "Sep",
     "Oct",
     "Nov",
-    "Dec",
+    "Dec"
   ];
 
   // Ensure the input is a valid date string in the format YYYY-MM-DD
@@ -453,7 +453,7 @@ globalThis.FORMAT_DATE = function formatDate(dateInput, format = "DEFAULT") {
     "MMMM DD": `${monthFull} ${day}`, // Ex: January 15
     "DD MMMM": `${day} ${monthFull}`, // Ex: 15 January
     "MMM DD": `${monthShort} ${day}`, // Ex: Jan 15
-    "DD MMM": `${day} ${monthShort}`, // Ex: 15 Jan
+    "DD MMM": `${day} ${monthShort}` // Ex: 15 Jan
   };
 
   return formats[format] || formats["DEFAULT"];

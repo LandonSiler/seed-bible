@@ -97,7 +97,7 @@ const LoreCard = () => {
               style={{
                 width: "auto",
                 minWidth: "auto",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
               backgroundColor="black"
               onClick={onButtonClick}
@@ -137,7 +137,7 @@ const LoreCard = () => {
                   padding: "0",
                   borderRadius: "4px",
                   marginLeft: "4px",
-                  overflow: "hidden",
+                  overflow: "hidden"
                 }}
                 backgroundColor="black"
                 onClick={() => {
@@ -148,7 +148,7 @@ const LoreCard = () => {
                   style={{
                     border: "none",
                     backgroundColor: "transparent",
-                    backdropFilter: "none",
+                    backdropFilter: "none"
                   }}
                   className="item material-symbols-outlined"
                 >
@@ -163,7 +163,7 @@ const LoreCard = () => {
                   padding: "0",
                   borderRadius: "4px",
                   marginLeft: "4px",
-                  overflow: "hidden",
+                  overflow: "hidden"
                 }}
                 backgroundColor="black"
                 onClick={() => {
@@ -174,7 +174,7 @@ const LoreCard = () => {
                   style={{
                     border: "none",
                     backgroundColor: "transparent",
-                    backdropFilter: "none",
+                    backdropFilter: "none"
                   }}
                   className="item material-symbols-outlined"
                 >
@@ -207,7 +207,7 @@ const QuitGame = () => {
           position: "fixed",
           top: "20px",
           right: "20px",
-          zIndex: "99",
+          zIndex: "99"
         }}
       >
         <Button

@@ -24,7 +24,7 @@ function parseContent(content) {
         currentSection = {
           heading: "",
           number: currentSection.number + 1,
-          verses: [],
+          verses: []
         };
       }
       currentSection.heading = parseText(sectionContent);
@@ -45,7 +45,7 @@ export class BibleDataManager {
     translation = "BSB",
     bookId = "GEN",
     chapter = 1,
-    baseUrl = "https://bible.helloao.org",
+    baseUrl = "https://bible.helloao.org"
   } = {}) {
     this.tabId = tabId;
     this.translation = translation;
@@ -93,7 +93,7 @@ export class BibleDataManager {
         prevChapter:
           json?.data?.previousChapterApiLink || json?.previousChapterApiLink,
         numberOfChapters:
-          json?.data?.book?.numberOfChapters || json?.numberOfChapters,
+          json?.data?.book?.numberOfChapters || json?.numberOfChapters
       };
 
       this.footnotes = json?.data?.chapter?.footnotes || null;
@@ -155,7 +155,7 @@ export class BibleDataManager {
       data: this.data,
       footnotes: this.footnotes,
       loading: this.loading,
-      error: this.error,
+      error: this.error
     };
   }
 }

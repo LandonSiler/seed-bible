@@ -1,16 +1,16 @@
 const notificationColors = {
   warning: {
     bgColor: "#FFC107",
-    color: "#fff",
+    color: "#fff"
   },
   success: {
     bgColor: "#4CAF50",
-    color: "#fff",
+    color: "#fff"
   },
   error: {
     bgColor: "#FFBABA",
-    color: "#D8000C",
-  },
+    color: "#D8000C"
+  }
 };
 
 const message = that?.message;

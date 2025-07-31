@@ -5,7 +5,7 @@ import {
   T,
   MenuDown,
   FormatLine,
-  ColorSelect,
+  ColorSelect
 } from "app.components.icons";
 const { Input } = Components;
 import { useTabsContext } from "app.hooks.tabs";
@@ -21,8 +21,8 @@ export const defaultTextConfig = {
       bold: true,
       italic: false,
       underline: false,
-      alignment: "left",
-    },
+      alignment: "left"
+    }
   },
   heading: {
     font: `'Montserrat', sans-serif`,
@@ -34,8 +34,8 @@ export const defaultTextConfig = {
       bold: true,
       italic: false,
       underline: false,
-      alignment: "left",
-    },
+      alignment: "left"
+    }
   },
   chapter: {
     font: `'Montserrat', sans-serif`,
@@ -47,8 +47,8 @@ export const defaultTextConfig = {
       bold: true,
       italic: false,
       underline: false,
-      alignment: "left",
-    },
+      alignment: "left"
+    }
   },
   verse: {
     font: "EB Garamond",
@@ -60,9 +60,9 @@ export const defaultTextConfig = {
       bold: false,
       italic: false,
       underline: false,
-      alignment: "left",
-    },
-  },
+      alignment: "left"
+    }
+  }
 };
 export function exportTextConfigToCSS(textConfig) {
   const toCSSVarName = (section, key) => `--text-${section}-${key}`;
@@ -117,13 +117,13 @@ function TextSettings() {
     heading: { ...defaultTextConfig.heading },
     chapter: { ...defaultTextConfig.chapter },
     verse: { ...defaultTextConfig.verse },
-    bookchapter: { ...defaultTextConfig.bookchapter },
+    bookchapter: { ...defaultTextConfig.bookchapter }
   });
 
   const handleStyleChange = (section, newConfig) => {
     const updatedConfig = {
       ...textConfig,
-      [section]: newConfig,
+      [section]: newConfig
     };
 
     setTextConfig(updatedConfig);
@@ -132,9 +132,9 @@ function TextSettings() {
       settings: {
         text: {
           root: exportTextConfigToCSS(updatedConfig),
-          data: updatedConfig,
-        },
-      },
+          data: updatedConfig
+        }
+      }
     });
   };
   useEffect(() => {
@@ -173,7 +173,7 @@ function TextSettings() {
         `bookchapter`,
         "heading",
         //  'chapter',
-        "verse",
+        "verse"
       ].map((section) => (
         <div key={section} className="flexColumn-10">
           <div style={{ marginBottom: "20px" }} className="blackText">
@@ -185,7 +185,7 @@ function TextSettings() {
             onChange={(e) =>
               handleStyleChange(section, {
                 ...textConfig[section],
-                font: e.target.value,
+                font: e.target.value
               })
             }
           >
@@ -215,7 +215,7 @@ function TextSettings() {
             onChange={(e) =>
               handleStyleChange(section, {
                 ...textConfig[section],
-                weight: e.target.value,
+                weight: e.target.value
               })
             }
           >
@@ -233,13 +233,13 @@ function TextSettings() {
               if (isNaN(val)) {
                 return ShowNotification({
                   message: `Margins Can Only be Number!`,
-                  severity: "error",
+                  severity: "error"
                 });
               }
               console.log("HERE");
               handleStyleChange(section, {
                 ...textConfig[section],
-                marginVertical: val,
+                marginVertical: val
               });
             }}
             placeholder="10"
@@ -254,13 +254,13 @@ function TextSettings() {
               if (isNaN(val)) {
                 return ShowNotification({
                   message: `Margins Can Only be Number!`,
-                  severity: "error",
+                  severity: "error"
                 });
               }
               console.log("HERE");
               handleStyleChange(section, {
                 ...textConfig[section],
-                marginHorizontal: val,
+                marginHorizontal: val
               });
             }}
             placeholder="10"
@@ -285,8 +285,8 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
       ...sectionStyles,
       styles: {
         ...sectionStyles.styles,
-        [style]: !sectionStyles.styles[style],
-      },
+        [style]: !sectionStyles.styles[style]
+      }
     });
   };
 
@@ -303,15 +303,15 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
       ...sectionStyles,
       styles: {
         ...sectionStyles.styles,
-        alignment: newAlignment,
-      },
+        alignment: newAlignment
+      }
     });
   };
 
   const handleColorSelect = (color) => {
     onChange({
       ...sectionStyles,
-      color,
+      color
     });
     setShowPalette(false);
   };
@@ -330,7 +330,7 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
     "#6366F1",
     "#8B5CF6",
     "#EC4899",
-    "#F43F5E",
+    "#F43F5E"
   ];
 
   return (
@@ -384,7 +384,7 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
             height: `${16}px`,
             backgroundColor: sectionStyles.color || "#606060",
             borderRadius: "50%",
-            display: "inline-block",
+            display: "inline-block"
           }}
         ></div>
       </div>
@@ -402,7 +402,7 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
             display: "grid",
             gridTemplateColumns: "repeat(7, 20px)",
             gap: "8px",
-            zIndex: 10,
+            zIndex: 10
           }}
         >
           {colorPalette.map((color) => (
@@ -418,7 +418,7 @@ const TextFormattingToolbar = ({ sectionStyles, onChange }) => {
                 border:
                   color === sectionStyles.color
                     ? "2px solid #333"
-                    : "1px solid #ccc",
+                    : "1px solid #ccc"
               }}
             />
           ))}

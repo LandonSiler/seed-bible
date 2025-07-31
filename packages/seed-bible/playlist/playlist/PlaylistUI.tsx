@@ -21,7 +21,7 @@ const Playlist = ({ id }) => {
     id: null,
     name: null,
     description: null,
-    icon: null,
+    icon: null
   });
 
   const isCustomIcon = (editData.icon || "")?.startsWith("https");
@@ -50,8 +50,8 @@ const Playlist = ({ id }) => {
       default: {
         active: true,
         deleteable: false,
-        link: "",
-      },
+        link: ""
+      }
     }
   );
 
@@ -75,8 +75,8 @@ const Playlist = ({ id }) => {
         [id]: {
           active: true,
           deleteable: true,
-          link: "",
-        },
+          link: ""
+        }
       };
     });
     setOpenModal(false);
@@ -160,8 +160,8 @@ const Playlist = ({ id }) => {
         onClick: () => {
           setViewHistory(0);
         },
-        icon: "playlist_play",
-      },
+        icon: "playlist_play"
+      }
       // We  will add Collections Later
       // {
       //     label: "Collections",
@@ -201,7 +201,7 @@ const Playlist = ({ id }) => {
             startIndex: 0,
             startSubIndex: -1,
             parentId: "default",
-            name: playlist.name,
+            name: playlist.name
           });
         globalThis.hasASharedPlaylist = false;
       }
@@ -259,7 +259,7 @@ const Playlist = ({ id }) => {
                   ...ButtonStyle,
                   fontSize: "24px",
                   padding: "0",
-                  border: "none",
+                  border: "none"
                 }}
                 onClick={() => {
                   globalThis[`setOpenAttachLink`](false);
@@ -312,7 +312,7 @@ const Playlist = ({ id }) => {
                   fontSize: "24px",
                   padding: "0",
                   border: "none",
-                  marginLeft: "auto",
+                  marginLeft: "auto"
                 }}
                 onClick={() => {
                   // setHide(p => !p);

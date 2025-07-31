@@ -81,5 +81,5 @@ return {
   allItems,
   suggestedColor,
   suggestedIcon,
-  suggestedDescription,
+  suggestedDescription
 };

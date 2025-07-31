@@ -9,7 +9,7 @@ const ModalStepper = ({
   css = "",
   isDisabledButtons = false,
   sxModal = {},
-  sxBackdrop = {},
+  sxBackdrop = {}
 }) => {
   const [step, setStep] = useState(0);
 

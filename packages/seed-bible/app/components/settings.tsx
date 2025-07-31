@@ -7,7 +7,7 @@ import {
   Space,
   LoadSpace,
   ToolbarIcon,
-  UserAvatar,
+  UserAvatar
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 import { SpaceSettingsForm, SpaceSelector } from "app.components.spaceSettings";
@@ -21,7 +21,7 @@ const SettingsSidebar = () => {
     activeSpace,
     spaces,
     downloadSpaceAsJSON,
-    replaceActiveSpaceWithJSON,
+    replaceActiveSpaceWithJSON
   } = useTabsContext();
   const CurrentSpace = spaces.find((e) => e.id === activeSpace);
   const [expandedSections, setExpandedSections] = useState({
@@ -29,7 +29,7 @@ const SettingsSidebar = () => {
     bibleDefaults: false,
     pageSettings: true,
     canvasSettings: false,
-    mapSettings: true,
+    mapSettings: true
   });
   const settingsConfig = [
     {
@@ -37,21 +37,21 @@ const SettingsSidebar = () => {
       label: "Theme",
       icon: "palette",
       expandable: false,
-      onClick: () => setSideBarMode("themeSettings"),
+      onClick: () => setSideBarMode("themeSettings")
     },
     {
       key: "layers",
       label: "Layers",
       icon: "layers",
       style: "disabled",
-      expandable: true,
+      expandable: true
     },
     {
       key: "bibleDefaults",
       label: "Bible Defaults",
       style: "disabled",
       icon: "book",
-      expandable: true,
+      expandable: true
     },
     { key: "divider1", type: "divider" },
     {
@@ -64,23 +64,23 @@ const SettingsSidebar = () => {
           key: "toolbar",
           label: "Toolbar",
           icon: `construction`,
-          onClick: () => setSideBarMode("toolbarSettings-Page"),
+          onClick: () => setSideBarMode("toolbarSettings-Page")
         },
         // { key: 'panel', label: 'Panel', icon: 'view_sidebar' },
         {
           key: "text",
           label: "Text",
           icon: "text_fields",
-          onClick: () => setSideBarMode("textSettings"),
+          onClick: () => setSideBarMode("textSettings")
         },
         { key: "extensions", label: "Extensions", icon: "extension" },
         {
           key: "ai",
           label: "AI",
           icon: "smart_toy",
-          onClick: () => setSideBarMode("aiSettings"),
-        },
-      ],
+          onClick: () => setSideBarMode("aiSettings")
+        }
+      ]
     },
     { key: "divider2", type: "divider" },
     {
@@ -93,23 +93,23 @@ const SettingsSidebar = () => {
           key: "toolbar",
           label: "Toolbar",
           icon: `construction`,
-          onClick: () => setSideBarMode("toolbarSettings-Canvas"),
+          onClick: () => setSideBarMode("toolbarSettings-Canvas")
         },
         // { key: 'panel', label: 'Panel', icon: 'view_sidebar' },
         {
           key: "text",
           label: "Promt Bar",
           icon: "text_fields",
-          onClick: () => setSideBarMode("promtSettings"),
+          onClick: () => setSideBarMode("promtSettings")
         },
         { key: "extensions", label: "Extensions", icon: "extension" },
         {
           key: "ai",
           label: "AI",
           icon: "smart_toy",
-          onClick: () => setSideBarMode("canvasAiSettings"),
-        },
-      ],
+          onClick: () => setSideBarMode("canvasAiSettings")
+        }
+      ]
     },
     // { key: 'divider2', type: 'divider' },
     // {
@@ -134,7 +134,7 @@ const SettingsSidebar = () => {
           const file = files[0];
           replaceActiveSpaceWithJSON(file, CurrentSpace.id);
         }
-      },
+      }
     },
     {
       key: "LoadSpace",
@@ -143,9 +143,9 @@ const SettingsSidebar = () => {
       expandable: false,
       onClick: () => {
         downloadSpaceAsJSON(CurrentSpace.id);
-      },
+      }
     },
-    { key: "Share", label: "Share", icon: "share", expandable: false },
+    { key: "Share", label: "Share", icon: "share", expandable: false }
   ];
 
   const toggleSection = (section) => {
@@ -259,7 +259,7 @@ const SettingsSidebar = () => {
                 subItems,
                 type,
                 onClick,
-                style,
+                style
               }) =>
                 type === "divider" ? (
                   <div key={key} className="settings-divider">
@@ -295,7 +295,7 @@ const SettingsSidebar = () => {
                             key: subKey,
                             label: subLabel,
                             icon: subIcon,
-                            onClick,
+                            onClick
                           }) => (
                             <div
                               onClick={onClick}
@@ -334,7 +334,7 @@ const SettingsSidebar = () => {
                   "border-radius": "50%",
                   height: "40px",
                   width: "40px",
-                  border: "1px solid #4459F3",
+                  border: "1px solid #4459F3"
                 }}
                 src={userData.photoLink}
               />
@@ -461,7 +461,7 @@ const SettingsSidebar = () => {
                     "align-items": "center",
                     "justify-content": "center",
                     "flex-direction": "row",
-                    gap: "20px",
+                    gap: "20px"
                   }}
                 >
                   <input

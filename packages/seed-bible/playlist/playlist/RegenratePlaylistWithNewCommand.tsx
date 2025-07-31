@@ -101,5 +101,5 @@ if (badData) {
 console.log("allItems", allItems);
 
 return {
-  allItems,
+  allItems
 };

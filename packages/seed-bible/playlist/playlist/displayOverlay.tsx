@@ -22,7 +22,7 @@ const ButtonStyle = {
   borderRadius: "40px",
   padding: "6px",
   fontSize: "14px",
-  marginLeft: "4px",
+  marginLeft: "4px"
 };
 
 const Overlay = () => {
@@ -43,7 +43,7 @@ const Overlay = () => {
       <div
         style={{
           bottom: `${pos.y}px`,
-          left: `${pos.x}px`,
+          left: `${pos.x}px`
         }}
         className="overlay linked-item-custom"
       >
@@ -60,7 +60,7 @@ const Overlay = () => {
               onClick={() => {
                 thisBot.navigationWithDataItem({
                   dataItem: data,
-                  bulkAdd: false,
+                  bulkAdd: false
                 });
               }}
             >
@@ -80,7 +80,7 @@ const Overlay = () => {
                       isDelete: true,
                       index,
                       playListId,
-                      removeID,
+                      removeID
                     });
                     unLinkItem(index);
                   }

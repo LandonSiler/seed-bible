@@ -8,7 +8,7 @@ import {
   ColorSelect,
   ToolbarIcon,
   Panal,
-  Playlist,
+  Playlist
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 import { useSideBarContext } from "app.hooks.sideBar";
@@ -21,7 +21,7 @@ const ToolbarSettings = () => {
     mapTools,
     setTools,
     setCanvasTools,
-    setMapTools,
+    setMapTools
   } = useBibleContext();
   const { sidebarMode, setSideBarMode } = useSideBarContext();
   const { currentSpace } = useTabsContext();
@@ -139,7 +139,7 @@ const ToolbarSettings = () => {
                       padding: "5px 10px",
                       borderRadius: "5px",
                       border: "none",
-                      cursor: "pointer",
+                      cursor: "pointer"
                     }}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -155,7 +155,7 @@ const ToolbarSettings = () => {
                       padding: "5px 10px",
                       borderRadius: "5px",
                       border: "none",
-                      cursor: "pointer",
+                      cursor: "pointer"
                     }}
                     onClick={(e) => {
                       e.stopPropagation();

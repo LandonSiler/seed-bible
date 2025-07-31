@@ -96,7 +96,7 @@ const allowedCharacters = [
   "7",
   "8",
   "9",
-  " ",
+  " "
 ];
 if (
   !searchBarFocused &&

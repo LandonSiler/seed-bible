@@ -2,7 +2,7 @@ const abData = [];
 for (const auxName of tags.auxNames) {
   const auxData = shout("onLookupABEggs", {
     aoID: auxName,
-    returnType: "data",
+    returnType: "data"
   });
   await Promise.all(auxData).then((e) => {
     abData.push(e[0]);
@@ -27,7 +27,7 @@ for (const ab of abData) {
     }
     const newBot = create({
       ...state.tags,
-      space: "local",
+      space: "local"
     });
     if (newBot.tags.onInstJoined) {
       whisper(newBot, "onInstJoined");

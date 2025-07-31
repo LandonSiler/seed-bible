@@ -12,7 +12,7 @@ const SkipAnimation = () => {
           position: "fixed",
           bottom: "20px",
           right: "20px",
-          zIndex: "99",
+          zIndex: "99"
         }}
       >
         <Button

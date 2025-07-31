@@ -32,7 +32,7 @@ const Toolbar = () => {
             border: toolbarProps.sidebarMode.includes("toolbarSettings")
               ? "2px solid #4459F3"
               : null,
-            background: toolbarBackground,
+            background: toolbarBackground
           }}
         >
           <div className="toolbar-item-wrapper">
@@ -81,7 +81,7 @@ const Toolbar = () => {
                               </span>
                             ),
                             type: "toolbar",
-                            data: { tool, index },
+                            data: { tool, index }
                           });
                         }, 1200);
                       }}

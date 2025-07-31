@@ -19,5 +19,5 @@ globalThis.SetEditData({
   id: null,
   name: null,
   description: null,
-  icon: null,
+  icon: null
 });

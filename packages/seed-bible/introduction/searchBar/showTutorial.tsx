@@ -25,7 +25,7 @@ const App = () => {
       tutorialName: that.tutorialName,
       setModalOpacity,
       tutorialStep,
-      setTutorialStep,
+      setTutorialStep
     });
   }, [tutorialStep, that.tutorialName]);
 
@@ -44,7 +44,7 @@ const App = () => {
         styles={{
           opacity: modalOpacity,
           transition: "0.5s linear opacity",
-          zIndex: 10000,
+          zIndex: 10000
         }}
       >
         {gridPortalBot.tags.pixelWidth < 720
@@ -95,7 +95,7 @@ const getTutorial = ({
   tutorialName,
   setModalOpacity,
   tutorialStep,
-  setTutorialStep,
+  setTutorialStep
 }) => {
   const tutorials = [
     {
@@ -105,7 +105,7 @@ const getTutorial = ({
           imageUrl: {
             web: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/15677051c2dc92d40538b6212cdc9883faea980914c007745460af901905293f.mp4",
             mobile:
-              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/5bc71d44be4e0e65a786206bf173bb676b1eb8b04824ff6154eba5d9626afc4f.mp4",
+              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/5bc71d44be4e0e65a786206bf173bb676b1eb8b04824ff6154eba5d9626afc4f.mp4"
           },
           strings: {
             0: (
@@ -116,7 +116,7 @@ const getTutorial = ({
                 </span>
                 !
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -135,13 +135,13 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Show me",
+          btnName: "Show me"
         },
         {
           imageUrl: {
             web: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/fe9b21cb5d0a2d6af9757130575e2321a88a711e2292532bfc9c4cb725f98cad.mp4",
             mobile:
-              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/26ef881821790389488e31e1ba129a61abf25091b6276ae8a02499364f0f0ab9.mp4",
+              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/26ef881821790389488e31e1ba129a61abf25091b6276ae8a02499364f0f0ab9.mp4"
           },
           strings: {
             0: (
@@ -149,7 +149,7 @@ const getTutorial = ({
                 Select a location to pull it up on the map!
               </p>
             ),
-            1: <p style={{ color: "black" }}>Let's check out Jesusalem!</p>,
+            1: <p style={{ color: "black" }}>Let's check out Jesusalem!</p>
           },
           action: async () => {
             setModalOpacity(0);
@@ -167,25 +167,25 @@ const getTutorial = ({
             whisper(thisBot, "handleGeoJsonSearch", {
               place: {
                 place: "Jerusalem",
-                geojson: "m66c5b8",
-              },
+                geojson: "m66c5b8"
+              }
             });
             setTutorialStep(tutorialStep + 1);
           },
-          btnName: "Show me",
+          btnName: "Show me"
         },
         {
           imageUrl: {
             web: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/1fa0f74906767dece60bd1eb7ce9555447bfc61dfa0b60dbac109bc4e48c6243.mp4",
             mobile:
-              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/7c54bac0cd1cc705099237cfdeb9e69fa4850cc61f680dc5ad39cbecfdb4425d.mp4",
+              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/7c54bac0cd1cc705099237cfdeb9e69fa4850cc61f680dc5ad39cbecfdb4425d.mp4"
           },
           strings: {
             0: (
               <p style={{ color: "black" }}>
                 Scroll or pinch to <b>zoom in</b> or <b>out</b>.
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -196,27 +196,27 @@ const getTutorial = ({
             );
             await os.focusOn(JerusalemBot, {
               duration: 2,
-              zoom: JerusalemBot.tags.zoom * 0.5,
+              zoom: JerusalemBot.tags.zoom * 0.5
             });
             await os.sleep(1500);
             await os.focusOn(JerusalemBot, {
               duration: 2,
-              zoom: JerusalemBot.tags.zoom * 2,
+              zoom: JerusalemBot.tags.zoom * 2
             });
             await os.focusOn(JerusalemBot, {
               duration: 2,
-              zoom: JerusalemBot.tags.zoom,
+              zoom: JerusalemBot.tags.zoom
             });
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Show me",
+          btnName: "Show me"
         },
         {
           imageUrl: {
             web: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/Sandbox1/110460d8c5e012016c691e9f5746ef781830ab66e94d4dfb79bca33df9d7d837.mp4",
             mobile:
-              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/99009ca92d5b126fe17df3d02c0c2751867efe0d87d3e1fdd26e6e613179981b.mp4",
+              "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/99009ca92d5b126fe17df3d02c0c2751867efe0d87d3e1fdd26e6e613179981b.mp4"
           },
           strings: {
             0: (
@@ -224,7 +224,7 @@ const getTutorial = ({
                 Twist with two fingers on the screen or right click to{" "}
                 <b>rotate</b>.
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -239,8 +239,8 @@ const getTutorial = ({
               rotation: {
                 x: Math.PI * 0.4,
                 y: Math.PI * 0.4,
-                normalize: false,
-              },
+                normalize: false
+              }
             });
             await os.sleep(1000);
             await os.focusOn(JerusalemBot, {
@@ -248,14 +248,14 @@ const getTutorial = ({
               rotation: {
                 x: 0,
                 y: 0,
-                normalize: false,
-              },
+                normalize: false
+              }
             });
             await os.sleep(2000);
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Show me",
+          btnName: "Show me"
         },
         {
           strings: {
@@ -269,14 +269,14 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 <b>You're ready to go! Enjoy!</b>
               </p>
-            ),
+            )
           },
           action: async () => {
             endTutorial();
           },
-          btnName: "Continue",
-        },
-      ],
+          btnName: "Continue"
+        }
+      ]
     },
     {
       tutorialName: "chaism-tutorial",
@@ -287,7 +287,7 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 Did you know the Bible is a kind of <b>mountain range?</b>
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -295,7 +295,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -309,7 +309,7 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 But that's <b>not</b> how Biblical authors usually do it!
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -317,7 +317,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -326,7 +326,7 @@ const getTutorial = ({
                 When they want to <b>show us something important</b> they often
                 put it in the <b>middle!</b>
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -334,7 +334,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -342,7 +342,7 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 Take a moment to read these verses!
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -350,7 +350,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -358,7 +358,7 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 In this passage we see Jesus <b>heal</b> a leper.
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -366,7 +366,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -376,7 +376,7 @@ const getTutorial = ({
                 <b style={{ color: "green" }}>willingness</b>, and{" "}
                 <b style={{ color: "#E65100" }}>being clean</b> <b>repeat!</b>
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -385,7 +385,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -394,7 +394,7 @@ const getTutorial = ({
                 The height of this text is not that Jesus healed a man but
                 rather that he <b>touched him!</b>
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -402,7 +402,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -410,7 +410,7 @@ const getTutorial = ({
               <p style={{ color: "black" }}>
                 This structure is called a chiasm, and they are all over Bible!
               </p>
-            ),
+            )
           },
           action: async () => {
             setModalOpacity(0);
@@ -418,7 +418,7 @@ const getTutorial = ({
             setTutorialStep(tutorialStep + 1);
             setModalOpacity(1);
           },
-          btnName: "Next",
+          btnName: "Next"
         },
         {
           strings: {
@@ -427,15 +427,15 @@ const getTutorial = ({
                 We want to make many tools like this to help people make and
                 share all sorts of Biblical ideas!
               </p>
-            ),
+            )
           },
           action: async () => {
             endTutorial();
           },
-          btnName: "Let's explore!",
-        },
-      ],
-    },
+          btnName: "Let's explore!"
+        }
+      ]
+    }
   ];
   for (let i = 0; i < tutorials.length; i++) {
     if (tutorials[i].tutorialName === tutorialName) {

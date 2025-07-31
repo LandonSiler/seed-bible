@@ -34,5 +34,5 @@ return {
   Tooltip,
   Checkbox,
   LoaderSecondary,
-  Chips,
+  Chips
 };

@@ -34,7 +34,7 @@ const AttachLinkItem = ({
   originalList,
   datesRepeat,
   datesInWrongOrder,
-  currentFormat,
+  currentFormat
 }) => {
   const [editDateModal, setEditDateModal] = useState(false);
 
@@ -50,8 +50,8 @@ const AttachLinkItem = ({
           ...old[index],
           content: FORMAT_DATE(date),
           additionalInfo: {
-            date: FORMAT_YYYY_MM_DD(date),
-          },
+            date: FORMAT_YYYY_MM_DD(date)
+          }
         };
       }
       return old;
@@ -75,7 +75,7 @@ const AttachLinkItem = ({
               margin: "10px 0",
               padding: "8px",
               width: "100%",
-              boxSizing: "border-box",
+              boxSizing: "border-box"
             }}
           />
           <ButtonsCover>
@@ -139,7 +139,7 @@ const AttachLinkItem = ({
             position: "absolute",
             left: 0,
             top: 0,
-            zIndex: -1,
+            zIndex: -1
           }}
           placeholder={"test"}
           ref={(ref) => {

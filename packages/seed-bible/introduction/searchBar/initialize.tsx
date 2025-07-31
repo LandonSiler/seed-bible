@@ -36,7 +36,7 @@ const App = () => {
   const SearchBar = thisBot.SearchBar();
   // Define a dynamic experiences object
   const [experiences, setExperiences] = useState({
-    0: <SearchBar />,
+    0: <SearchBar />
   });
   globalThis.SetExperiences = setExperiences;
   // Memoize the current experience based on `currentExperience`

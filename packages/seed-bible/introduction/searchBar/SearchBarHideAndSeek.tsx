@@ -60,11 +60,11 @@ const SearchBarHideAndSeek = () => {
   const [{ startIndex, endIndex, winnerBook }, setIndexs] = useState({
     startIndex: -1,
     winnerBook: -1,
-    endIndex: sortedBooks.length,
+    endIndex: sortedBooks.length
   });
   const [filterIndexUpdate, setFilterIndexUpdate] = useState({
     startIndex: -1,
-    endIndex: sortedBooks.length,
+    endIndex: sortedBooks.length
   });
 
   useEffect(() => {
@@ -112,7 +112,7 @@ const SearchBarHideAndSeek = () => {
     const filteIndexUpdate = () => {
       setFilterIndexUpdate({
         startIndex,
-        endIndex,
+        endIndex
       });
     };
 
@@ -183,7 +183,7 @@ const SideBarBooks = ({
   startIndex,
   endIndex,
   winnerBook,
-  blinker,
+  blinker
 }) => {
   const bookBot = useMemo(
     () =>

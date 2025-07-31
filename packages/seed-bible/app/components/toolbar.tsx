@@ -18,7 +18,7 @@ function Toolbar() {
     mapMode,
     setTools,
     setCanvasTools,
-    setMapTools,
+    setMapTools
   } = useBibleContext();
   const { sidebarMode } = useSideBarContext();
   const { setIsDragging, isDragging, setElement, Element } = useMouseMove();
@@ -26,7 +26,7 @@ function Toolbar() {
     activeSpace,
     updateToolsForSpace,
     getToolsForActiveSpace,
-    updateTab,
+    updateTab
   } = useTabsContext();
 
   const TabTools = getToolsForActiveSpace();
@@ -110,7 +110,7 @@ function Toolbar() {
         setOldList,
         setDraggedIndex,
         setElement,
-        isDragging,
+        isDragging
       });
     } else {
       thisBot.renderToolbar({
@@ -127,7 +127,7 @@ function Toolbar() {
         setOldList,
         setDraggedIndex,
         setElement,
-        isDragging,
+        isDragging
       });
     }
   }, [
@@ -139,7 +139,7 @@ function Toolbar() {
     handleMouseEnter,
     draggedIndex,
     hasHeldRef,
-    holdTimeoutRef,
+    holdTimeoutRef
   ]);
 
   return <></>;

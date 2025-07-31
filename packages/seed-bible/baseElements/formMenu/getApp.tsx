@@ -79,7 +79,7 @@ const App = ({ chapter }) => {
             case "1 Psalms": {
               setBook({
                 startingBook: 0,
-                endingBook: 40,
+                endingBook: 40
               });
               setBookName("1 Psalms");
               bookfound = true;
@@ -88,7 +88,7 @@ const App = ({ chapter }) => {
             case "2 Psalms": {
               setBook({
                 startingBook: 41,
-                endingBook: 71,
+                endingBook: 71
               });
               setBookName("2 Psalms");
               bookfound = true;
@@ -97,7 +97,7 @@ const App = ({ chapter }) => {
             case "3 Psalms": {
               setBook({
                 startingBook: 72,
-                endingBook: 88,
+                endingBook: 88
               });
               setBookName("3 Psalms");
               bookfound = true;
@@ -106,7 +106,7 @@ const App = ({ chapter }) => {
             case "4 Psalms": {
               setBook({
                 startingBook: 89,
-                endingBook: 105,
+                endingBook: 105
               });
               setBookName("4 Psalms");
               bookfound = true;
@@ -115,7 +115,7 @@ const App = ({ chapter }) => {
             case "5 Psalms": {
               setBook({
                 startingBook: 106,
-                endingBook: 149,
+                endingBook: 149
               });
               setBookName("5 Psalms");
               bookfound = true;

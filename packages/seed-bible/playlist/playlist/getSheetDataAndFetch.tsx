@@ -134,7 +134,7 @@ try {
         book: bookData.commonName,
         bookId: bookData.id,
         chapter: chapter,
-        viewerId: CurrentViewerID,
+        viewerId: CurrentViewerID
       };
 
       const chapterData = {
@@ -142,13 +142,13 @@ try {
         chapterNo: chapter,
         id: bookData.id,
         numberOfChapters: bookData.numberOfChapters,
-        translationId: bookData.translationId,
+        translationId: bookData.translationId
       };
 
       const additionalInfo = {
         book: bookData.commonName,
         chapter: chapter,
-        bookRank: bookDetails.rank,
+        bookRank: bookDetails.rank
       };
 
       const totalVerseInChapter =
@@ -168,19 +168,19 @@ try {
               additionalInfo: {
                 ...additionalInfo,
                 chapterData: {
-                  ...chapterData,
+                  ...chapterData
                 },
                 data: {
                   verse: i,
                   verseNumber: i,
-                  ...dataObj,
+                  ...dataObj
                 },
-                verse: i,
+                verse: i
               },
               content: `${bookData.commonName} ${chapter}:${i}`,
               id: createUUID(),
               prefix: "",
-              type: dataType,
+              type: dataType
             });
           }
         } else {
@@ -188,19 +188,19 @@ try {
             additionalInfo: {
               ...additionalInfo,
               chapterData: {
-                ...chapterData,
+                ...chapterData
               },
               data: {
                 verse: 1,
                 verseNumber: 1,
-                ...dataObj,
+                ...dataObj
               },
-              verse: 1,
+              verse: 1
             },
             content: `${bookData.commonName} ${chapter}:${1}`,
             id: createUUID(),
             prefix: "",
-            type: dataType,
+            type: dataType
           });
         }
       } else {
@@ -210,19 +210,19 @@ try {
           additionalInfo: {
             ...additionalInfo,
             chapterData: {
-              ...chapterData,
+              ...chapterData
             },
             data: {
               verse: verse,
               verseNumber: verse,
-              ...dataObj,
+              ...dataObj
             },
-            verse: verse,
+            verse: verse
           },
           content: `${bookData.commonName} ${chapter}:${verse}`,
           id: createUUID(),
           prefix: "",
-          type: dataType,
+          type: dataType
         });
       }
       return;
@@ -252,14 +252,14 @@ try {
             const additionalInfo = {
               bookName: bookData.commonName,
               bookRank: bookDetails.rank,
-              chapters: bookData.numberOfChapters,
+              chapters: bookData.numberOfChapters
             };
 
             const dataObj = {
               id: bookData.id,
               translationId: bookData.translationId,
               numberOfChapters: bookData.numberOfChapters,
-              viewerId: CurrentViewerID,
+              viewerId: CurrentViewerID
             };
 
             dataConvert.push({
@@ -268,13 +268,13 @@ try {
                 chapter: i,
                 data: {
                   chapter: i,
-                  ...dataObj,
-                },
+                  ...dataObj
+                }
               },
               content: `${bookData.commonName} ${i}`,
               id: createUUID(),
               prefix: "",
-              type: "chapter",
+              type: "chapter"
             });
           }
         } else {
@@ -292,14 +292,14 @@ try {
           const additionalInfo = {
             bookName: bookData.commonName,
             bookRank: bookDetails.rank,
-            chapters: bookData.numberOfChapters,
+            chapters: bookData.numberOfChapters
           };
 
           const dataObj = {
             id: bookData.id,
             translationId: bookData.translationId,
             numberOfChapters: bookData.numberOfChapters,
-            viewerId: CurrentViewerID,
+            viewerId: CurrentViewerID
           };
 
           dataConvert.push({
@@ -308,13 +308,13 @@ try {
               chapter: 1,
               data: {
                 chapter: 1,
-                ...dataObj,
-              },
+                ...dataObj
+              }
             },
             content: `${bookData.commonName} ${1}`,
             id: createUUID(),
             prefix: "",
-            type: "chapter",
+            type: "chapter"
           });
         }
       } else {
@@ -333,14 +333,14 @@ try {
         const additionalInfo = {
           bookName: bookData.commonName,
           bookRank: bookDetails.rank,
-          chapters: bookData.numberOfChapters,
+          chapters: bookData.numberOfChapters
         };
 
         const dataObj = {
           id: bookData.id,
           translationId: bookData.translationId,
           numberOfChapters: bookData.numberOfChapters,
-          viewerId: CurrentViewerID,
+          viewerId: CurrentViewerID
         };
 
         dataConvert.push({
@@ -349,13 +349,13 @@ try {
             chapter: chapter,
             data: {
               chapter: chapter,
-              ...dataObj,
-            },
+              ...dataObj
+            }
           },
           content: `${bookData.commonName} ${chapter}`,
           id: createUUID(),
           prefix: "",
-          type: "chapter",
+          type: "chapter"
         });
       }
       return;
@@ -370,8 +370,8 @@ try {
         type: "book",
         additionalInfo: {
           bookName,
-          bookRank,
-        },
+          bookRank
+        }
       });
       return;
     }
@@ -386,8 +386,8 @@ try {
         id: createUUID(),
         type: "section",
         additionalInfo: {
-          sectionName,
-        },
+          sectionName
+        }
       });
       return;
     }
@@ -408,8 +408,8 @@ try {
           type: "testament",
           additionalInfo: {
             isNewTestament,
-            bookName: isOldTestament ? "Old Testament" : "New Testament",
-          },
+            bookName: isOldTestament ? "Old Testament" : "New Testament"
+          }
         });
       }
     }

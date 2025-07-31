@@ -19,14 +19,14 @@ const App = () => {
   const [gameContainer, setGameContainer] = useState({
     position: "fixed !important",
     right: "0px !important",
-    top: "0px !important",
+    top: "0px !important"
   });
   const [mapCanvas, setMapCanvas] = useState({});
   const [mapViewPoint, setMapViewPoint] = useState({
     bottom: "0px !important",
     left: "0px !important",
     width: "0px !important",
-    height: "0px !important",
+    height: "0px !important"
   });
   const [gameBackground, setGameBackground] = useState({});
   const [gameCanvas, setGameCanvas] = useState({});
@@ -36,11 +36,11 @@ const App = () => {
 
   const [hw, setHw] = useState({
     height: "0px !important",
-    width: "0px !important",
+    width: "0px !important"
   });
   const [tl, setTl] = useState({
     top: "0px !important",
-    left: "0px !important",
+    left: "0px !important"
   });
 
   const combinedStyle = useMemo(() => {
@@ -73,7 +73,7 @@ const App = () => {
     gameBackground,
     gameCanvas,
     hw,
-    tl,
+    tl
   ]);
 
   globalThis.setHW = setHw;

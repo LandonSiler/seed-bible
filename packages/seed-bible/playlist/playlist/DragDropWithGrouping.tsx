@@ -42,7 +42,7 @@ const DragDrop = ({
   icon,
   isCustomColor,
   description,
-  isCustomIcon,
+  isCustomIcon
 }) => {
   const [opendedList, setOpenedList] = useState("");
 
@@ -51,7 +51,7 @@ const DragDrop = ({
   const toBeSetItems = useRef([]);
   const [dragOverSet, setDragoverSetMutate] = useState({
     position: "top",
-    itemId: "null",
+    itemId: "null"
   });
 
   const setDragoverSet = (newState) => {
@@ -128,7 +128,7 @@ const DragDrop = ({
     let newItems = [];
 
     const filterAbleItems = {
-      [draggedItemID]: true,
+      [draggedItemID]: true
     };
 
     if (draggedItemID.startsWith(pseudoIndentifier)) {
@@ -137,7 +137,7 @@ const DragDrop = ({
         setDragoverSet({
           itemId: "null",
           position:
-            originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top",
+            originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top"
         });
         return;
       }
@@ -159,7 +159,7 @@ const DragDrop = ({
         setDragoverSet({
           itemId: "null",
           position:
-            originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top",
+            originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top"
         });
         return;
       }
@@ -167,7 +167,7 @@ const DragDrop = ({
 
     setDragoverSet({
       itemId: draggedOverItem.id,
-      position: originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top",
+      position: originalRespectiveIndex > draggedItemIndex ? "Bottom" : "Top"
     });
 
     // console.log("Drag Over Adjusted Index:", { newIndex });
@@ -183,7 +183,7 @@ const DragDrop = ({
   const handleDragEnd = () => {
     setDragoverSet({
       itemId: "null",
-      position: "false",
+      position: "false"
     });
     toBeSetItems.current && setList(toBeSetItems.current);
     setDraggedItemID(null);
@@ -394,7 +394,7 @@ const DragDrop = ({
                 position: "absolute",
                 left: 0,
                 top: 0,
-                zIndex: -1,
+                zIndex: -1
               }}
               placeholder={"test"}
               ref={(ref) => {
@@ -502,7 +502,7 @@ const PlaylistContentRenderer = ({
   onClickItem,
   onClick,
   deleteFromList,
-  dragOverSet,
+  dragOverSet
 }) => {
   const [open, setOpen] = useState(false);
   const dragged = useRef(false);
@@ -563,7 +563,7 @@ const PlaylistContentRenderer = ({
             position: "absolute",
             left: 0,
             top: 0,
-            zIndex: -1,
+            zIndex: -1
           }}
           placeholder={"test"}
           ref={(ref) => {
@@ -597,7 +597,7 @@ const PlaylistContentRenderer = ({
               position: "absolute",
               left: 0,
               top: 0,
-              zIndex: -1,
+              zIndex: -1
             }}
             placeholder={"test"}
             ref={(ref) => {
@@ -666,7 +666,7 @@ const PlaylistContentRenderer = ({
           height: open ? "auto" : "0",
           transition: "all 0.2s linear",
           overflow: "hidden",
-          padding: "0 8px",
+          padding: "0 8px"
         }}
       >
         {additionalInfo.map((data) => {

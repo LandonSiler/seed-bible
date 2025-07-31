@@ -39,7 +39,7 @@ export function useFolderTabs(initialFolders = []) {
               ...folder,
               tabs: folder.tabs.map((tab) =>
                 tab.id === tabId ? { ...tab, data: newData } : tab
-              ),
+              )
             }
           : folder
       )
@@ -52,6 +52,6 @@ export function useFolderTabs(initialFolders = []) {
     removeFolder,
     addTabToFolder,
     removeTabFromFolder,
-    updateTabInFolder,
+    updateTabInFolder
   };
 }

@@ -3,7 +3,7 @@ const {
   startIndex,
   startSubIndex,
   parentId,
-  name: playlistName,
+  name: playlistName
 } = that;
 if (!globalThis.IsQueuePresent) {
   os.unregisterApp("playing-playlist");
@@ -23,8 +23,8 @@ if (!globalThis.IsQueuePresent) {
         name: playlistName,
         list: playlist.list,
         id: createUUID(),
-        playlistID: playlist.id,
-      },
+        playlistID: playlist.id
+      }
     };
   });
   return;
@@ -38,7 +38,7 @@ const AttachLink = await thisBot.AttachLink();
 const paraStyle = {
   fontWeight: "400",
   padding: "8px",
-  fontSize: "10px",
+  fontSize: "10px"
 };
 
 const ButtonStyle = {
@@ -48,7 +48,7 @@ const ButtonStyle = {
   padding: "6px",
   fontSize: "14px",
   marginLeft: "4px",
-  background: "cadetblue",
+  background: "cadetblue"
 };
 
 let subIndex = startSubIndex;
@@ -188,7 +188,7 @@ if (!checklistEnabled) {
       ...tgITM,
       isLastItem:
         thh.length === 1 && (!isfirstItemPlaylist || thh[0].list.length === 1),
-      isFirstItem: startIndex === 0 && subIndex < 1,
+      isFirstItem: startIndex === 0 && subIndex < 1
     });
   } else if (tgITM) {
     const isBulk = Array.isArray(tgITM.additionalInfo);
@@ -196,7 +196,7 @@ if (!checklistEnabled) {
     if (!skip) {
       thisBot.navigationWithDataItem({
         dataItem: isBulk ? tgITM.additionalInfo : tgITM,
-        bulkAdd: isBulk,
+        bulkAdd: isBulk
       });
     }
   }
@@ -228,8 +228,8 @@ const PlayingPlaylist = () => {
       name: playlistName,
       list: [...(playlist?.list || [])],
       id: createUUID(),
-      playlistID: playlist.id,
-    },
+      playlistID: playlist.id
+    }
   });
   // const [dragList, setDragList] = useState([]);
   // const [oldList, setOldList] = useState([]);
@@ -253,7 +253,7 @@ const PlayingPlaylist = () => {
         : firstIndex,
     fromButton: 0,
     isPreviousQueue: false,
-    subIndex: 0,
+    subIndex: 0
     // index: startIndex,
     // Sub Index is not needed cause we have paused the Merging for now
     // subIndex,
@@ -269,7 +269,7 @@ const PlayingPlaylist = () => {
         key,
         fromButton: currIndex.fromButton,
         isPreviousQueue: false,
-        subIndex: 0,
+        subIndex: 0
       });
     } else {
       setCurreIndex({
@@ -277,7 +277,7 @@ const PlayingPlaylist = () => {
         key,
         fromButton: currIndex.fromButton,
         isPreviousQueue: false,
-        subIndex: 0,
+        subIndex: 0
       });
     }
   };
@@ -395,7 +395,7 @@ const PlayingPlaylist = () => {
       key: newKey,
       fromButton: order,
       isPreviousQueue: false,
-      subIndex: newSubIndex,
+      subIndex: newSubIndex
     };
 
     const targetItem = getCurrentItem(
@@ -456,7 +456,7 @@ const PlayingPlaylist = () => {
       globalThis.LAST_QUEUE_IIEM = item[item.length];
     } else {
       const isSame = objectComparator(item, globalThis.LAST_QUEUE_IIEM || {}, [
-        "content",
+        "content"
       ]);
 
       if (isSame) return os.toast("Last Item Repeated!");
@@ -505,7 +505,7 @@ const PlayingPlaylist = () => {
         // Case: Adding to an existing special queue
         updatedPlaylists[currentKey].list = [
           ...updatedPlaylists[currentKey].list,
-          ...toAddItems,
+          ...toAddItems
         ];
       } else {
         // Case: Splitting a playlist
@@ -518,14 +518,14 @@ const PlayingPlaylist = () => {
           list: [...toAddItems],
           id: createUUID(),
           SQ: true, // Mark this as a special queue,
-          playlistID: null,
+          playlistID: null
         };
 
         if (!checklistEnabled) {
           // Update the current playlist with items before the split
           updatedPlaylists[currentKey] = {
             ...currentPlaylist,
-            list: beforeCurrentIndex,
+            list: beforeCurrentIndex
           };
         }
 
@@ -547,7 +547,7 @@ const PlayingPlaylist = () => {
               list: [...afterCurrentIndex],
               id: createUUID(),
               SQ: false, // Mark this as a special queue
-              playlistID,
+              playlistID
             };
           }
         }
@@ -597,7 +597,7 @@ const PlayingPlaylist = () => {
     typeContent,
     nextItemName,
     prevItemName,
-    currentItemName,
+    currentItemName
   ] = useMemo(() => {
     const targetItem = getCurrentItem(
       currIndex.key,
@@ -635,7 +635,7 @@ const PlayingPlaylist = () => {
       thisBot.RenderLinkContent({
         ...targetItem,
         isLastItem: !nextItem,
-        isFirstItem: !prevItem,
+        isFirstItem: !prevItem
       });
     } else if (currIndex.fromButton !== 0) {
       const isBulk = Array.isArray(targetItem.additionalInfo);
@@ -666,7 +666,7 @@ const PlayingPlaylist = () => {
         } else {
           thisBot.navigationWithDataItem({
             dataItem: isBulk ? targetItem.additionalInfo : targetItem,
-            bulkAdd: isBulk,
+            bulkAdd: isBulk
           });
         }
         // SetBlinker({});
@@ -680,7 +680,7 @@ const PlayingPlaylist = () => {
       currentItemType,
       nextItem,
       prevItem,
-      currentItemName,
+      currentItemName
     ];
   }, [currIndex, playlists, queue, refs]);
 
@@ -708,7 +708,7 @@ const PlayingPlaylist = () => {
         index: index,
         fromButton: currIndex.fromButton || 1,
         isPreviousQueue: false,
-        subIndex: 0,
+        subIndex: 0
       });
     }
   };
@@ -726,9 +726,9 @@ const PlayingPlaylist = () => {
       content: title,
       additionalInfo: {
         link,
-        ...linkState,
+        ...linkState
       },
-      type: linkState.type === "text" ? "heading" : "attachment-link",
+      type: linkState.type === "text" ? "heading" : "attachment-link"
     });
     setOpenAttachLink(false);
   };
@@ -817,13 +817,13 @@ const PlayingPlaylist = () => {
         thisBot.RenderLinkContent({
           ...targetItem,
           isLastItem: false,
-          isFirstItem: false,
+          isFirstItem: false
         });
       } else {
         const isBulk = Array.isArray(targetItem.additionalInfo);
         thisBot.navigationWithDataItem({
           dataItem: isBulk ? targetItem.additionalInfo : targetItem,
-          bulkAdd: isBulk,
+          bulkAdd: isBulk
         });
       }
     }
@@ -895,7 +895,7 @@ const PlayingPlaylist = () => {
                   margin: "0",
                   width: "2.55rem",
                   height: "2.55rem",
-                  borderRadius: "50%",
+                  borderRadius: "50%"
                 }}
                 className="playlist-action small"
               >
@@ -903,7 +903,7 @@ const PlayingPlaylist = () => {
                   style={{
                     margin: "0",
                     fontSize: "14px",
-                    backgroundColor: "#D36433",
+                    backgroundColor: "#D36433"
                   }}
                   class="material-symbols-outlined unfollow"
                 >
@@ -954,10 +954,10 @@ const PlayingPlaylist = () => {
               if (!globalThis["defaultplaylistChecked"])
                 globalThis["defaultplaylistChecked"] = {};
               globalThis["defaultplaylistProgress"][playlistID] = {
-                ...itemVisitedMap,
+                ...itemVisitedMap
               };
               globalThis["defaultplaylistChecked"][playlistID] = {
-                ...checkedItems,
+                ...checkedItems
               };
               globalThis?.savePlaylistProgress &&
                 savePlaylistProgress(playlistID);
@@ -987,7 +987,7 @@ const PlayingPlaylist = () => {
                     }
                     setPlaylists((prev) => ({
                       ...prev,
-                      [key]: { name, list: listLatest },
+                      [key]: { name, list: listLatest }
                     }));
                     // setList((prev) => {
                     //     const item = prev[currIndex.index];
@@ -1003,7 +1003,7 @@ const PlayingPlaylist = () => {
                     onClick({
                       dataItem,
                       bulkAdd,
-                      key,
+                      key
                     });
                   }}
                   onClickItem={() => {}}
@@ -1029,7 +1029,7 @@ const PlayingPlaylist = () => {
             width: "calc(100%)",
             borderTop: "1px solid #DADADA",
             backgroundColor: "#F7F7F5",
-            height: "auto",
+            height: "auto"
           }}
         >
           <AttachLink
@@ -1055,7 +1055,7 @@ const PlayingPlaylist = () => {
             width: "calc(100%)",
             borderTop: "1px solid #DADADA",
             backgroundColor: "#F7F7F5",
-            height: "153px",
+            height: "153px"
           }}
           className="reset-css"
         >
@@ -1074,7 +1074,7 @@ const PlayingPlaylist = () => {
                   margin: "0",
                   minWidth: "auto",
                   padding: "0",
-                  border: "none",
+                  border: "none"
                 }}
                 onClick={() => {
                   // globalThis.SetPlayingPlaylist && globalThis.SetPlayingPlaylist(false);
@@ -1107,14 +1107,14 @@ const PlayingPlaylist = () => {
                 flexDirection: "row",
                 justifyContent: "space-between",
                 gap: "0.5rem",
-                width: "calc(100%)",
+                width: "calc(100%)"
               }}
             >
               <div
                 style={{
                   width: "50%",
                   flexDirection: "column",
-                  display: "flex",
+                  display: "flex"
                 }}
               >
                 <p
@@ -1122,7 +1122,7 @@ const PlayingPlaylist = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "center"
                   }}
                 >
                   Currently Playing
@@ -1135,7 +1135,7 @@ const PlayingPlaylist = () => {
                       display: "grid",
                       placeItems: "center",
                       backgroundColor: "#D3643329",
-                      borderRadius: "0.25rem",
+                      borderRadius: "0.25rem"
                     }}
                   >
                     <span
@@ -1153,7 +1153,7 @@ const PlayingPlaylist = () => {
                         fontSize: "12px",
                         fontWeight: "600",
                         display: "flex",
-                        alignItems: "center",
+                        alignItems: "center"
                       }}
                     >
                       {currentItemName?.content
@@ -1171,7 +1171,7 @@ const PlayingPlaylist = () => {
                       style={{
                         color: "green",
                         fontSize: "12px",
-                        fontWeight: "900",
+                        fontWeight: "900"
                       }}
                     >
                       {nextItemName?.content ? "" : " (Playlist Ended)"}
@@ -1223,7 +1223,7 @@ const PlayingPlaylist = () => {
                 width: "100%",
                 justifyContent: "space-between",
                 alignItems: "center",
-                marginTop: "auto",
+                marginTop: "auto"
               }}
             >
               <Button
@@ -1235,7 +1235,7 @@ const PlayingPlaylist = () => {
                   border: "1px solid #D36433",
                   color: "#4459F3",
                   padding: "8px",
-                  fontSize: "12px",
+                  fontSize: "12px"
                 }}
                 onClick={() => {
                   if (!prevItemName?.content) return;
@@ -1266,7 +1266,7 @@ const PlayingPlaylist = () => {
                   width: "2.55rem",
                   height: "2.55rem",
                   borderRadius: "50%",
-                  border: "none",
+                  border: "none"
                 }}
                 className="playlist-action small"
               >
@@ -1274,7 +1274,7 @@ const PlayingPlaylist = () => {
                   style={{
                     margin: "0",
                     fontSize: "14px",
-                    backgroundColor: "#D36433",
+                    backgroundColor: "#D36433"
                   }}
                   class="material-symbols-outlined unfollow"
                 >
@@ -1290,7 +1290,7 @@ const PlayingPlaylist = () => {
                   border: "1px solid #D36433",
                   color: "#4459F3",
                   padding: "8px",
-                  fontSize: "12px",
+                  fontSize: "12px"
                 }}
                 onClick={() => {
                   DataManager.cancelCurrentPlayingSound();

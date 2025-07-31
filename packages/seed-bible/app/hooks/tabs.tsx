@@ -19,9 +19,9 @@ export function TabsProvider({ children }) {
       settings: {
         theme: {},
         toolbar: {
-          tools,
+          tools
         },
-        text: {},
+        text: {}
       },
       folders: [
         // { id: uuid(), name: 'Folder 1', tabs: [{ id: uuid(), taken: false, data: { use: 'thePage', first: true, type: 'book', book: 'Genesis', bookId: 'GEN', chapter: 1, translation: 'BSB' } }] }
@@ -37,10 +37,10 @@ export function TabsProvider({ children }) {
             book: "Genesis",
             bookId: "GEN",
             chapter: 1,
-            translation: "BSB",
-          },
-        },
-      ], // Standalone tabs (not in a folder)
+            translation: "BSB"
+          }
+        }
+      ] // Standalone tabs (not in a folder)
     },
     {
       id: uuid(),
@@ -48,9 +48,9 @@ export function TabsProvider({ children }) {
       settings: {
         theme: {},
         toolbar: {
-          tools,
+          tools
         },
-        text: {},
+        text: {}
       },
       folders: [],
       tabs: [
@@ -64,10 +64,10 @@ export function TabsProvider({ children }) {
             book: "Genesis",
             bookId: "GEN",
             chapter: 1,
-            translation: "BSB",
-          },
-        },
-      ],
+            translation: "BSB"
+          }
+        }
+      ]
     },
     {
       id: uuid(),
@@ -75,9 +75,9 @@ export function TabsProvider({ children }) {
       settings: {
         theme: {},
         toolbar: {
-          tools,
+          tools
         },
-        text: {},
+        text: {}
       },
       folders: [],
       tabs: [
@@ -91,11 +91,11 @@ export function TabsProvider({ children }) {
             book: "Genesis",
             bookId: "GEN",
             chapter: 1,
-            translation: "BSB",
-          },
-        },
-      ],
-    },
+            translation: "BSB"
+          }
+        }
+      ]
+    }
   ]);
   const [activeSpace, setActiveSpace] = useState(spaces[0].id);
   const [activeTab, setActiveTab] = useState(null);
@@ -140,9 +140,9 @@ export function TabsProvider({ children }) {
                 ...space.settings,
                 toolbar: {
                   ...space.settings.toolbar,
-                  tools,
-                },
-              },
+                  tools
+                }
+              }
             }
           : space
       )
@@ -172,13 +172,13 @@ export function TabsProvider({ children }) {
         // Remove from folders
         const updatedFolders = space.folders.map((folder) => ({
           ...folder,
-          tabs: folder.tabs.filter((tab) => tab.id !== tabId),
+          tabs: folder.tabs.filter((tab) => tab.id !== tabId)
         }));
 
         return {
           ...space,
           tabs: updatedTabs,
-          folders: updatedFolders,
+          folders: updatedFolders
         };
       })
     );
@@ -214,8 +214,8 @@ export function TabsProvider({ children }) {
                   tab.id === tabId
                     ? { ...tab, data: { ...tab.data, ...newData } }
                     : tab
-                ),
-              })),
+                )
+              }))
             }
           : space
       )
@@ -244,7 +244,7 @@ export function TabsProvider({ children }) {
               // Remove the tab from any folder it may exist in
               folders: space.folders.map((folder) => ({
                 ...folder,
-                tabs: folder.tabs.filter((t) => t.id !== tab.id),
+                tabs: folder.tabs.filter((t) => t.id !== tab.id)
               })),
 
               // Now add the tab to the specified location if action is "add"
@@ -255,10 +255,10 @@ export function TabsProvider({ children }) {
                         folder.id === folderId
                           ? { ...folder, tabs: [...folder.tabs, tab] }
                           : folder
-                      ),
+                      )
                     }
                   : { tabs: [...space.tabs, tab] }
-                : {}),
+                : {})
             }
           : space
       )
@@ -316,8 +316,8 @@ export function TabsProvider({ children }) {
               settings: importedSpace.settings || {
                 theme: {},
                 toolbar: {},
-                text: {},
-              },
+                text: {}
+              }
             }
           : space
       )
@@ -327,7 +327,7 @@ export function TabsProvider({ children }) {
     if (importedSpace.recorededData) {
       globalThis.PanelTabsMap = {
         ...globalThis.PanelTabsMap,
-        ...importedSpace.recorededData,
+        ...importedSpace.recorededData
       };
     }
     if (importedSpace.screens) {
@@ -349,7 +349,7 @@ export function TabsProvider({ children }) {
         space.id === activeSpace
           ? {
               ...space,
-              folders: space.folders.filter((folder) => folder.id !== folderId),
+              folders: space.folders.filter((folder) => folder.id !== folderId)
             }
           : space
       )
@@ -366,7 +366,7 @@ export function TabsProvider({ children }) {
                 folder.id === folderId
                   ? { ...folder, tabs: [...folder.tabs, tab] }
                   : folder
-              ),
+              )
             }
           : space
       )
@@ -382,7 +382,7 @@ export function TabsProvider({ children }) {
                 folder.id === folderId
                   ? { ...folder, tabs: [...folder.tabs, ...tabs] }
                   : folder
-              ),
+              )
             }
           : space
       )
@@ -399,10 +399,10 @@ export function TabsProvider({ children }) {
                 folder.id === folderId
                   ? {
                       ...folder,
-                      tabs: folder.tabs.filter((tab) => tab.id !== tabId),
+                      tabs: folder.tabs.filter((tab) => tab.id !== tabId)
                     }
                   : folder
-              ),
+              )
             }
           : space
       )
@@ -417,7 +417,7 @@ export function TabsProvider({ children }) {
       settings: {
         theme: {},
         toolbar: {},
-        text: {},
+        text: {}
       },
       folders: [],
       tabs: [
@@ -431,10 +431,10 @@ export function TabsProvider({ children }) {
             book: "Genesis",
             bookId: "GEN",
             chapter: 1,
-            translation: "BSB",
-          },
-        },
-      ],
+            translation: "BSB"
+          }
+        }
+      ]
     };
     setSpaces((prevSpaces) => [...prevSpaces, newSpace]);
   };
@@ -482,13 +482,13 @@ export function TabsProvider({ children }) {
               folder.id === newFolderId
                 ? { ...folder, tabs: [...folder.tabs, foundTab] } // Move tab inside folder
                 : folder
-            ),
+            )
           };
         } else {
           return {
             ...space,
             tabs: [...updatedTabs, foundTab], // Move tab to standalone
-            folders: updatedFolders, // Update folders
+            folders: updatedFolders // Update folders
           };
         }
       })
@@ -542,13 +542,13 @@ export function TabsProvider({ children }) {
               folder.id === newFolderId
                 ? { ...folder, tabs: [...folder.tabs, ...tabsToActuallyMove] }
                 : folder
-            ),
+            )
           };
         } else {
           return {
             ...space,
             tabs: [...updatedTabs, ...tabsToActuallyMove],
-            folders: updatedFolders,
+            folders: updatedFolders
           };
         }
       })
@@ -614,7 +614,7 @@ export function TabsProvider({ children }) {
         selectedTabs,
         setSelectedTabs,
         getToolsForActiveSpace,
-        currentSpace: spaces.find((e) => e.id === activeSpace),
+        currentSpace: spaces.find((e) => e.id === activeSpace)
       }}
     >
       {children}

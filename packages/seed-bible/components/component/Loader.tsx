@@ -6,7 +6,7 @@ const Loader = ({ width = "42px", height = "42px" }) => {
         className="loader"
         style={{
           width,
-          height,
+          height
         }}
       />
     </>

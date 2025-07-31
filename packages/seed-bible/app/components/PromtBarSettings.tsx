@@ -10,7 +10,7 @@ import {
   ToolbarIcon,
   Panal,
   Playlist,
-  AiChatIcon,
+  AiChatIcon
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 import { useSideBarContext } from "app.hooks.sideBar";
@@ -26,15 +26,15 @@ const PromtBarSettings = () => {
         label: "ChatGPT",
         hasToggle: true,
         active: true,
-        id: 1,
+        id: 1
       },
       {
         icon: "robot_2",
         label: "Dall-E",
         hasToggle: true,
         active: true,
-        id: 2,
-      },
+        id: 2
+      }
       // {
       //     icon: 'database', label: 'Data Ocean', hasToggle: true, active: false, id: 3
       // }
@@ -47,36 +47,36 @@ const PromtBarSettings = () => {
         label: "Separate Node",
         hasToggle: true,
         active: true,
-        id: 1,
+        id: 1
       },
       {
         icon: "network_intel_node",
         label: "ChatGPT",
         hasToggle: true,
         active: true,
-        id: 2,
+        id: 2
       },
       {
         icon: "robot_2",
         label: "Dall-E",
         hasToggle: true,
         active: true,
-        id: 3,
+        id: 3
       },
       {
         icon: "mic",
         label: "Voice Note",
         hasToggle: true,
         active: true,
-        id: 4,
+        id: 4
       },
       {
         icon: "delete",
         label: "Delete",
         hasToggle: true,
         active: true,
-        id: 5,
-      },
+        id: 5
+      }
     ]
   );
 
@@ -166,7 +166,7 @@ const PromtBarSettings = () => {
                           padding: "5px 10px",
                           borderRadius: "5px",
                           border: "none",
-                          cursor: "pointer",
+                          cursor: "pointer"
                         }}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -182,7 +182,7 @@ const PromtBarSettings = () => {
                           padding: "5px 10px",
                           borderRadius: "5px",
                           border: "none",
-                          cursor: "pointer",
+                          cursor: "pointer"
                         }}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -243,7 +243,7 @@ const PromtBarSettings = () => {
                           padding: "5px 10px",
                           borderRadius: "5px",
                           border: "none",
-                          cursor: "pointer",
+                          cursor: "pointer"
                         }}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -259,7 +259,7 @@ const PromtBarSettings = () => {
                           padding: "5px 10px",
                           borderRadius: "5px",
                           border: "none",
-                          cursor: "pointer",
+                          cursor: "pointer"
                         }}
                         onClick={(e) => {
                           e.stopPropagation();

@@ -25,7 +25,7 @@ if (globalThis.makingPlaylist) {
           if (bulkAdd) {
             globalThis[`${id}currentPlaylist`] = [
               ...globalThis[`${id}currentPlaylist`],
-              ...dataItem,
+              ...dataItem
             ];
             return;
           }

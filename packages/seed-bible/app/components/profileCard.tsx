@@ -5,7 +5,7 @@ const ProfileCard = ({
   uid,
   link,
   tags,
-  date,
+  date
 }) => {
   const cardStyle = {
     width: "320px",
@@ -14,13 +14,13 @@ const ProfileCard = ({
     boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)",
     overflow: "hidden",
     fontFamily:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
   };
 
   const headerStyle = {
     height: "80px",
     background: "linear-gradient(135deg, #a8d5ba 0%, #c8e6c9 100%)",
-    position: "relative",
+    position: "relative"
   };
 
   const avatarStyle = {
@@ -37,12 +37,12 @@ const ProfileCard = ({
     color: "white",
     fontSize: "18px",
     fontWeight: "bold",
-    border: "3px solid white",
+    border: "3px solid white"
   };
 
   const contentStyle = {
     padding: "35px 20px 20px",
-    position: "relative",
+    position: "relative"
   };
 
   const subscribeButtonStyle = {
@@ -59,27 +59,27 @@ const ProfileCard = ({
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
-    gap: "6px",
+    gap: "6px"
   };
 
   const titleStyle = {
     fontSize: "24px",
     fontWeight: "600",
     color: "#333",
-    margin: "0 0 4px 0",
+    margin: "0 0 4px 0"
   };
 
   const subtitleStyle = {
     fontSize: "14px",
     color: "#666",
-    margin: "0 0 12px 0",
+    margin: "0 0 12px 0"
   };
 
   const descriptionStyle = {
     fontSize: "14px",
     color: "#333",
     lineHeight: "1.4",
-    margin: "0 0 16px 0",
+    margin: "0 0 16px 0"
   };
 
   const linkStyle = {
@@ -89,13 +89,13 @@ const ProfileCard = ({
     color: "#666",
     fontSize: "14px",
     textDecoration: "none",
-    marginBottom: "20px",
+    marginBottom: "20px"
   };
 
   const linkIconStyle = {
     width: "16px",
     height: "16px",
-    opacity: 0.6,
+    opacity: 0.6
   };
 
   const infoRowStyle = {
@@ -103,27 +103,27 @@ const ProfileCard = ({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: "12px",
-    fontSize: "14px",
+    fontSize: "14px"
   };
 
   const labelStyle = {
     color: "#666",
-    fontWeight: "500",
+    fontWeight: "500"
   };
 
   const valueStyle = {
-    color: "#333",
+    color: "#333"
   };
 
   const tagsContainerStyle = {
-    marginTop: "16px",
+    marginTop: "16px"
   };
 
   const tagsWrapperStyle = {
     display: "flex",
     gap: "8px",
     flexWrap: "wrap",
-    marginTop: "8px",
+    marginTop: "8px"
   };
 
   const tagStyle = {
@@ -133,7 +133,7 @@ const ProfileCard = ({
     borderRadius: "16px",
     fontSize: "12px",
     fontWeight: "500",
-    border: "none",
+    border: "none"
   };
 
   return (

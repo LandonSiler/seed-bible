@@ -6,43 +6,43 @@ const experiences = [
   {
     experience_name: "Bible Locations",
     google_icon: "map",
-    experience_id: 2,
+    experience_id: 2
   },
   {
     experience_name: "Quiz Game",
     google_icon: "quiz",
-    experience_id: 3,
+    experience_id: 3
   },
   {
     experience_name: "Chiasm Demo",
     google_icon: "landscape",
     experience_id: 4,
-    quickAction: getBot("system", "main.chaismTool").createTool,
+    quickAction: getBot("system", "main.chaismTool").createTool
   },
   {
     experience_name: "Lore Card",
     google_icon: "playing_cards",
     experience_id: 5,
-    quickAction: thisBot.ShowLoreCards,
+    quickAction: thisBot.ShowLoreCards
   },
   {
     experience_name: "Guessing Game",
     google_icon: "action_key",
     experience_id: 6,
-    quickAction: thisBot.PlayHideAndSeek,
+    quickAction: thisBot.PlayHideAndSeek
   },
   {
     experience_name: "Hotter or Colder?",
     google_icon: "radio_button_checked",
     experience_id: 7,
-    quickAction: getBot("system", "main.geoGuessGame").initGeoGame,
+    quickAction: getBot("system", "main.geoGuessGame").initGeoGame
   },
   {
     experience_name: "Land Between",
     google_icon: "globe",
     experience_id: 8,
-    quickAction: thisBot.tryToInitLandBetweenExperience,
-  },
+    quickAction: thisBot.tryToInitLandBetweenExperience
+  }
 ];
 
 const ShowExperiences = () => {

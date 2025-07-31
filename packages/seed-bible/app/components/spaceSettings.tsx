@@ -3,7 +3,7 @@ import {
   Space,
   LoadSpace,
   ToolbarIcon,
-  UserAvatar,
+  UserAvatar
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 const { useEffect } = os.appHooks;
@@ -42,40 +42,40 @@ export function ImportSpaceModal() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      backgroundColor: "rgba(0, 0, 0, 0.5)"
     },
     modalContainer: {
       backgroundColor: "#ffffff",
       borderRadius: "8px",
       width: "320px",
       padding: "16px",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
     },
     headerText: {
       fontSize: "14px",
       color: "#4b5563",
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     inputContainer: {
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     input: {
       width: "100%",
       padding: "8px",
       border: "1px solid #d1d5db",
       borderRadius: "8px",
-      backgroundColor: "#f9fafb",
+      backgroundColor: "#f9fafb"
     },
     orDivider: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     orText: {
       fontSize: "12px",
       color: "#6b7280",
-      fontWeight: "500",
+      fontWeight: "500"
     },
     dropArea: {
       backgroundColor: "#f3f4f6",
@@ -87,14 +87,14 @@ export function ImportSpaceModal() {
       justifyContent: "center",
       cursor: "pointer",
       marginBottom: "16px",
-      border: isDragging ? "2px solid #3b82f6" : "1px solid #e5e7eb",
+      border: isDragging ? "2px solid #3b82f6" : "1px solid #e5e7eb"
     },
     iconContainer: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       marginBottom: "4px",
-      position: "relative",
+      position: "relative"
     },
     folderIcon: {
       backgroundColor: "#3b82f6",
@@ -104,7 +104,7 @@ export function ImportSpaceModal() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      position: "relative",
+      position: "relative"
     },
     plusBadge: {
       position: "absolute",
@@ -116,20 +116,20 @@ export function ImportSpaceModal() {
       height: "16px",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: "center"
     },
     browseText: {
       color: "#3b82f6",
       fontSize: "14px",
-      fontWeight: "500",
+      fontWeight: "500"
     },
     limitText: {
       fontSize: "12px",
       color: "#6b7280",
-      marginTop: "4px",
+      marginTop: "4px"
     },
     hiddenInput: {
-      display: "none",
+      display: "none"
     },
     importButton: {
       width: "100%",
@@ -140,7 +140,7 @@ export function ImportSpaceModal() {
       fontWeight: "500",
       border: "none",
       cursor: "pointer",
-      marginBottom: "8px",
+      marginBottom: "8px"
     },
     cancelButton: {
       width: "100%",
@@ -150,8 +150,8 @@ export function ImportSpaceModal() {
       borderRadius: "8px",
       fontWeight: "500",
       border: "none",
-      cursor: "pointer",
-    },
+      cursor: "pointer"
+    }
   };
 
   return (
@@ -252,7 +252,7 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
   const [selectedIcon, setSelectedIcon] = useState({
     id: "star",
     emoji: "⭐",
-    label: "Star",
+    label: "Star"
   });
   const [showIconPicker, setShowIconPicker] = useState(false);
 
@@ -269,7 +269,7 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
     { id: "chart", emoji: "📊", label: "Chart" },
     { id: "globe", emoji: "🌎", label: "Globe" },
     { id: "calendar", emoji: "📅", label: "Calendar" },
-    { id: "bell", emoji: "🔔", label: "Notification" },
+    { id: "bell", emoji: "🔔", label: "Notification" }
   ];
 
   const styles = {
@@ -282,31 +282,31 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      backgroundColor: "rgba(0, 0, 0, 0.5)"
     },
     modalContainer: {
       backgroundColor: "#ffffff",
       borderRadius: "8px",
       width: "340px",
       padding: "20px",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
     },
     headerText: {
       fontSize: "18px",
       fontWeight: "600",
       color: "#111827",
       marginBottom: "16px",
-      textAlign: "center",
+      textAlign: "center"
     },
     formGroup: {
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     label: {
       display: "block",
       fontSize: "14px",
       color: "#4b5563",
       marginBottom: "6px",
-      fontWeight: "500",
+      fontWeight: "500"
     },
     input: {
       width: "100%",
@@ -314,10 +314,10 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       border: "1px solid #d1d5db",
       borderRadius: "8px",
       backgroundColor: "#f9fafb",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     iconSelectContainer: {
-      marginBottom: "20px",
+      marginBottom: "20px"
     },
     iconButton: {
       display: "flex",
@@ -328,12 +328,12 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       backgroundColor: "#f9fafb",
       cursor: "pointer",
       width: "100%",
-      justifyContent: "space-between",
+      justifyContent: "space-between"
     },
     iconPreview: {
       display: "flex",
       alignItems: "center",
-      gap: "8px",
+      gap: "8px"
     },
     iconEmoji: {
       fontSize: "20px",
@@ -343,14 +343,14 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#e5e7eb",
-      borderRadius: "4px",
+      borderRadius: "4px"
     },
     iconText: {
       fontSize: "14px",
-      color: "#4b5563",
+      color: "#4b5563"
     },
     chevronIcon: {
-      color: "#9ca3af",
+      color: "#9ca3af"
     },
     iconPickerContainer: {
       marginTop: "8px",
@@ -358,12 +358,12 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       borderRadius: "8px",
       padding: "12px",
       backgroundColor: "#ffffff",
-      display: showIconPicker ? "block" : "none",
+      display: showIconPicker ? "block" : "none"
     },
     iconGrid: {
       display: "grid",
       gridTemplateColumns: "repeat(6, 1fr)",
-      gap: "8px",
+      gap: "8px"
     },
     iconOption: {
       display: "flex",
@@ -373,16 +373,16 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       borderRadius: "4px",
       cursor: "pointer",
       fontSize: "20px",
-      backgroundColor: "#f3f4f6",
+      backgroundColor: "#f3f4f6"
     },
     selectedIconOption: {
       backgroundColor: "#dbeafe",
-      border: "2px solid #3b82f6",
+      border: "2px solid #3b82f6"
     },
     buttonContainer: {
       display: "flex",
       justifyContent: "space-between",
-      gap: "12px",
+      gap: "12px"
     },
     cancelButton: {
       flex: "1",
@@ -393,7 +393,7 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       fontWeight: "500",
       border: "none",
       cursor: "pointer",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     saveButton: {
       flex: "1",
@@ -404,8 +404,8 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
       fontWeight: "500",
       border: "none",
       cursor: "pointer",
-      fontSize: "14px",
-    },
+      fontSize: "14px"
+    }
   };
 
   const handleIconSelect = (icon) => {
@@ -476,7 +476,7 @@ export function RenameSpaceModal({ updateSpace, activeSpace }) {
                     ...styles.iconOption,
                     ...(selectedIcon && selectedIcon.id === icon.id
                       ? styles.selectedIconOption
-                      : {}),
+                      : {})
                   }}
                   onClick={() => handleIconSelect(icon)}
                 >
@@ -520,7 +520,7 @@ export function CreateNewSpaceModal({ addSpace }) {
   const [selectedIcon, setSelectedIcon] = useState({
     id: "star",
     emoji: "⭐",
-    label: "Star",
+    label: "Star"
   });
   const [showIconPicker, setShowIconPicker] = useState(false);
 
@@ -537,7 +537,7 @@ export function CreateNewSpaceModal({ addSpace }) {
     { id: "chart", emoji: "📊", label: "Chart" },
     { id: "globe", emoji: "🌎", label: "Globe" },
     { id: "calendar", emoji: "📅", label: "Calendar" },
-    { id: "bell", emoji: "🔔", label: "Notification" },
+    { id: "bell", emoji: "🔔", label: "Notification" }
   ];
 
   const styles = {
@@ -550,7 +550,7 @@ export function CreateNewSpaceModal({ addSpace }) {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      backgroundColor: "rgba(0, 0, 0, 0.5)"
     },
     modalContainer: {
       backgroundColor: "#ffffff",
@@ -558,24 +558,24 @@ export function CreateNewSpaceModal({ addSpace }) {
       width: "380px",
       padding: "20px",
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-      padding: " 30px !important",
+      padding: " 30px !important"
     },
     headerText: {
       fontSize: "18px",
       fontWeight: "600",
       color: "#111827",
       marginBottom: "16px",
-      textAlign: "center",
+      textAlign: "center"
     },
     formGroup: {
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     label: {
       display: "block",
       fontSize: "14px",
       color: "#4b5563",
       marginBottom: "6px",
-      fontWeight: "500",
+      fontWeight: "500"
     },
     input: {
       width: "100%",
@@ -583,7 +583,7 @@ export function CreateNewSpaceModal({ addSpace }) {
       border: "1px solid #d1d5db",
       borderRadius: "8px",
       backgroundColor: "#f9fafb",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     textarea: {
       width: "100%",
@@ -593,10 +593,10 @@ export function CreateNewSpaceModal({ addSpace }) {
       backgroundColor: "#f9fafb",
       fontSize: "14px",
       minHeight: "80px",
-      resize: "vertical",
+      resize: "vertical"
     },
     iconSelectContainer: {
-      marginBottom: "16px",
+      marginBottom: "16px"
     },
     iconButton: {
       display: "flex",
@@ -607,12 +607,12 @@ export function CreateNewSpaceModal({ addSpace }) {
       backgroundColor: "#f9fafb",
       cursor: "pointer",
       width: "100%",
-      justifyContent: "space-between",
+      justifyContent: "space-between"
     },
     iconPreview: {
       display: "flex",
       alignItems: "center",
-      gap: "8px",
+      gap: "8px"
     },
     iconEmoji: {
       fontSize: "20px",
@@ -622,14 +622,14 @@ export function CreateNewSpaceModal({ addSpace }) {
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#e5e7eb",
-      borderRadius: "4px",
+      borderRadius: "4px"
     },
     iconText: {
       fontSize: "14px",
-      color: "#4b5563",
+      color: "#4b5563"
     },
     chevronIcon: {
-      color: "#9ca3af",
+      color: "#9ca3af"
     },
     iconPickerContainer: {
       marginTop: "8px",
@@ -637,12 +637,12 @@ export function CreateNewSpaceModal({ addSpace }) {
       borderRadius: "8px",
       padding: "12px",
       backgroundColor: "#ffffff",
-      display: showIconPicker ? "block" : "none",
+      display: showIconPicker ? "block" : "none"
     },
     iconGrid: {
       display: "grid",
       gridTemplateColumns: "repeat(6, 1fr)",
-      gap: "8px",
+      gap: "8px"
     },
     iconOption: {
       display: "flex",
@@ -652,35 +652,35 @@ export function CreateNewSpaceModal({ addSpace }) {
       borderRadius: "4px",
       cursor: "pointer",
       fontSize: "20px",
-      backgroundColor: "#f3f4f6",
+      backgroundColor: "#f3f4f6"
     },
     selectedIconOption: {
       backgroundColor: "#dbeafe",
-      border: "2px solid #3b82f6",
+      border: "2px solid #3b82f6"
     },
     optionsContainer: {
-      marginBottom: "20px",
+      marginBottom: "20px"
     },
     optionRow: {
       display: "flex",
       alignItems: "center",
-      marginBottom: "12px",
+      marginBottom: "12px"
     },
     checkbox: {
       marginRight: "8px",
       width: "16px",
       height: "16px",
-      accentColor: "#4f46e5",
+      accentColor: "#4f46e5"
     },
     optionLabel: {
       fontSize: "14px",
-      color: "#4b5563",
+      color: "#4b5563"
     },
     buttonContainer: {
       display: "flex",
       justifyContent: "space-between",
       gap: "12px",
-      marginTop: "8px",
+      marginTop: "8px"
     },
     cancelButton: {
       flex: "1",
@@ -691,7 +691,7 @@ export function CreateNewSpaceModal({ addSpace }) {
       fontWeight: "500",
       border: "none",
       cursor: "pointer",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     createButton: {
       flex: "1",
@@ -702,13 +702,13 @@ export function CreateNewSpaceModal({ addSpace }) {
       fontWeight: "500",
       border: "none",
       cursor: "pointer",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     helperText: {
       fontSize: "12px",
       color: "#6b7280",
-      marginTop: "4px",
-    },
+      marginTop: "4px"
+    }
   };
 
   const handleIconSelect = (icon) => {
@@ -723,7 +723,7 @@ export function CreateNewSpaceModal({ addSpace }) {
       description: spaceDescription,
       isPrivate,
       enableComments,
-      icon: selectedIcon,
+      icon: selectedIcon
     });
     addSpace(spaceName, selectedIcon.emoji);
     closePopupSettings();
@@ -790,7 +790,7 @@ export function CreateNewSpaceModal({ addSpace }) {
                     ...styles.iconOption,
                     ...(selectedIcon && selectedIcon.id === icon.id
                       ? styles.selectedIconOption
-                      : {}),
+                      : {})
                   }}
                   onClick={() => handleIconSelect(icon)}
                 >
@@ -866,7 +866,7 @@ export function SpaceSettingsForm() {
     "person_pin",
     "note_alt",
     "chat_bubble",
-    "explore",
+    "explore"
   ];
 
   const handleSave = () => {
@@ -880,7 +880,7 @@ export function SpaceSettingsForm() {
   useEffect(() => {
     updateSpace(activeSpace, {
       icon: icons[selectedIcon],
-      iconIndex: selectedIcon,
+      iconIndex: selectedIcon
     });
   }, [selectedIcon]);
 
@@ -958,7 +958,7 @@ export const SpaceSelector = () => {
     "person_pin",
     "note_alt",
     "chat_bubble",
-    "explore",
+    "explore"
   ];
   // useEffect(() => {
   //     updateSpace(activeSpace, { icon: icons[selectedIcon], iconIndex: selectedIcon })
@@ -974,12 +974,12 @@ export const SpaceSelector = () => {
               // setSelectedIcon(index);
               updateSpace(activeSpace, {
                 icon: icons[index],
-                iconIndex: index,
+                iconIndex: index
               });
             }}
             style={{
               ...styles.iconOption,
-              ...(selectedIcon === index ? styles.iconOptionSelected : {}),
+              ...(selectedIcon === index ? styles.iconOptionSelected : {})
             }}
             onMouseOver={(e) => {
               if (selectedIcon !== index) {
@@ -1013,39 +1013,39 @@ const styles = {
     alignItems: "flex-start",
     justifyContent: "center",
     fontFamily:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
   },
   settingsBox: {
     //   background: 'white',
     borderRadius: "8px",
     //   boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-    width: "100%",
+    width: "100%"
   },
   header: {
     padding: "16px 20px",
     borderBottom: "1px solid #e5e5e5",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   title: {
     fontSize: "16px",
     fontWeight: "600",
     color: "#333",
-    margin: 0,
+    margin: 0
   },
   closeBtn: {
     background: "none",
     border: "none",
     cursor: "pointer",
     color: "#666",
-    fontSize: "18px",
+    fontSize: "18px"
   },
   content: {
-    padding: "20px",
+    padding: "20px"
   },
   inputGroup: {
-    marginBottom: "20px",
+    marginBottom: "20px"
   },
   label: {
     display: "flex",
@@ -1053,12 +1053,12 @@ const styles = {
     marginBottom: "8px",
     color: "#555",
     fontSize: "14px",
-    fontWeight: "500",
+    fontWeight: "500"
   },
   labelIcon: {
     marginRight: "8px",
     fontSize: "18px",
-    color: "#666",
+    color: "#666"
   },
   input: {
     width: "100%",
@@ -1069,11 +1069,11 @@ const styles = {
     background: "white",
     outline: "none",
     transition: "border-color 0.2s, box-shadow 0.2s",
-    boxSizing: "border-box",
+    boxSizing: "border-box"
   },
   inputFocus: {
     borderColor: "#4285f4",
-    boxShadow: "0 0 0 2px rgba(66, 133, 244, 0.1)",
+    boxShadow: "0 0 0 2px rgba(66, 133, 244, 0.1)"
   },
   iconGrid: {
     display: "grid",
@@ -1081,7 +1081,7 @@ const styles = {
     gap: "8px",
     marginTop: "8px",
     padding: "12px",
-    background: "white",
+    background: "white"
   },
   iconOption: {
     width: "36px",
@@ -1093,22 +1093,22 @@ const styles = {
     justifyContent: "center",
     cursor: "pointer",
     transition: "all 0.2s",
-    background: "white",
+    background: "white"
   },
   iconOptionSelected: {
     borderColor: "#4285f4",
-    background: "#e8f0fe",
+    background: "#e8f0fe"
   },
   iconOptionHover: {
-    borderColor: "#4285f4",
+    borderColor: "#4285f4"
   },
   icon: {
     fontSize: "18px",
-    color: "#666",
+    color: "#666"
   },
   iconSelected: {
     fontSize: "18px",
-    color: "#4285f4",
+    color: "#4285f4"
   },
   saveBtn: {
     width: "100%",
@@ -1121,6 +1121,6 @@ const styles = {
     fontWeight: "600",
     cursor: "pointer",
     marginTop: "20px",
-    transition: "background-color 0.2s",
-  },
+    transition: "background-color 0.2s"
+  }
 };

@@ -11,7 +11,7 @@ const defaultTheme = {
   panel: null,
   toolbar: "white",
   text1: "#606060",
-  text2: "#000",
+  text2: "#000"
 };
 const ThemeSettings = () => {
   const { updateSpace, activeSpace, currentSpace } = useTabsContext();
@@ -49,12 +49,12 @@ const ThemeSettings = () => {
 
     const updatedColors = {
       ...colors,
-      [field]: newColor,
+      [field]: newColor
     };
 
     setColorsMap((prev) => ({
       ...prev,
-      [activeSpace]: updatedColors,
+      [activeSpace]: updatedColors
     }));
 
     // Update sidebar theme state and persist
@@ -71,7 +71,7 @@ const ThemeSettings = () => {
       // }));
       setThemeColors((prev) => ({
         ...prev,
-        [activeSpace]: globalThis.CurrentColors,
+        [activeSpace]: globalThis.CurrentColors
       })); // apply immediately
       // updateSpace(activeSpace, { themeColors: original });
       // }
@@ -96,7 +96,7 @@ const ThemeSettings = () => {
             if (!changesSaved) {
               setThemeColors((prev) => ({
                 ...prev,
-                [activeSpace]: globalThis.CurrentColors,
+                [activeSpace]: globalThis.CurrentColors
               }));
             }
             setSideBarMode("settings");
@@ -164,7 +164,7 @@ const ThemeSettings = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -174,7 +174,7 @@ const ThemeSettings = () => {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "600",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           <span
@@ -182,7 +182,7 @@ const ThemeSettings = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "center",
-              gap: "5px",
+              gap: "5px"
             }}
           >
             <svg
@@ -210,7 +210,7 @@ const ThemeSettings = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -220,7 +220,7 @@ const ThemeSettings = () => {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "600",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           <span
@@ -228,7 +228,7 @@ const ThemeSettings = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "center",
-              gap: "5px",
+              gap: "5px"
             }}
           >
             <svg
@@ -257,7 +257,7 @@ const ThemeSettings = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -267,7 +267,7 @@ const ThemeSettings = () => {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "600",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           <span
@@ -275,7 +275,7 @@ const ThemeSettings = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "center",
-              gap: "5px",
+              gap: "5px"
             }}
           >
             <svg
@@ -304,7 +304,7 @@ const ThemeSettings = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -314,7 +314,7 @@ const ThemeSettings = () => {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "600",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           <span
@@ -322,7 +322,7 @@ const ThemeSettings = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "center",
-              gap: "5px",
+              gap: "5px"
             }}
           >
             <span class="material-symbols-outlined">text_fields</span> Text
@@ -340,7 +340,7 @@ const ThemeSettings = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -350,7 +350,7 @@ const ThemeSettings = () => {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "600",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           <span
@@ -358,7 +358,7 @@ const ThemeSettings = () => {
               display: "flex",
               justifyContent: "start",
               alignItems: "center",
-              gap: "5px",
+              gap: "5px"
             }}
           >
             <span class="material-symbols-outlined">text_fields</span> Text
@@ -450,7 +450,7 @@ const ColorRow = ({ label, iconPath, color, onChange }) => (
     style={{
       display: "flex",
       justifyContent: "space-between",
-      alignItems: "center",
+      alignItems: "center"
     }}
   >
     <div
@@ -460,7 +460,7 @@ const ColorRow = ({ label, iconPath, color, onChange }) => (
         fontSize: "16px",
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "normal",
+        lineHeight: "normal"
       }}
     >
       <span
@@ -468,7 +468,7 @@ const ColorRow = ({ label, iconPath, color, onChange }) => (
           display: "flex",
           justifyContent: "start",
           alignItems: "center",
-          gap: "5px",
+          gap: "5px"
         }}
       >
         <svg
@@ -496,7 +496,7 @@ const ColorSelect = ({ color, onChange }) => {
         width: "24px",
         height: "24px",
         flexShrink: "0",
-        aspectRatio: "1 / 1",
+        aspectRatio: "1 / 1"
       }}
     >
       <svg

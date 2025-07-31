@@ -8,7 +8,7 @@ const Button = ({
   color = "",
   backgroundColor = "",
   style = {},
-  varient = "",
+  varient = ""
 }) => {
   return (
     <>
@@ -23,7 +23,7 @@ const Button = ({
         style={{
           color,
           backgroundColor,
-          ...style,
+          ...style
         }}
       >
         {children}

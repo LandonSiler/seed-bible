@@ -6,7 +6,7 @@ const SplitScreenIcon = ({ size = 24 }) => {
       display: "inline-flex",
       position: "relative",
       width: size,
-      height: size,
+      height: size
     },
     screenLeft: {
       position: "absolute",
@@ -16,7 +16,7 @@ const SplitScreenIcon = ({ size = 24 }) => {
       height: 20 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenRight: {
       position: "absolute",
@@ -25,8 +25,8 @@ const SplitScreenIcon = ({ size = 24 }) => {
       width: 9 * scale,
       height: 20 * scale,
       borderRadius: 1 * scale,
-      backgroundColor: "#666",
-    },
+      backgroundColor: "#666"
+    }
   };
 
   return (
@@ -120,7 +120,7 @@ const DualScreenIcon = ({ size = 24 }) => {
       display: "inline-flex",
       position: "relative",
       width: size,
-      height: size,
+      height: size
     },
     screenLeft: {
       position: "absolute",
@@ -130,7 +130,7 @@ const DualScreenIcon = ({ size = 24 }) => {
       height: 20 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenRight: {
       position: "absolute",
@@ -140,8 +140,8 @@ const DualScreenIcon = ({ size = 24 }) => {
       height: 20 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
-    },
+      backgroundColor: "#e0e0e0"
+    }
   };
 
   return (
@@ -174,7 +174,7 @@ const ThreeScreenIcon = ({ size = 24 }) => {
       display: "inline-flex",
       position: "relative",
       width: size,
-      height: size,
+      height: size
     },
     screenLeft: {
       position: "absolute",
@@ -184,7 +184,7 @@ const ThreeScreenIcon = ({ size = 24 }) => {
       height: 18.5 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenRightTop: {
       position: "absolute",
@@ -194,7 +194,7 @@ const ThreeScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenRightBottom: {
       position: "absolute",
@@ -204,8 +204,8 @@ const ThreeScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
-    },
+      backgroundColor: "#e0e0e0"
+    }
   };
 
   return (
@@ -226,7 +226,7 @@ const QuadScreenIcon = ({ size = 24 }) => {
       display: "inline-flex",
       position: "relative",
       width: size,
-      height: size,
+      height: size
     },
     screenTopLeft: {
       position: "absolute",
@@ -236,7 +236,7 @@ const QuadScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenTopRight: {
       position: "absolute",
@@ -246,7 +246,7 @@ const QuadScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenBottomLeft: {
       position: "absolute",
@@ -256,7 +256,7 @@ const QuadScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: "#e0e0e0"
     },
     screenBottomRight: {
       position: "absolute",
@@ -266,8 +266,8 @@ const QuadScreenIcon = ({ size = 24 }) => {
       height: 9 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
-    },
+      backgroundColor: "#e0e0e0"
+    }
   };
 
   return (
@@ -319,7 +319,7 @@ const SingleScreenIcon = ({ size = 24 }) => {
       display: "inline-flex",
       position: "relative",
       width: size,
-      height: size,
+      height: size
     },
     screen: {
       position: "absolute",
@@ -329,8 +329,8 @@ const SingleScreenIcon = ({ size = 24 }) => {
       height: 20 * scale,
       border: `${1 * scale}px solid #666`,
       borderRadius: 1 * scale,
-      backgroundColor: "#e0e0e0",
-    },
+      backgroundColor: "#e0e0e0"
+    }
   };
 
   return (
@@ -351,7 +351,7 @@ export const Panel1 = () => {
         "align-items": "center",
         width: "105px",
         height: "65px",
-        "border-radius": "5px",
+        "border-radius": "5px"
       }}
     >
       <span style={{ fontSize: "10px" }}>1</span>
@@ -370,7 +370,7 @@ export const Panel2 = () => {
           "align-items": "center",
           width: "60px",
           height: "65px",
-          "border-radius": "3px 0px 0px 3px",
+          "border-radius": "3px 0px 0px 3px"
         }}
       >
         <span style={{ fontSize: "10px" }}>1</span>
@@ -384,7 +384,7 @@ export const Panel2 = () => {
           "align-items": "center",
           width: "40px",
           height: "65px",
-          "border-radius": " 0px 3px 3px 0px",
+          "border-radius": " 0px 3px 3px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>2</span>
@@ -404,7 +404,7 @@ export const Panel3 = () => {
           "align-items": "center",
           width: "60px",
           height: "65px",
-          "border-radius": "3px 0px 0px 3px",
+          "border-radius": "3px 0px 0px 3px"
         }}
       >
         <span style={{ fontSize: "10px" }}>1</span>
@@ -419,7 +419,7 @@ export const Panel3 = () => {
             "align-items": "center",
             width: "40px",
             height: "32px",
-            "border-radius": " 0px 3px 0px 0px",
+            "border-radius": " 0px 3px 0px 0px"
           }}
         >
           <span style={{ fontSize: "10px" }}>2</span>
@@ -433,7 +433,7 @@ export const Panel3 = () => {
             "align-items": "center",
             width: "40px",
             height: "32px",
-            "border-radius": " 0px 0px 3px 0px",
+            "border-radius": " 0px 0px 3px 0px"
           }}
         >
           <span style={{ fontSize: "10px" }}>3</span>
@@ -455,7 +455,7 @@ export const Panel4 = () => {
             "align-items": "center",
             width: "50px",
             height: "32px",
-            "border-radius": " 3px 0px 0px 0px",
+            "border-radius": " 3px 0px 0px 0px"
           }}
         >
           <span style={{ fontSize: "10px" }}>1</span>
@@ -469,7 +469,7 @@ export const Panel4 = () => {
             "align-items": "center",
             width: "50px",
             height: "32px",
-            "border-radius": "  0px 0px 0px 3px",
+            "border-radius": "  0px 0px 0px 3px"
           }}
         >
           <span style={{ fontSize: "10px" }}>2</span>
@@ -485,7 +485,7 @@ export const Panel4 = () => {
             "align-items": "center",
             width: "50px",
             height: "32px",
-            "border-radius": " 0px 3px 0px 0px",
+            "border-radius": " 0px 3px 0px 0px"
           }}
         >
           <span style={{ fontSize: "10px" }}>3</span>
@@ -499,7 +499,7 @@ export const Panel4 = () => {
             "align-items": "center",
             width: "50px",
             height: "32px",
-            "border-radius": " 0px 0px 3px 0px",
+            "border-radius": " 0px 0px 3px 0px"
           }}
         >
           <span style={{ fontSize: "10px" }}>4</span>
@@ -521,7 +521,7 @@ export const Panel3Row = () => {
           "align-items": "center",
           width: "35px",
           height: "65px",
-          "border-radius": "3px 0px 0px 3px",
+          "border-radius": "3px 0px 0px 3px"
         }}
       >
         <span style={{ fontSize: "10px" }}>1</span>
@@ -535,7 +535,7 @@ export const Panel3Row = () => {
           "align-items": "center",
           width: "33px",
           height: "65px",
-          "border-radius": " 0px 0px 0px 0px",
+          "border-radius": " 0px 0px 0px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>2</span>
@@ -549,7 +549,7 @@ export const Panel3Row = () => {
           "align-items": "center",
           width: "33px",
           height: "65px",
-          "border-radius": " 0px 3px 3px 0px",
+          "border-radius": " 0px 3px 3px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>3</span>
@@ -570,7 +570,7 @@ export const Panel4Row = () => {
           "align-items": "center",
           width: "25px",
           height: "65px",
-          "border-radius": "3px 0px 0px 3px",
+          "border-radius": "3px 0px 0px 3px"
         }}
       >
         <span style={{ fontSize: "10px" }}>1</span>
@@ -584,7 +584,7 @@ export const Panel4Row = () => {
           "align-items": "center",
           width: "25px",
           height: "65px",
-          "border-radius": " 0px 0px 0px 0px",
+          "border-radius": " 0px 0px 0px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>2</span>
@@ -598,7 +598,7 @@ export const Panel4Row = () => {
           "align-items": "center",
           width: "25px",
           height: "65px",
-          "border-radius": " 0px 0px 0px 0px",
+          "border-radius": " 0px 0px 0px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>3</span>
@@ -612,7 +612,7 @@ export const Panel4Row = () => {
           "align-items": "center",
           width: "25px",
           height: "65px",
-          "border-radius": " 0px 3px 3px 0px",
+          "border-radius": " 0px 3px 3px 0px"
         }}
       >
         <span style={{ fontSize: "10px" }}>4</span>
@@ -856,5 +856,5 @@ export {
   AiChatIcon,
   UserAvatar,
   MarginYIcon,
-  MarginXIcon,
+  MarginXIcon
 };

@@ -10,7 +10,7 @@ export const useDivSpliter = ({
   containerWidth = 800,
   containerHeight = 600,
   minSize = 100,
-  onResize,
+  onResize
 }) => {
   const [apps, setApps] = useState(components);
   const count = apps.length;
@@ -34,18 +34,18 @@ export const useDivSpliter = ({
 
   const prevContainerSize = useRef({
     width: containerWidth,
-    height: containerHeight,
+    height: containerHeight
   });
 
   const verticalDragRef = useRef({
     isDragging: false,
     startX: 0,
-    startLeftWidth: 0,
+    startLeftWidth: 0
   });
   const horizontalDragRef = useRef({
     isDragging: false,
     startY: 0,
-    startTopHeight: 0,
+    startTopHeight: 0
   });
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export const useDivSpliter = ({
     verticalDragRef.current = {
       isDragging: true,
       startX: e.clientX,
-      startLeftWidth: leftWidth,
+      startLeftWidth: leftWidth
     };
   };
 
@@ -80,7 +80,7 @@ export const useDivSpliter = ({
     horizontalDragRef.current = {
       isDragging: true,
       startY: e.clientY,
-      startTopHeight: topHeight,
+      startTopHeight: topHeight
     };
   };
 
@@ -132,7 +132,7 @@ export const useDivSpliter = ({
         leftWidth: newWidth * leftRatio,
         topHeight: newHeight * topRatio,
         containerWidth: newWidth,
-        containerHeight: newHeight,
+        containerHeight: newHeight
       });
     }
   };
@@ -216,7 +216,7 @@ export const useDivSpliter = ({
       handleHorizontalMouseDown,
       isMobile,
       handleTouchMove,
-      handleTouchEnd,
+      handleTouchEnd
     },
     updateContainerSize,
     addApplication,
@@ -224,7 +224,7 @@ export const useDivSpliter = ({
     setApps,
     resetApps,
     removeApplicationByID,
-    replaceApplication,
+    replaceApplication
   };
 };
 
@@ -241,7 +241,7 @@ export const SplitApp = ({
   handleHorizontalMouseDown,
   isMobile,
   handleTouchMove,
-  handleTouchEnd,
+  handleTouchEnd
 }) => {
   const { panelMode, screens } = useBibleContext();
   const { activeSpace } = useTabsContext();
@@ -258,7 +258,7 @@ export const SplitApp = ({
     dragRefs.current[index] = {
       isDragging: true,
       startX: e.clientX,
-      startWidth: panelWidths[index],
+      startWidth: panelWidths[index]
     };
   };
 
@@ -299,7 +299,7 @@ export const SplitApp = ({
           height: currentContainerHeight,
           overflow: "auto",
           userSelect: "none",
-          position: "relative",
+          position: "relative"
         }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -313,7 +313,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[0]?.App}
@@ -325,7 +325,7 @@ export const SplitApp = ({
             width: "100%",
             cursor: "row-resize",
             // background: '',
-            touchAction: "none",
+            touchAction: "none"
           }}
           onMouseDown={handleHorizontalMouseDown}
           onTouchStart={(e) => {
@@ -333,7 +333,7 @@ export const SplitApp = ({
             horizontalDragRef.current = {
               isDragging: true,
               startY: touch.clientY,
-              startTopHeight: topHeight,
+              startTopHeight: topHeight
             };
           }}
         />
@@ -345,7 +345,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[1]?.App}
@@ -362,7 +362,7 @@ export const SplitApp = ({
           height: currentContainerHeight,
           overflow: "auto",
           userSelect: "none",
-          position: "relative",
+          position: "relative"
         }}
         onMouseMove={handleRowMouseMove}
         onMouseUp={handleRowMouseUp}
@@ -376,7 +376,7 @@ export const SplitApp = ({
                 minWidth: minWidth || "100px",
                 overflow: "auto",
                 borderRadius: "12px",
-                overflow: "auto",
+                overflow: "auto"
               }}
             >
               {App}
@@ -387,7 +387,7 @@ export const SplitApp = ({
                   width: 4,
                   cursor: "col-resize",
                   // background: '',
-                  zIndex: 1,
+                  zIndex: 1
                 }}
                 onMouseDown={(e) => handleRowMouseDown(index, e)}
               />
@@ -404,7 +404,7 @@ export const SplitApp = ({
           width: currentContainerWidth,
           height: currentContainerHeight,
           position: "relative",
-          userSelect: "none",
+          userSelect: "none"
         }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -417,7 +417,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[0]?.App}
@@ -435,7 +435,7 @@ export const SplitApp = ({
             padding: "0px",
             minWidth: "370px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[1]?.App}
@@ -450,7 +450,7 @@ export const SplitApp = ({
           width: currentContainerWidth,
           height: currentContainerHeight,
           position: "relative",
-          userSelect: "none",
+          userSelect: "none"
         }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -463,7 +463,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[0]?.App}
@@ -480,7 +480,7 @@ export const SplitApp = ({
             height: "100%",
             minWidth: "370px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           <div
@@ -500,7 +500,7 @@ export const SplitApp = ({
               overflow: "auto",
               padding: "0px",
               borderRadius: "12px",
-              overflow: "auto",
+              overflow: "auto"
             }}
           >
             {apps[2]?.App}
@@ -515,7 +515,7 @@ export const SplitApp = ({
           position: "relative",
           width: currentContainerWidth,
           height: currentContainerHeight,
-          userSelect: "none",
+          userSelect: "none"
         }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -531,7 +531,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[0]?.App}
@@ -549,7 +549,7 @@ export const SplitApp = ({
             padding: "0px",
             minWidth: "370px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[1]?.App}
@@ -566,7 +566,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[2]?.App}
@@ -583,7 +583,7 @@ export const SplitApp = ({
             overflow: "auto",
             padding: "0px",
             borderRadius: "12px",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           {apps[3]?.App}
@@ -597,7 +597,7 @@ export const SplitApp = ({
             width: 4,
             height: currentContainerHeight,
             cursor: "col-resize",
-            background: "",
+            background: ""
           }}
           onMouseDown={handleVerticalMouseDown}
         />
@@ -610,7 +610,7 @@ export const SplitApp = ({
             height: 4,
             width: currentContainerWidth,
             cursor: "row-resize",
-            background: "",
+            background: ""
           }}
           onMouseDown={handleHorizontalMouseDown}
         />
@@ -623,7 +623,7 @@ export const SplitApp = ({
           width: currentContainerWidth,
           height: currentContainerHeight,
           overflow: "auto",
-          padding: "0px",
+          padding: "0px"
         }}
       >
         {apps.map(({ App, id }, index) => (

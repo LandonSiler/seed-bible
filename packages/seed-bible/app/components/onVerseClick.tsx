@@ -8,8 +8,8 @@ const dataItem = {
     chapter: that.chapter,
     book: that.book,
     data: { ...that },
-    chapterData: { ...globalThis.CHAPTER_DATA },
-  },
+    chapterData: { ...globalThis.CHAPTER_DATA }
+  }
 };
 
 // console.log("ON VERSE CLICK that that", that);
@@ -40,8 +40,8 @@ if (globalThis.ON_VERSE_CLICK && isShiftHold) {
           book: lastBook.book,
           chapter: currentBook.chapter,
           verse: fIndex,
-          data: { ...that },
-        },
+          data: { ...that }
+        }
       };
       highLight[fIndex] = true;
       globalThis.Playlist &&

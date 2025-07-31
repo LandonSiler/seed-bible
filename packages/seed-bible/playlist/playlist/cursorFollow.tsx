@@ -25,7 +25,7 @@ const MouseCursor = () => {
           left: pointer.x + 5,
           top: pointer.y - 15,
           "background-color": "transparent",
-          zIndex: "200002",
+          zIndex: "200002"
         }}
       >
         <div
@@ -34,7 +34,7 @@ const MouseCursor = () => {
             zIndex: 200002,
             "user-select": "none",
             color: "black",
-            background: "transparent",
+            background: "transparent"
           }}
         >
           <span class="material-symbols-outlined unfollow"> {icon} </span>

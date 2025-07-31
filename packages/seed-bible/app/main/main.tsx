@@ -10,7 +10,7 @@ import { SplitApp, useDivSpliter } from "app.hooks.divSpliter";
 import {
   ThePage,
   ThePageWithPanel,
-  ThePageWithEditor,
+  ThePageWithEditor
 } from "app.components.thePage";
 import { useBibleContext } from "app.hooks.bibleVariables";
 import { useTabsContext } from "app.hooks.tabs";
@@ -37,7 +37,7 @@ const Main = () => {
     addApplication,
     resetApps,
     removeApplication,
-    setApps,
+    setApps
   } = useDivSpliter({
     components: [
       {
@@ -48,13 +48,13 @@ const Main = () => {
             tab={tabs[0]}
           />
         ),
-        to: "window",
-      },
+        to: "window"
+      }
     ],
     split: true,
     containerWidth: 1150,
     containerHeight: 920,
-    minSize: 100,
+    minSize: 100
   });
 
   globalThis.AddApplication = addApplication;
@@ -81,7 +81,7 @@ const Main = () => {
           />
         ),
         to: "window",
-        tabData: globalThis.PanelTabsMap[id],
+        tabData: globalThis.PanelTabsMap[id]
       });
     }
     // console.log(newApps)
@@ -108,7 +108,7 @@ const Main = () => {
           />
         ),
         to: "window",
-        tabData: globalThis.PanelTabsMap[id],
+        tabData: globalThis.PanelTabsMap[id]
       });
     }
     console.log(newApps);

@@ -17,7 +17,7 @@ if (parentSection?.tags?.isInExplodedView || !globalThis.hideSeekPlaying)
 parentSection &&
   !isSingleBook &&
   parentSection.setAsExplodedView({
-    focusON: parentSection.tags.sectionRank === 7 || globalThis.skipAnimation,
+    focusON: parentSection.tags.sectionRank === 7 || globalThis.skipAnimation
   });
 const sectionExplodeSound = [
   "String_01c",
@@ -27,7 +27,7 @@ const sectionExplodeSound = [
   "String_07e",
   "String_08f",
   "String_10a",
-  "String_11c",
+  "String_11c"
 ];
 await os.sleep(globalThis.skipAnimation ? 700 : 1000);
 
@@ -56,7 +56,7 @@ if (!globalThis.skipAnimation) {
   if (!isSingleBook) {
     await thisBot.highlightBooksinSection({
       sectionRank: parentSection.tags.sectionRank,
-      validInteger: that.validInteger,
+      validInteger: that.validInteger
     });
   }
 }

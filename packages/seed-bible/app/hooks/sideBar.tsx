@@ -3,7 +3,7 @@ import { getStyleOf } from "app.styles.styler";
 import {
   DualScreenIcon,
   ThreeScreenIcon,
-  QuadScreenIcon,
+  QuadScreenIcon
 } from "app.components.icons";
 const MyContext = createContext();
 
@@ -98,7 +98,7 @@ export function SideBarProvider({ children }) {
     if (popupSettings || popupComponent) {
       runPopUpSettings({
         ...popupSettings,
-        sidebarContext: { closePopupSettings, position, popupComponent },
+        sidebarContext: { closePopupSettings, position, popupComponent }
       });
     } else {
       os.unregisterApp("PopupSettings");
@@ -121,7 +121,7 @@ export function SideBarProvider({ children }) {
         openPopupSettings,
         sidebarWidth,
         setSidebarWidth,
-        closePopupSettings,
+        closePopupSettings
       }}
     >
       {children}
@@ -139,7 +139,7 @@ export function PopupSettings({ items, type, disabled, sidebarContext }) {
         left: `${sidebarContext.position.x}px`,
         top: `${sidebarContext.position.y}px`,
         zIndex: "10000",
-        pointerEvents: "auto",
+        pointerEvents: "auto"
       }}
     >
       {sidebarContext.popupComponent || (
@@ -153,7 +153,7 @@ export function PopupSettings({ items, type, disabled, sidebarContext }) {
                   style={{
                     width: "100%",
                     height: "1px",
-                    backgroundColor: "#cdcccc3b",
+                    backgroundColor: "#cdcccc3b"
                   }}
                 ></div>
               );

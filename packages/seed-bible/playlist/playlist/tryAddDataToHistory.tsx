@@ -47,11 +47,11 @@ if (globalThis.makingPlaylist) {
                 bookName: dataItem.additionalInfo.bookName,
                 chapter: startChapter + i + 1,
                 data: {
-                  ...dataItem.additionalInfo.data,
-                },
-              },
+                  ...dataItem.additionalInfo.data
+                }
+              }
             },
-            playlistID: id,
+            playlistID: id
           });
         });
       }
@@ -70,7 +70,7 @@ if (globalThis.makingPlaylist) {
         dataItem,
         isDelete,
         playlistID: id,
-        force: that.force,
+        force: that.force
       });
     } else {
       if (globalThis[`${id}AddDataToHistory`]) {

@@ -14,7 +14,7 @@ const TapozChat = ({ id }) => {
     if (!chatText.trim()) {
       return ShowNotification({
         message: "Type something to get response!",
-        severity: "error",
+        severity: "error"
       });
     }
     if (loading) return;
@@ -31,13 +31,13 @@ const TapozChat = ({ id }) => {
           organization_id: "67355031aea5f406546577d0",
           prompt: chatText,
           history: [...messages],
-          secret_key: "2U838B2Q0G9KR4FXREBL",
+          secret_key: "2U838B2Q0G9KR4FXREBL"
         },
         {
           headers: {
             "x-api-key": API_KEY,
-            "Content-Type": "application/json",
-          },
+            "Content-Type": "application/json"
+          }
         }
       );
       const response = apiResults?.data?.data?.response.data;
@@ -47,18 +47,18 @@ const TapozChat = ({ id }) => {
           ...prev,
           {
             role: "assistant",
-            content: "Error generating response. Please Try again!",
-          },
+            content: "Error generating response. Please Try again!"
+          }
         ]);
         return ShowNotification({
           message: "Error in Getting Response!",
-          severity: "error",
+          severity: "error"
         });
       }
       console.log("response", response);
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: response },
+        { role: "assistant", content: response }
       ]);
       setLoading(false);
     } catch (err) {
@@ -66,8 +66,8 @@ const TapozChat = ({ id }) => {
         ...prev,
         {
           role: "assistant",
-          content: "Error generating response. Please Try again!",
-        },
+          content: "Error generating response. Please Try again!"
+        }
       ]);
       setLoading(false);
     }
@@ -84,7 +84,7 @@ const TapozChat = ({ id }) => {
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "space-between"
           }}
         >
           <h2 style={{ margin: "0" }}>Tapos Chatbot</h2>
@@ -95,7 +95,7 @@ const TapozChat = ({ id }) => {
               padding: "0",
               border: "none",
               cursor: "pointer",
-              marginLeft: "auto",
+              marginLeft: "auto"
             }}
             onClick={() => {
               if (globalThis.TapozChatboxPresent) {

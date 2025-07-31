@@ -13,14 +13,14 @@ const PlaylistList = ({
   setPlayLists,
   creatingPlaylist = false,
   playingPlaylist,
-  parentId,
+  parentId
 }) => {
   const [draggedItemID, setDraggedItemID] = useState(null);
   const [opendedList, setOpenedList] = useState(false);
   const toBeSetItems = useRef(null);
   const [dragOverSet, setDragoverSetMutate] = useState({
     position: "top",
-    itemId: "null",
+    itemId: "null"
   });
 
   const setDragoverSet = (newState) => {
@@ -50,21 +50,21 @@ const PlaylistList = ({
     let newItems = [];
 
     const filterAbleItems = {
-      [draggedItemID]: true,
+      [draggedItemID]: true
     };
 
     if (dragItem.id === draggedOverItem.id) {
       toBeSetItems.current = playLists;
       setDragoverSet({
         itemId: "null",
-        position: "Top",
+        position: "Top"
       });
       return;
     }
 
     setDragoverSet({
       itemId: draggedOverItem.id,
-      position: draggedItemIndex < index ? "Bottom" : "Top",
+      position: draggedItemIndex < index ? "Bottom" : "Top"
     });
 
     // Filter out the currently dragged item
@@ -97,7 +97,7 @@ const PlaylistList = ({
           const oldItem = old[dragItemIndex];
           old[dragOverItemIndex].list.push({
             type: "playlist",
-            ...oldItem,
+            ...oldItem
           });
           old[dragOverItemIndex].nesting += 1;
           old.splice(dragItemIndex, 1);
@@ -109,7 +109,7 @@ const PlaylistList = ({
     }
     setDragoverSet({
       itemId: "null",
-      position: "Top",
+      position: "Top"
     });
     setDraggedItemID(null);
   };
@@ -157,7 +157,7 @@ const PlaylistList = ({
                 icon,
                 isCustomColor,
                 isCustomIcon,
-                selectedTags,
+                selectedTags
               },
               index
             ) => (

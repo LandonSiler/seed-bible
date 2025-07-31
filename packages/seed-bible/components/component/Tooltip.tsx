@@ -39,7 +39,7 @@ const Tooltip = ({ children, text, forRight, gifUrl }) => {
         <div
           style={{
             left: !forRight ? "0" : "none",
-            right: forRight ? "0" : "none",
+            right: forRight ? "0" : "none"
           }}
           className="tooltip-bubble"
         >

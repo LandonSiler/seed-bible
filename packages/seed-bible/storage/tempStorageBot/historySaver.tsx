@@ -16,8 +16,8 @@ const parallelPlaylistPresent = getTag(thisBot, "playlistLists") || {
   default: {
     active: true,
     deleteable: false,
-    link: "",
-  },
+    link: ""
+  }
 };
 
 const collectionsPresent = getTag(thisBot, "defaultCollections") || [] || {};
@@ -56,7 +56,7 @@ if (sharedPlaylist) {
     web
       .hook({
         url: `https://theographic-bible-api.netlify.app/api/playlist/getPlaylist?uid=${sharedPlaylist}`,
-        method: "GET",
+        method: "GET"
       })
       .then(async (dbRes) => {
         // console.log(dbRes, "dbRes");
@@ -108,7 +108,7 @@ if (sharedPlaylist) {
         console.log(err);
         ShowNotification({
           message: "Unable to copy playlist. Please try again!",
-          severity: "error",
+          severity: "error"
         });
       });
   } catch (err) {

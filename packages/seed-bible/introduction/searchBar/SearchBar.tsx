@@ -5,7 +5,7 @@ const {
   useRef,
   useCallback,
   createRef,
-  useContext,
+  useContext
 } = os.appHooks;
 const { Modal, Button } = Components;
 
@@ -13,28 +13,28 @@ const PsalmsData = [
   {
     commonName: "1 Psalms",
     startingBook: 0,
-    endingBook: 40,
+    endingBook: 40
   },
   {
     commonName: "2 Psalms",
     startingBook: 41,
-    endingBook: 71,
+    endingBook: 71
   },
   {
     commonName: "3 Psalms",
     startingBook: 72,
-    endingBook: 88,
+    endingBook: 88
   },
   {
     commonName: "4 Psalms",
     startingBook: 89,
-    endingBook: 105,
+    endingBook: 105
   },
   {
     commonName: "5 Psalms",
     startingBook: 106,
-    endingBook: 149,
-  },
+    endingBook: 149
+  }
 ];
 
 function generateQuery(params) {
@@ -74,7 +74,7 @@ const SearchBar = () => {
       "hindi",
       "hebrew",
       "ancient greek",
-      "custom",
+      "custom"
     ]
   );
 
@@ -85,7 +85,7 @@ const SearchBar = () => {
       arabic: {},
       hindi: {},
       hebrew: {},
-      "ancient greek": {},
+      "ancient greek": {}
     }
   );
 
@@ -95,7 +95,7 @@ const SearchBar = () => {
     masks?.selectedTranslation || {
       languageEnglishName: "English",
       id: "BSB",
-      shortName: "BSB",
+      shortName: "BSB"
     }
   );
   const [showCustomTranslation, setShowCustomTranslation] = useState(false);
@@ -245,7 +245,7 @@ const SearchBar = () => {
   const handleTranslationAddition = async ({
     type,
     value,
-    setInputValue = () => {},
+    setInputValue = () => {}
   }) => {
     const available_translations_req = await web.get(
       "https://bible.helloao.org/api/available_translations.json"
@@ -253,7 +253,7 @@ const SearchBar = () => {
     if (type === "id") {
       const trValue = {
         pass: false,
-        value: null,
+        value: null
       };
       if (available_translations_req.status === 200) {
         available_translations_req.data.translations.map((translation) => {
@@ -264,7 +264,7 @@ const SearchBar = () => {
         });
         if (trValue.pass) {
           const translationValue = {
-            ...trValue.value,
+            ...trValue.value
           };
           if (
             apiTranslations[
@@ -283,14 +283,14 @@ const SearchBar = () => {
                     ...translations[
                       translationValue.languageEnglishName.toLowerCase()
                     ],
-                    [value.toLowerCase()]: translationValue,
+                    [value.toLowerCase()]: translationValue
                   }
                 : { [value.toLowerCase()]: translationValue };
             setSelectedTranslation({
               languageEnglishName:
                 translationValue.languageEnglishName.toLowerCase(),
               id: translationValue.shortName,
-              shortName: translationValue.shortName,
+              shortName: translationValue.shortName
             });
             setApiTranslations(translations);
             setShowCustomTranslation(false);
@@ -301,7 +301,7 @@ const SearchBar = () => {
             ) {
               setDefaultTranslations([
                 ...defaultTranslations,
-                translationValue.languageEnglishName.toLowerCase(),
+                translationValue.languageEnglishName.toLowerCase()
               ]);
             }
             os.toast(`Translation ${value} added!`);
@@ -313,7 +313,7 @@ const SearchBar = () => {
     } else {
       const trValue = {
         pass: false,
-        value: null,
+        value: null
       };
       if (available_translations_req.status === 200) {
         available_translations_req.data.translations.map((translation) => {
@@ -324,7 +324,7 @@ const SearchBar = () => {
         });
         if (trValue.pass) {
           const translationValue = {
-            ...trValue.value,
+            ...trValue.value
           };
           if (
             apiTranslations[
@@ -343,14 +343,14 @@ const SearchBar = () => {
                     ...translations[
                       translationValue.languageEnglishName.toLowerCase()
                     ],
-                    [value.toLowerCase()]: translationValue,
+                    [value.toLowerCase()]: translationValue
                   }
                 : { [value.toLowerCase()]: translationValue };
             setSelectedTranslation({
               languageEnglishName:
                 translationValue.languageEnglishName.toLowerCase(),
               id: translationValue.shortName,
-              shortName: translationValue.shortName,
+              shortName: translationValue.shortName
             });
             setApiTranslations(translations);
             setShowCustomTranslation(false);
@@ -361,7 +361,7 @@ const SearchBar = () => {
             ) {
               setDefaultTranslations([
                 ...defaultTranslations,
-                translationValue.languageEnglishName.toLowerCase(),
+                translationValue.languageEnglishName.toLowerCase()
               ]);
             }
             os.toast(`Translation ${value} added!`);
@@ -371,7 +371,7 @@ const SearchBar = () => {
           web
             .hook({
               method: "GET",
-              url: value,
+              url: value
             })
             .then((e) => {
               const url = new URL(value);
@@ -391,7 +391,7 @@ const SearchBar = () => {
                     id: translation.id,
                     listOfBooksApiLink: `${url.origin}${translation.listOfBooksApiLink}`,
                     origin: url.origin,
-                    shortName: translation.shortName,
+                    shortName: translation.shortName
                   };
                   if (i === 0) {
                     defaultTranslation = controlledTranslation;
@@ -401,16 +401,16 @@ const SearchBar = () => {
                       ? {
                           ...tempApiTranslations[languageEnglishName],
                           [translation.shortName.toLowerCase()]:
-                            controlledTranslation,
+                            controlledTranslation
                         }
                       : {
                           [translation.shortName.toLowerCase()]:
-                            controlledTranslation,
+                            controlledTranslation
                         };
                   if (!defaultTranslations.includes(languageEnglishName)) {
                     setDefaultTranslations([
                       ...defaultTranslations,
-                      languageEnglishName,
+                      languageEnglishName
                     ]);
                   }
                 }
@@ -427,7 +427,7 @@ const SearchBar = () => {
                     id: translation.id,
                     listOfBooksApiLink: `${url.origin}${translation.listOfBooksApiLink}`,
                     origin,
-                    shortName: translation.shortName,
+                    shortName: translation.shortName
                   };
                   if (
                     apiTranslations[
@@ -451,14 +451,14 @@ const SearchBar = () => {
                             translation.languageEnglishName.toLowerCase()
                           ],
                           [translation.shortName.toLowerCase()]:
-                            controlledTranslation,
+                            controlledTranslation
                         }
                       : {
                           [translation.shortName.toLowerCase()]:
-                            controlledTranslation,
+                            controlledTranslation
                         };
                     setSelectedTranslation({
-                      ...controlledTranslation,
+                      ...controlledTranslation
                     });
                     setApiTranslations(translations);
                     setShowCustomTranslation(false);
@@ -469,7 +469,7 @@ const SearchBar = () => {
                     ) {
                       setDefaultTranslations([
                         ...defaultTranslations,
-                        translation.languageEnglishName.toLowerCase(),
+                        translation.languageEnglishName.toLowerCase()
                       ]);
                     }
                     os.toast(`Translation ${value} added!`);
@@ -601,7 +601,7 @@ const SearchBar = () => {
     ) {
       const translations = { ...apiTranslations };
       translations[selectedTranslation.languageEnglishName.toLowerCase()] = {
-        [selectedTranslation.shortName.toLowerCase()]: selectedTranslation,
+        [selectedTranslation.shortName.toLowerCase()]: selectedTranslation
       };
       console.log(translations, "1 trans");
       setTagMask(thisBot, "apiTranslations", translations, "local");
@@ -610,14 +610,14 @@ const SearchBar = () => {
         "defaultTranslations",
         [
           ...defaultTranslations,
-          selectedTranslation.languageEnglishName.toLowerCase(),
+          selectedTranslation.languageEnglishName.toLowerCase()
         ],
         "local"
       );
       setApiTranslations(translations);
       setDefaultTranslations([
         ...defaultTranslations,
-        selectedTranslation.languageEnglishName.toLowerCase(),
+        selectedTranslation.languageEnglishName.toLowerCase()
       ]);
     }
     setTagMask(thisBot, "selectedTranslation", selectedTranslation, "local");
@@ -636,7 +636,7 @@ const SearchBar = () => {
               return {
                 ...item,
                 languageEnglishName:
-                  item?.languageEnglishName || item.englishName,
+                  item?.languageEnglishName || item.englishName
               };
             });
             setTagMask(
@@ -657,7 +657,7 @@ const SearchBar = () => {
                   }
                 } else {
                   translations[englishName] = {
-                    [shortName]: translation,
+                    [shortName]: translation
                   };
                 }
               } else {
@@ -669,13 +669,13 @@ const SearchBar = () => {
                   const shortName = translation.shortName.toLowerCase();
                   if (!translations[englishName]) {
                     translations[englishName] = {
-                      [shortName]: translation,
+                      [shortName]: translation
                     };
                   } else {
                     if (!translations[englishName][shortName]) {
                       translations[englishName] = {
                         ...translations[englishName],
-                        [shortName]: translation,
+                        [shortName]: translation
                       };
                     }
                   }
@@ -709,7 +709,7 @@ const SearchBar = () => {
           }
         } else {
           translations[englishName] = {
-            [shortName]: translation,
+            [shortName]: translation
           };
         }
       } else {
@@ -721,13 +721,13 @@ const SearchBar = () => {
           const shortName = translation.shortName.toLowerCase();
           if (!translations[englishName]) {
             translations[englishName] = {
-              [shortName]: translation,
+              [shortName]: translation
             };
           } else {
             if (!translations[englishName][shortName]) {
               translations[englishName] = {
                 ...translations[englishName],
-                [shortName]: translation,
+                [shortName]: translation
               };
             }
           }
@@ -780,7 +780,7 @@ const SearchBar = () => {
     openSearchBar,
     setOpenSearchBar,
     searchBarFocused,
-    handleEnter,
+    handleEnter
   ]);
 
   console.log("searchBar initated", booksData);
@@ -887,7 +887,7 @@ const SearchBar = () => {
                 top: "45px",
                 left: "0",
                 padding: "0px 10px",
-                zIndex: "1",
+                zIndex: "1"
               }}
             >
               <input
@@ -916,7 +916,7 @@ const SearchBar = () => {
                   paddingLeft: "30px",
                   width: "100%",
                   background: "#F7F7F7",
-                  border: "1px solid #E2E2E2",
+                  border: "1px solid #E2E2E2"
                 }}
               />
               <i
@@ -948,7 +948,7 @@ const SearchBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    fontSize: "36px",
+                    fontSize: "36px"
                   }}
                   class={`material-symbols-outlined`}
                 >
@@ -976,7 +976,7 @@ const SearchBar = () => {
                 transform: showCustomTranslation
                   ? "rotateZ(45deg)"
                   : "rotateZ(0deg)",
-                cursor: "pointer",
+                cursor: "pointer"
               }}
               class="material-symbols-outlined"
             >
@@ -1074,7 +1074,7 @@ const CustomTranslation = ({ handleTranslationAddition }) => {
               handleTranslationAddition({
                 type: currentMode,
                 value: inputValue,
-                setInputValue: setInputValue,
+                setInputValue: setInputValue
               })
             }
             class="import-btn"
@@ -1097,7 +1097,7 @@ const NewTransOptions = ({
   translationName,
   translations,
   selectedTranslation,
-  setSelectedTranslation,
+  setSelectedTranslation
 }) => {
   const [show, setShow] = useState(false);
 
@@ -1107,7 +1107,7 @@ const NewTransOptions = ({
       const url = `https://aolab-bible-api.netlify.app/api/translations/addTranslation`;
       const params = {
         uid: translation.id,
-        translation: JSON.stringify(translation),
+        translation: JSON.stringify(translation)
       };
       const queryUrl = attachQueryToURL(url, params);
       const result = await web.get(queryUrl);
@@ -1157,7 +1157,7 @@ const NewTransOptions = ({
                     background:
                       selectedTranslation.id === value.id
                         ? "rgba(59, 130, 246, 0.5)"
-                        : "rgba(1, 87, 155, 0.3)",
+                        : "rgba(1, 87, 155, 0.3)"
                   }}
                   class="translation-option"
                 >
@@ -1186,7 +1186,7 @@ const TransOption = ({
   index,
   idx = 0,
   setSelectedTranslation,
-  selectedTranslation,
+  selectedTranslation
 }) => {
   const [show, setShowFasle] = useState(
     translationOption.translations.find((e) => e.short === selectedTranslation)
@@ -1224,7 +1224,7 @@ const TransOption = ({
                     }}
                     style={{
                       background:
-                        selectedTranslation === e.short ? "#E1F5FE" : "#B388FF",
+                        selectedTranslation === e.short ? "#E1F5FE" : "#B388FF"
                     }}
                     class="translation-option"
                   >
@@ -1243,7 +1243,7 @@ const SideBarBooks = ({
   booksData,
   focusOnBook,
   selectedTestament,
-  selectedTranslation,
+  selectedTranslation
 }) => {
   const [lastBookClicked, setLastBookClicked] = useState(-1);
   const [bookData, setBookData] = useState(null);
@@ -1427,7 +1427,7 @@ const SideBarChapters = ({
   setLastBookClicked,
   setBookData,
   refsObject,
-  selectedTranslation,
+  selectedTranslation
 }) => {
   const [renderingJSX, setRenderingJSX] = useState([]);
 
@@ -1484,7 +1484,7 @@ const SideBarChapters = ({
                 numberOfChapters: bookData.numberOfChapters,
                 bookName: bookData.commonName,
                 chapterNo: i + 1,
-                bookData,
+                bookData
               })
             }
           >
@@ -1567,7 +1567,7 @@ const SideBarChapters = ({
                 display:
                   currentPsalms === psalmsPartName({ index: i })
                     ? "flex"
-                    : "none",
+                    : "none"
               }}
               class="chapter-btn"
               onCLick={() =>
@@ -1576,7 +1576,7 @@ const SideBarChapters = ({
                   translationId: bookData.translationId,
                   numberOfChapters: bookData.numberOfChapters,
                   bookName: psalmsPartName({ index: i }),
-                  chapterNo: i + 1,
+                  chapterNo: i + 1
                 })
               }
             >
@@ -1597,7 +1597,7 @@ const SideBarChapters = ({
                   numberOfChapters: bookData.numberOfChapters,
                   bookName: bookData.commonName,
                   chapterNo: i + 1,
-                  bookData,
+                  bookData
                 })
               }
             >

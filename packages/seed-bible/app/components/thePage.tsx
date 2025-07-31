@@ -32,7 +32,7 @@ function ThePage({
   panelId,
   setEnableEditor,
   setData,
-  data,
+  data
 }) {
   const [tab, setTab] = useState(T);
   const [tabEntered, setTabEntered] = useState(false);
@@ -63,12 +63,12 @@ function ThePage({
     const left = Math.floor(rect.left);
     setHW({
       height: `${height}px !important`,
-      width: `${width}px !important`,
+      width: `${width}px !important`
     });
     setTL({
       top: `${top}px !important`,
       left: `${left}px !important`,
-      borderRadius: "10px",
+      borderRadius: "10px"
     });
   };
 
@@ -96,20 +96,20 @@ function ThePage({
         "hindi",
         "hebrew",
         "ancient greek",
-        "custom",
+        "custom"
       ];
       allTranslations = available_translations_req.data.translations.map(
         (item) => {
           return {
             ...item,
-            languageEnglishName: item?.languageEnglishName || item.englishName,
+            languageEnglishName: item?.languageEnglishName || item.englishName
           };
         }
       );
 
       const trValue = {
         pass: false,
-        value: null,
+        value: null
       };
       if (available_translations_req.status === 200) {
         allTranslations.forEach((translationData) => {
@@ -136,7 +136,7 @@ function ThePage({
         } else if (!urlId) {
           const url = `https://aolab-bible-api.netlify.app/api/translations/getTranslation`;
           const params = {
-            uid: translationId,
+            uid: translationId
           };
           const queryUrl = attachQueryToURL(url, params);
           const result = await web.get(queryUrl);
@@ -154,7 +154,7 @@ function ThePage({
             if (!defaultTranslations.includes(englishName)) {
               defaultTranslations.push(englishName);
               translations[englishName] = {
-                [shortName]: translation,
+                [shortName]: translation
               };
             }
             baseUrl = translation.origin;
@@ -174,7 +174,7 @@ function ThePage({
                 id: trans.id,
                 listOfBooksApiLink: `${url.origin}${trans.listOfBooksApiLink}`,
                 origin: url.origin,
-                shortName: trans.shortName,
+                shortName: trans.shortName
               };
             });
             console.log(newTranslations, "newTranslations");
@@ -191,7 +191,7 @@ function ThePage({
               id: defaultTranslation.id,
               listOfBooksApiLink: `${url.origin}${defaultTranslation.listOfBooksApiLink}`,
               origin: url.origin,
-              shortName: defaultTranslation.shortName,
+              shortName: defaultTranslation.shortName
             };
             console.log(translation, "translation");
             console.log("3 trans");
@@ -206,7 +206,7 @@ function ThePage({
             if (!defaultTranslations.includes(englishName)) {
               defaultTranslations.push(englishName);
               translations[englishName] = {
-                [shortName]: translation,
+                [shortName]: translation
               };
             }
             baseUrl = translation.origin;
@@ -230,7 +230,7 @@ function ThePage({
             }
           } else {
             translations[englishName] = {
-              [shortName]: translation,
+              [shortName]: translation
             };
           }
         });
@@ -250,7 +250,7 @@ function ThePage({
       baseUrl,
       bookId,
       bookTranslationId,
-      firstChapterApiLink,
+      firstChapterApiLink
     };
   };
 
@@ -261,7 +261,7 @@ function ThePage({
     if (tab.data.type === "canvas") {
       setData({
         ...tab.data,
-        content: [],
+        content: []
       });
       return;
     }
@@ -272,7 +272,7 @@ function ThePage({
       translation: bookTranslationId || tab.data.translation,
       bookId: bookId || tab.data.bookId,
       chapter: tab.data.chapter,
-      basuUrl: baseUrl,
+      basuUrl: baseUrl
     });
     setBible(bible);
     await bible.fetch();
@@ -294,11 +294,11 @@ function ThePage({
       if (panelId && tab) {
         os.log("recoreded", panelId, {
           ...tab,
-          data: { ...tab.data, ...data },
+          data: { ...tab.data, ...data }
         });
         globalThis.PanelTabsMap[panelId] = {
           ...tab,
-          data: { ...tab.data, ...data },
+          data: { ...tab.data, ...data }
         };
       }
     }
@@ -390,7 +390,7 @@ function ThePage({
             updateTab(tab?.id, tabData);
             setTab({ ...tab, data: tabData });
           }
-        },
+        }
       });
     } else {
       setNavFunctions({
@@ -398,7 +398,7 @@ function ThePage({
         openPrevChapter,
         open,
         changeTranslation: bible?.changeTranslation || undefined,
-        setPanalApp: () => {},
+        setPanalApp: () => {}
       });
     }
     globalThis.Open = open;
@@ -408,7 +408,7 @@ function ThePage({
       show: false,
       top: 0,
       left: 0,
-      text: null,
+      text: null
     });
     //     os.log(tab)
     //     if (globalThis.GetBooksDataForMenu) {
@@ -509,7 +509,7 @@ function ThePage({
     show: false,
     top: 0,
     left: 0,
-    text: null,
+    text: null
   });
 
   const handleRightClick = (event) => {
@@ -522,7 +522,7 @@ function ThePage({
           show: true,
           top: `${event.y}px`,
           left: `${event.x}px`,
-          text: selectedText,
+          text: selectedText
         });
       }
     } else {
@@ -531,7 +531,7 @@ function ThePage({
         show: false,
         top: 0,
         left: 0,
-        text: null,
+        text: null
       });
     }
   };
@@ -542,14 +542,14 @@ function ThePage({
       whisper(typingTool, "makeTextBox", {
         x: 0,
         y: 0,
-        label: showDialog.text,
+        label: showDialog.text
       });
     }
     setShowDialog({
       show: false,
       top: 0,
       left: 0,
-      text: null,
+      text: null
     });
   };
 
@@ -593,13 +593,13 @@ function ThePage({
           animateTag(miniMapPortalBot, {
             fromValue: {
               miniPortalWidth: 0.1,
-              miniPortalHeight: 0.2,
+              miniPortalHeight: 0.2
             },
             toValue: {
               miniPortalWidth: 1,
-              miniPortalHeight: 1,
+              miniPortalHeight: 1
             },
-            duration: 0.1,
+            duration: 0.1
           });
         }
         configBot.tags.miniMapPortal = `map-${tab?.data?.chapter}`;
@@ -642,12 +642,12 @@ function ThePage({
       clearInterval(it);
       setHW({
         height: `0px !important`,
-        width: `0px !important`,
+        width: `0px !important`
       });
       setTL({
         top: `0px !important`,
         left: `0px !important`,
-        borderRadius: "10px",
+        borderRadius: "10px"
       });
       globalThis.SetCurrentCanvasMode = null;
       masks.canvasTab = null;
@@ -692,7 +692,7 @@ function ThePage({
             top: showDialog.top,
             left: showDialog.left,
             zIndex: 10000,
-            pointerEvents: "auto",
+            pointerEvents: "auto"
           }}
         >
           <div class="popupSettings">
@@ -735,7 +735,7 @@ function ThePage({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: screens === 1 && "100vh",
+              height: screens === 1 && "100vh"
             }}
             className={`pageContainer ${tabEntered ? "tabEntered" : "tabDrop"} ${highlightOnce ? "tabHighlightBg" : ""}`}
           >
@@ -744,7 +744,7 @@ function ThePage({
                 pointerEvents: isDragging ? "none" : undefined,
                 display: "flex",
                 flexDirection: "column",
-                textAlign: "center",
+                textAlign: "center"
               }}
             >
               {!tabEntered ? `Please drop tab here` : "Drop to open !"}
@@ -753,7 +753,7 @@ function ThePage({
                   textAlign: "center",
                   color: "#666",
                   margin: "20px 0",
-                  fontSize: "14px",
+                  fontSize: "14px"
                 }}
               >
                 ──────── OR ────────
@@ -774,7 +774,7 @@ function ThePage({
                   border: "none",
                   borderRadius: "4px",
                   cursor: "pointer",
-                  fontSize: "14px",
+                  fontSize: "14px"
                 }}
               >
                 Select Book/Chapter
@@ -796,14 +796,14 @@ function Section({
   holded,
   blinker,
   selected,
-  textEdit,
+  textEdit
 }) {
   const editTextStyle = {
     "border-radius": "6px",
     border: "2px solid #4459F3",
     background: "rgba(68, 89, 243, 0.10)",
     padding: "8px",
-    position: "relative",
+    position: "relative"
   };
   const styles = {
     font: `'Montserrat', sans-serif`,
@@ -813,8 +813,8 @@ function Section({
       bold: true,
       italic: false,
       underline: false,
-      alignment: "left",
-    },
+      alignment: "left"
+    }
   };
   return (
     <div>
@@ -840,13 +840,13 @@ function Section({
                     verseNumber: verse.verseNumber,
                     text: verse.text,
                     chapter,
-                    book,
+                    book
                   });
                   thisBot.onVerseClick({
                     verseNumber: verse.verseNumber,
                     text: verse.text,
                     chapter,
-                    book,
+                    book
                   });
                 }}
                 style={{
@@ -855,7 +855,7 @@ function Section({
                     selected[verse.verseNumber] ||
                     blinker[verse.verseNumber]
                       ? `underline`
-                      : ``,
+                      : ``
                 }}
                 className="sectionText"
               >
@@ -875,7 +875,7 @@ function Section({
                     position: "absolute",
                     left: 0,
                     top: 0,
-                    zIndex: -1,
+                    zIndex: -1
                   }}
                   placeholder={"test"}
                   ref={(ref) => {

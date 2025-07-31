@@ -19,7 +19,7 @@ export function BibleVariablesProvider({ children }) {
       onClick: () => {
         setOpenSidebar((prev) => !prev);
         setCurrentExperience(0);
-      },
+      }
     },
     {
       icon: "playlist_play",
@@ -40,8 +40,8 @@ export function BibleVariablesProvider({ children }) {
             id,
             App: <PlayList id={id} />,
             to: "panel",
-            minWidth: "23rem",
-          },
+            minWidth: "23rem"
+          }
         });
         //     }
         // }
@@ -70,11 +70,11 @@ export function BibleVariablesProvider({ children }) {
               id,
               App: <PlayList id={id} />,
               to: "panel",
-              minWidth: "23rem",
+              minWidth: "23rem"
             });
           }
         }
-      },
+      }
     },
     {
       // icon: 'chat',
@@ -107,8 +107,8 @@ export function BibleVariablesProvider({ children }) {
               />
             ),
             to: "panel",
-            minWidth: "30rem",
-          },
+            minWidth: "30rem"
+          }
         });
       },
       onClick: async () => {
@@ -132,10 +132,10 @@ export function BibleVariablesProvider({ children }) {
               />
             ),
             to: "panel",
-            minWidth: "30rem",
+            minWidth: "30rem"
           });
         }
-      },
+      }
     },
     {
       // icon: 'chat',
@@ -170,8 +170,8 @@ export function BibleVariablesProvider({ children }) {
               />
             ),
             to: "panel",
-            minWidth: "30rem",
-          },
+            minWidth: "30rem"
+          }
         });
       },
       onClick: async () => {
@@ -200,10 +200,10 @@ export function BibleVariablesProvider({ children }) {
               />
             ),
             to: "panel",
-            minWidth: "30rem",
+            minWidth: "30rem"
           });
         }
-      },
+      }
     },
     {
       icon: "https://auth-aux-aobot-prod-filesbucket-141297942820.s3.amazonaws.com/aoBot/3c6a9b2acc629e207b0891f7a8d95d8cb0b2110b6cb99fc3e1b44944e19d09c0.gif",
@@ -211,8 +211,8 @@ export function BibleVariablesProvider({ children }) {
       hasToggle: true,
       active: true,
       isImg: true,
-      onClick: async () => {},
-    },
+      onClick: async () => {}
+    }
   ]);
 
   const [canvasTools, setCanvasTools] = useState([
@@ -235,8 +235,8 @@ export function BibleVariablesProvider({ children }) {
       hasToggle: true,
       active: true,
       isImg: true,
-      onClick: async () => {},
-    },
+      onClick: async () => {}
+    }
   ]);
 
   const [mapTools, setMapTools] = useState([
@@ -259,8 +259,8 @@ export function BibleVariablesProvider({ children }) {
       hasToggle: true,
       active: true,
       isImg: true,
-      onClick: async () => {},
-    },
+      onClick: async () => {}
+    }
   ]);
 
   useEffect(() => {
@@ -300,7 +300,7 @@ export function BibleVariablesProvider({ children }) {
         canvasTools,
         mapTools,
         setCanvasTools,
-        setMapTools,
+        setMapTools
       }}
     >
       {children}

@@ -13,7 +13,7 @@ const OPTIONS = [
   { value: "youtube", label: "Youtube" },
   { value: "Video", label: "Video" },
   { value: RECORDING_VALUE, label: "Recording" },
-  { value: "aux", label: "AUX", disabled: true },
+  { value: "aux", label: "AUX", disabled: true }
 ];
 
 const AttachLink = ({ onClose, massAdd, attachLink }) => {
@@ -80,14 +80,14 @@ const AttachLink = ({ onClose, massAdd, attachLink }) => {
             if (!name.trim()) {
               return ShowNotification({
                 message: "Attachment Name missing!",
-                severity: "error",
+                severity: "error"
               });
             }
 
             if (mediaType === RECORDING_VALUE && !data) {
               return ShowNotification({
                 message: "Record Someting to Save Recording!",
-                severity: "error",
+                severity: "error"
               });
             }
 
@@ -98,13 +98,13 @@ const AttachLink = ({ onClose, massAdd, attachLink }) => {
             ) {
               return ShowNotification({
                 message: "Your link is not valid!",
-                severity: "error",
+                severity: "error"
               });
             }
 
             if (mediaType === SEARCH_ADD_VALUE) {
               const allItems = thisBot.getSuggestedListItems({
-                searchText: name,
+                searchText: name
               });
 
               massAdd(allItems);

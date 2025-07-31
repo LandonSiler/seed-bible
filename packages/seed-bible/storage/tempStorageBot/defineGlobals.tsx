@@ -12,7 +12,7 @@ if (!localStorage?.tags?.experincesArray) {
   const storageBotClone = getBot("system", "storage.tempStorageBot");
   const storageBot = create(storageBotClone, {
     space: "local",
-    system: "storage.localStorage",
+    system: "storage.localStorage"
   });
   console.log("STORAGE BOT CREATED!", storageBot);
 }

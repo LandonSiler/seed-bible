@@ -9,7 +9,7 @@ const playlistsProgress = (
     "video_library",
     "slow_motion_video",
     "play_lesson",
-    "auto_read_play",
+    "auto_read_play"
   ]
 )
   .filter((ele) => ele.content !== "undefined")

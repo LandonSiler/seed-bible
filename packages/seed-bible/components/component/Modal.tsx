@@ -6,7 +6,7 @@ const Modal = ({
   sxContainer = {},
   styles = {},
   backDropStyle = {},
-  showIcon = true,
+  showIcon = true
 }) => {
   return (
     <>

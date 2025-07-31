@@ -47,7 +47,7 @@ results.forEach((item) => {
             chapterNo: chapter,
             id: bookData.id,
             numberOfChapters: bookData.numberOfChapters,
-            translationId: bookData.translationId,
+            translationId: bookData.translationId
           },
           data: {
             book: bookData.commonName,
@@ -55,15 +55,15 @@ results.forEach((item) => {
             chapter: chapter,
             viewerId: CurrentViewerID,
             verse: vrs,
-            verseNumber: vrs,
+            verseNumber: vrs
           },
-          verse: vrs,
+          verse: vrs
         },
 
         content: `${bookData.commonName} ${chapter}:${vrs}`,
         id: createUUID(),
         prefix: "",
-        type: "verse",
+        type: "verse"
       };
       allItems.push(newItem);
     });
@@ -95,13 +95,13 @@ results.forEach((item) => {
             translationId: bookData.translationId,
             numberOfChapters: bookData.numberOfChapters,
             chapter: chpt,
-            viewerId: CurrentViewerID,
-          },
+            viewerId: CurrentViewerID
+          }
         },
         content: `${bookData.commonName} ${chpt}`,
         id: createUUID(),
         prefix: "",
-        type: "chapter",
+        type: "chapter"
       };
       allItems.push(newItem);
     });

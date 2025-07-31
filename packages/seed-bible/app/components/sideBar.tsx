@@ -12,7 +12,7 @@ import {
   Panel3,
   Panel4,
   Panel3Row,
-  Panel4Row,
+  Panel4Row
 } from "app.components.icons";
 import { useBibleContext } from "app.hooks.bibleVariables";
 import { useSideBarContext } from "app.hooks.sideBar";
@@ -21,7 +21,7 @@ import { FolderIcon, OpenFolderIcon } from "app.components.icons";
 import {
   ImportSpaceModal,
   RenameSpaceModal,
-  CreateNewSpaceModal,
+  CreateNewSpaceModal
 } from "app.components.spaceSettings";
 
 const { useState, useRef, useEffect } = os.appHooks;
@@ -31,7 +31,7 @@ function Tab({
   setActiveTab,
   setIsDragging,
   setElement,
-  collapsed,
+  collapsed
 }) {
   const { openPopupSettings, closePopupSettings } = useSideBarContext();
   const { setCanvasMode, setMapMode } = useBibleContext();
@@ -40,7 +40,7 @@ function Tab({
     multiSelectMode,
     setMultiSelectMode,
     selectedTabs,
-    setSelectedTabs,
+    setSelectedTabs
   } = useTabsContext();
 
   const OPTIONS = (tab) => ({
@@ -52,7 +52,7 @@ function Tab({
         onClick: () => {
           removeTab(el.id);
           closePopupSettings();
-        },
+        }
       },
       {
         icon: <MenuIcon name="edit" />,
@@ -60,7 +60,7 @@ function Tab({
         onClick: () => {
           globalThis[`SetEnableEditorOf${activeTab}`]((prev) => !prev);
           closePopupSettings();
-        },
+        }
       },
       {
         icon: <MenuIcon name="check_box" />,
@@ -68,9 +68,9 @@ function Tab({
         onClick: () => {
           setMultiSelectMode((prev) => !prev);
           setSelectedTabs([activeTab]);
-        },
-      },
-    ],
+        }
+      }
+    ]
   });
   const CANVASOPTIONS = {
     type: "normal",
@@ -81,9 +81,9 @@ function Tab({
         onClick: () => {
           removeTab(el.id);
           closePopupSettings();
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 
   const MAPOPTIONS = {
@@ -95,9 +95,9 @@ function Tab({
         onClick: () => {
           removeTab(el.id);
           closePopupSettings();
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 
   const dragTimeout = useRef(null);
@@ -119,7 +119,7 @@ function Tab({
             collapsed={collapsed}
           />
         ),
-        data: el,
+        data: el
       });
     }, 300); // delay before starting drag
   }
@@ -259,7 +259,7 @@ function Folder({ folder, collapsed }) {
     activeTab,
     removeFolder,
     addTabToFolder,
-    addTabsToFolder,
+    addTabsToFolder
   } = useTabsContext();
   const { setIsDragging, isDragging, setElement, Element } = useMouseMove();
   const [open, setOpen] = useState(true);
@@ -289,15 +289,15 @@ function Folder({ folder, collapsed }) {
         onClick: () => {
           removeFolder(folder.id);
           closePopupSettings();
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
   return (
     <div
       style={{
         "border-raduis": "8px",
-        border: tabEntered ? "1px black dashed" : "",
+        border: tabEntered ? "1px black dashed" : ""
       }}
       key={folder.id}
       onPointerEnter={handleMouseEnter}
@@ -363,7 +363,7 @@ function SideBar() {
     multiSelectMode,
     setMultiSelectMode,
     selectedTabs,
-    setSelectedTabs,
+    setSelectedTabs
   } = useTabsContext();
   globalThis.AddTab = addTab;
   const { screens, setScreens, fullScreen, setFullScreen } = useBibleContext();
@@ -394,7 +394,7 @@ function SideBar() {
     openPopupSettings,
     sidebarWidth,
     setSidebarWidth,
-    closePopupSettings,
+    closePopupSettings
   } = useSideBarContext();
   const { setIsDragging, isDragging, setElement, Element } = useMouseMove();
   const [tabEntered, setTabEntered] = useState(false);
@@ -481,7 +481,7 @@ function SideBar() {
           " flex-shrink": "0",
           "border-radius": "10px",
           background: " #202020",
-          padding: "20px",
+          padding: "20px"
         }}
       >
         <div
@@ -494,7 +494,7 @@ function SideBar() {
             "font-size": "16px",
             "font-style": "normal",
             "font-weight": "700",
-            "line-height": "normal",
+            "line-height": "normal"
           }}
         >
           Panels
@@ -503,7 +503,7 @@ function SideBar() {
           style={{
             gap: "10px",
             display: "grid",
-            "grid-template-columns": "repeat(3, 1fr)",
+            "grid-template-columns": "repeat(3, 1fr)"
           }}
         >
           <div
@@ -582,7 +582,7 @@ function SideBar() {
         disabled: true,
         icon: <MenuIcon name="logout" />,
         title: "Join a Lobby",
-        onClick: () => {},
+        onClick: () => {}
       },
       { type: "line" },
       {
@@ -591,35 +591,35 @@ function SideBar() {
         title: "Full screen",
         onClick: () => {
           setFullScreen(true);
-        },
+        }
       },
       { type: "line" },
       {
         disabled: true,
         icon: <MenuIcon name="search" />,
         title: "Search",
-        onClick: () => {},
+        onClick: () => {}
       },
       {
         disabled: true,
         icon: <MenuIcon name="extension" />,
         title: "Extensions",
-        onClick: () => {},
+        onClick: () => {}
       },
       { type: "line" },
       {
         disabled: true,
         icon: <MenuIcon name="bug_report" />,
         title: "Report a bug",
-        onClick: () => {},
+        onClick: () => {}
       },
       {
         disabled: true,
         icon: <MenuIcon name="help" />,
         title: "Help",
-        onClick: () => {},
-      },
-    ],
+        onClick: () => {}
+      }
+    ]
   };
   const AddingOption = {
     type: "normal",
@@ -637,11 +637,11 @@ function SideBar() {
               book: "Genesis",
               bookId: "GEN",
               chapter: 1,
-              translation: "BSB",
-            },
+              translation: "BSB"
+            }
           });
           closePopupSettings();
-        },
+        }
       },
       {
         icon: <MenuIcon name="view_in_ar" />,
@@ -660,11 +660,11 @@ function SideBar() {
               book: "Canvas",
               bookId: "GEN",
               chapter: canvasNumber,
-              translation: "BSB",
-            },
+              translation: "BSB"
+            }
           });
           closePopupSettings();
-        },
+        }
       },
       {
         icon: <MenuIcon name="create_new_folder" />,
@@ -673,9 +673,9 @@ function SideBar() {
           addFolder(`Folder ${folders.length + 1}`);
           closePopupSettings();
           // addTabToFolder(folder.id, { id: uuid(), taken: false, data: { type: 'book', book: 'Exodus', chapter: 1 } })
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
   useEffect(() => {
     os.log(customScreens, "customScreens");
@@ -699,7 +699,7 @@ function SideBar() {
             position: "absolute",
             left: "10px",
             top: "20px",
-            zIndex: 99999,
+            zIndex: 99999
           }}
         >
           <span className="material-symbols-outlined">menu</span>
@@ -715,7 +715,7 @@ function SideBar() {
             position: "absolute",
             left: "10px",
             top: "40px",
-            zIndex: 99999,
+            zIndex: 99999
           }}
         >
           <span className="material-symbols-outlined">menu</span>
@@ -739,7 +739,7 @@ function SideBar() {
             borderBottomRightRadius: "50%",
             opacity: 0,
             transition: "opacity 0.3s ease-in-out",
-            cursor: "pointer",
+            cursor: "pointer"
           }}
           onMouseEnter={(e) => (e.target.style.opacity = "1")}
           onMouseLeave={(e) => (e.target.style.opacity = "0")}
@@ -749,7 +749,7 @@ function SideBar() {
         onMouseUp={() => setIsDragging(false)}
         style={{
           width: `${sidebarWidth}px`,
-          display: sidebarWidth === 0 ? "none" : null,
+          display: sidebarWidth === 0 ? "none" : null
         }}
         // onMouseDown={handleMouseDown}
         ref={sidebarRef}
@@ -768,7 +768,7 @@ function SideBar() {
             width: "10px",
             height: "100%",
             background: "",
-            cursor: "pointer",
+            cursor: "pointer"
           }}
         ></div>
 
@@ -861,7 +861,7 @@ function SideBar() {
                 display: "flex",
                 "justify-content": "center",
                 "align-items": "center",
-                gap: "6px",
+                gap: "6px"
               }}
             >
               <input
@@ -883,7 +883,7 @@ function SideBar() {
                 "justify-content": "center",
                 "align-items": "center",
                 gap: "6px",
-                cursor: "pointer",
+                cursor: "pointer"
               }}
               onClick={() => {
                 selectedTabs.forEach((id) => removeTab(id));
@@ -908,7 +908,7 @@ function SideBar() {
                 "justify-content": "center",
                 "align-items": "center",
                 gap: "6px",
-                cursor: "pointer",
+                cursor: "pointer"
               }}
               onClick={() => {
                 if (folders.length === 0) {
@@ -924,7 +924,7 @@ function SideBar() {
                       console.log(tabs.map((e) => selectedTabs.includes(e.id)));
                       moveMultipleTabs(selectedTabs, item.id);
                       setMultiSelectMode(false);
-                    },
+                    }
                   });
                 });
                 openPopupSettings(OPTIONS);
@@ -948,7 +948,7 @@ function SideBar() {
               width: "100%",
               "flex-direction": "column",
               gap: "12px",
-              "padding-top": "10px",
+              "padding-top": "10px"
             }}
           >
             <span
@@ -964,7 +964,7 @@ function SideBar() {
               style={{
                 height: "1px",
                 width: "90%",
-                background: "rgb(187, 194, 194)",
+                background: "rgb(187, 194, 194)"
               }}
             ></div>
           </div>
@@ -972,7 +972,7 @@ function SideBar() {
         <div
           style={{
             "border-raduis": "8px",
-            border: tabEntered ? "1px black dashed" : "",
+            border: tabEntered ? "1px black dashed" : ""
           }}
           onPointerEnter={handleMouseEnter}
           onPointerLeave={handleMouseLeave}
@@ -1064,7 +1064,7 @@ export const SettingsProfile = () => {
     setActiveSpace,
     addSpace,
     updateSpace,
-    removeSpace,
+    removeSpace
   } = useTabsContext();
   const { openPopupSettings } = useSideBarContext();
   const { setIsAbleToRightClick } = useMouseMove();
@@ -1082,7 +1082,7 @@ export const SettingsProfile = () => {
           external: (
             <CreateNewSpaceModal addSpace={addSpace} activeSpace={id} />
           ),
-          onClick: () => {},
+          onClick: () => {}
         },
         { type: "line" },
         {
@@ -1090,7 +1090,7 @@ export const SettingsProfile = () => {
           title: "Edit space",
           onClick: () => {
             setSideBarMode("settings");
-          },
+          }
         },
         // { icon: <MenuIcon name="palette" />, title: 'Edit space',external: <CreateNewSpaceModal />, onClick: () => { } },
         { type: "line" },
@@ -1098,7 +1098,7 @@ export const SettingsProfile = () => {
           icon: <MenuIcon name="download" />,
           title: "Import space",
           external: <ImportSpaceModal />,
-          onClick: () => {},
+          onClick: () => {}
         },
         { type: "line" },
         { icon: <MenuIcon name="share" />, title: "Share", onClick: () => {} },
@@ -1107,9 +1107,9 @@ export const SettingsProfile = () => {
           title: "Delete",
           onClick: () => {
             removeSpace(id);
-          },
-        },
-      ],
+          }
+        }
+      ]
     };
   };
 

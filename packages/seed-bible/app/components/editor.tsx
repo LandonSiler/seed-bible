@@ -77,8 +77,8 @@ const LineHeight = Mark.create({
         renderHTML: (attributes) => {
           if (!attributes.lineHeight) return {};
           return { style: `line-height: ${attributes.lineHeight}` };
-        },
-      },
+        }
+      }
     };
   },
   parseHTML() {
@@ -86,7 +86,7 @@ const LineHeight = Mark.create({
   },
   renderHTML({ HTMLAttributes }) {
     return ["span", HTMLAttributes, 0];
-  },
+  }
 });
 
 const CustomStyle = Mark.create({
@@ -98,8 +98,8 @@ const CustomStyle = Mark.create({
         parseHTML: (element) => element.getAttribute("style"),
         renderHTML: (attributes) => {
           return attributes.style ? { style: attributes.style } : {};
-        },
-      },
+        }
+      }
     };
   },
   parseHTML() {
@@ -107,7 +107,7 @@ const CustomStyle = Mark.create({
   },
   renderHTML({ HTMLAttributes }) {
     return ["span", HTMLAttributes, 0];
-  },
+  }
 });
 
 export const BookTitle = Node.create({
@@ -119,7 +119,7 @@ export const BookTitle = Node.create({
   },
   renderHTML() {
     return ["div", { class: "bookTitle" }, 0];
-  },
+  }
 });
 
 export const SectionTitle = Node.create({
@@ -131,7 +131,7 @@ export const SectionTitle = Node.create({
   },
   renderHTML() {
     return ["div", { class: "sectionTitle" }, 0];
-  },
+  }
 });
 
 export const SectionCover = Node.create({
@@ -143,7 +143,7 @@ export const SectionCover = Node.create({
   },
   renderHTML() {
     return ["div", { class: "sectionCover" }, 0];
-  },
+  }
 });
 
 export const SectionText = Node.create({
@@ -155,7 +155,7 @@ export const SectionText = Node.create({
   },
   renderHTML() {
     return ["div", { class: "sectionText" }, 0];
-  },
+  }
 });
 
 export const SectionTextNumber = Node.create({
@@ -168,7 +168,7 @@ export const SectionTextNumber = Node.create({
   },
   renderHTML() {
     return ["span", { class: "sectionTextNumber" }, 0];
-  },
+  }
 });
 
 function generateHtmlFromContent(data) {
@@ -380,15 +380,15 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
           paragraph: true,
           paragraph: {
             HTMLAttributes: {
-              style: "text-align: left;",
-            },
-          },
+              style: "text-align: left;"
+            }
+          }
         }),
         TextStyle,
         Color.configure({ types: ["textStyle"] }),
         TextAlign.configure({
           types: ["heading", "paragraph"],
-          defaultAlignment: "left",
+          defaultAlignment: "left"
         }),
         Underline,
         Superscript,
@@ -405,15 +405,15 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         LineHeight,
         Image.configure({
           inline: false,
-          allowBase64: true,
+          allowBase64: true
         }),
         Link.configure({
           openOnClick: true,
-          linkOnPaste: true,
+          linkOnPaste: true
         }),
-        Highlight.configure({ multicolor: true }),
+        Highlight.configure({ multicolor: true })
       ],
-      content: htmlString || '<p style="text-align: left;">Hello World!</p>',
+      content: htmlString || '<p style="text-align: left;">Hello World!</p>'
     });
 
     editorRef.current = editor;
@@ -613,7 +613,7 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
           "3": "1em",
           "4": "1.25em",
           "5": "1.5em",
-          "6": "2em",
+          "6": "2em"
         };
         const fontSize = size;
         editor
@@ -660,20 +660,20 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         const chat = [
           {
             role: "system",
-            content: `${defaultPromt}`,
+            content: `${defaultPromt}`
           },
           {
             role: "system",
-            content: `Avoid: ${negativePromt}`,
+            content: `Avoid: ${negativePromt}`
           },
           {
             role: "system",
-            content: `Remember: ${positivePromt}`,
+            content: `Remember: ${positivePromt}`
           },
           {
             role: "user",
-            content: `${html}`,
-          },
+            content: `${html}`
+          }
         ];
         const combinedHtml = await ai.chat([...chat]);
 
@@ -747,7 +747,7 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         } else {
           editor.chain().focus().setMark("customStyle", { style }).run();
         }
-      },
+      }
     };
 
     return () => {
@@ -772,67 +772,67 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
       type: "button",
       onClick: () => globalThis.EditorFns.bold(),
       icon: "format_bold",
-      title: "Bold",
+      title: "Bold"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.italic(),
       icon: "format_italic",
-      title: "Italic",
+      title: "Italic"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.underline(),
       icon: "format_underlined",
-      title: "Underline",
+      title: "Underline"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.strikethrough(),
       icon: "format_strikethrough",
-      title: "Strikethrough",
+      title: "Strikethrough"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.superscript(),
       icon: "superscript",
-      title: "Superscript",
+      title: "Superscript"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.subscript(),
       icon: "subscript",
-      title: "Subscript",
+      title: "Subscript"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.aiHighlight(),
       icon: "auto_fix_high",
-      title: "AI Highlight",
+      title: "AI Highlight"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.alignLeft(),
       icon: "format_align_left",
-      title: "Align Left",
+      title: "Align Left"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.alignCenter(),
       icon: "format_align_center",
-      title: "Center Align",
+      title: "Center Align"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.alignRight(),
       icon: "format_align_right",
-      title: "Align Right",
+      title: "Align Right"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.alignJustify(),
       icon: "format_align_justify",
-      title: "Justify",
+      title: "Justify"
     },
     {
       type: "color-group",
@@ -842,7 +842,7 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
       onChange: (e) => {
         setTextColor(e.target.value);
         globalThis.EditorFns.setTextColor(e.target.value);
-      },
+      }
     },
     {
       type: "color-group",
@@ -852,7 +852,7 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
       onChange: (e) => {
         setBgColor(e.target.value);
         globalThis.EditorFns.setHighlightColor(e.target.value);
-      },
+      }
     },
     {
       type: "select",
@@ -863,8 +863,8 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         { value: "h1", label: "Heading 1" },
         { value: "h2", label: "Heading 2" },
         { value: "h3", label: "Heading 3" },
-        { value: "blockquote", label: "Quote" },
-      ],
+        { value: "blockquote", label: "Quote" }
+      ]
     },
     {
       type: "select",
@@ -875,8 +875,8 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         { value: "Times New Roman", label: "Times New Roman" },
         { value: "Courier New", label: "Courier New" },
         { value: "Georgia", label: "Georgia" },
-        { value: "Verdana", label: "Verdana" },
-      ],
+        { value: "Verdana", label: "Verdana" }
+      ]
     },
     {
       type: "select",
@@ -888,39 +888,39 @@ const TextEditor = ({ content, tab, data, setEnableEditor, enableEditor }) => {
         { value: "3", label: "Normal", selected: true },
         { value: "4", label: "Large" },
         { value: "5", label: "X-Large" },
-        { value: "6", label: "Huge" },
-      ],
+        { value: "6", label: "Huge" }
+      ]
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.undo(),
       icon: "undo",
-      title: "Undo",
+      title: "Undo"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.redo(),
       icon: "redo",
-      title: "Redo",
+      title: "Redo"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.clear(),
       icon: "format_clear",
-      title: "Clear Formatting",
+      title: "Clear Formatting"
     },
     {
       type: "button",
       onClick: () => globalThis.EditorFns.exportJson(),
       icon: "file_download",
-      title: "Export JSON",
+      title: "Export JSON"
     },
     {
       type: "button",
       onClick: () => uploadFile(),
       icon: "upload_file",
-      title: "Import JSON",
-    },
+      title: "Import JSON"
+    }
   ];
 
   const renderToolbarItem = (item, index) => {
@@ -1055,7 +1055,7 @@ const editorContainerStyle = {
   fontFamily: "Arial, sans-serif",
   background: "white",
   borderRadius: "8px",
-  overflow: "hidden",
+  overflow: "hidden"
 };
 
 const toolbarStyle = {
@@ -1066,7 +1066,7 @@ const toolbarStyle = {
   alignItems: "center",
   gap: "8px",
   overflow: "hidden",
-  position: "relative",
+  position: "relative"
 };
 
 const iconBtnStyle = {
@@ -1083,21 +1083,21 @@ const iconBtnStyle = {
   alignItems: "center",
   justifyContent: "center",
   transition: "background-color 0.2s, color 0.2s",
-  flexShrink: 0,
+  flexShrink: 0
 };
 
 const colorGroupStyle = {
   display: "flex",
   alignItems: "center",
   gap: "4px",
-  flexShrink: 0,
+  flexShrink: 0
 };
 
 const labelStyle = {
   fontSize: "12px",
   color: "#555",
   fontWeight: "bold",
-  marginRight: "2px",
+  marginRight: "2px"
 };
 
 const colorInputStyle = {
@@ -1108,7 +1108,7 @@ const colorInputStyle = {
   border: "none",
   outline: "none",
   cursor: "pointer",
-  padding: "0",
+  padding: "0"
 };
 
 const dropdownStyle = {
@@ -1120,7 +1120,7 @@ const dropdownStyle = {
   backgroundColor: "white",
   minWidth: "80px",
   maxWidth: "120px",
-  flexShrink: 1,
+  flexShrink: 1
 };
 
 const controlsStyle = {
@@ -1128,7 +1128,7 @@ const controlsStyle = {
   alignItems: "center",
   gap: "4px",
   marginLeft: "auto",
-  flexShrink: 0,
+  flexShrink: 0
 };
 
 const dropdownMenuStyle = {
@@ -1143,7 +1143,7 @@ const dropdownMenuStyle = {
   minWidth: "200px",
   maxHeight: "300px",
   overflowY: "auto",
-  padding: "8px",
+  padding: "8px"
 };
 
 const dropdownHeaderStyle = {
@@ -1154,7 +1154,7 @@ const dropdownHeaderStyle = {
   fontWeight: "bold",
   color: "#666",
   marginBottom: "4px",
-  borderRadius: "4px",
+  borderRadius: "4px"
 };
 
 const dropdownItemStyle = {
@@ -1162,7 +1162,7 @@ const dropdownItemStyle = {
   borderBottom: "1px solid #eee",
   display: "flex",
   alignItems: "center",
-  gap: "8px",
+  gap: "8px"
 };
 
 const editorStyle = {
@@ -1170,24 +1170,24 @@ const editorStyle = {
   padding: "15px",
   outline: "none",
   lineHeight: "1.6",
-  fontSize: "16px",
+  fontSize: "16px"
 };
 
 const alignmentOptions = [
   { label: "Justify", icon: "format_align_justify", value: "justify" },
   { label: "Left", icon: "format_align_left", value: "left" },
   { label: "Center", icon: "format_align_center", value: "center" },
-  { label: "Right", icon: "format_align_right", value: "right" },
+  { label: "Right", icon: "format_align_right", value: "right" }
 ];
 
 const listOption = [
   { label: "Bulleted", icon: "format_list_bulleted", value: "bulleted" },
-  { label: "Numbered", icon: "format_list_numbered", value: "numbered" },
+  { label: "Numbered", icon: "format_list_numbered", value: "numbered" }
 ];
 const iconButtonStyle = {
   background: "transparent",
   border: "none",
-  cursor: "pointer",
+  cursor: "pointer"
 };
 export function ResponsiveToolbar({ editor }) {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -1210,18 +1210,18 @@ export function ResponsiveToolbar({ editor }) {
     { label: "Left", icon: "format_align_left", value: "left" },
     { label: "Center", icon: "format_align_center", value: "center" },
     { label: "Right", icon: "format_align_right", value: "right" },
-    { label: "Justify", icon: "format_align_justify", value: "justify" },
+    { label: "Justify", icon: "format_align_justify", value: "justify" }
   ];
 
   const listOptions = [
     { label: "Bulleted", icon: "format_list_bulleted", value: "bulletList" },
-    { label: "Numbered", icon: "format_list_numbered", value: "orderedList" },
+    { label: "Numbered", icon: "format_list_numbered", value: "orderedList" }
   ];
   const spacingOption = [
     { label: "1", icon: null, value: "1" },
     { label: "2", icon: null, value: "2" },
     { label: "3", icon: null, value: "3" },
-    { label: "4", icon: null, value: "4" },
+    { label: "4", icon: null, value: "4" }
   ];
 
   // Handler functions
@@ -1307,7 +1307,7 @@ export function ResponsiveToolbar({ editor }) {
           selectedText={selectedText}
           onTextSelect={setSelectedText}
         />
-      ),
+      )
     },
     {
       id: "bold",
@@ -1321,7 +1321,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">format_bold</span>
         </button>
-      ),
+      )
     },
     {
       id: "italic",
@@ -1335,7 +1335,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">format_italic</span>
         </button>
-      ),
+      )
     },
     {
       id: "underline",
@@ -1349,7 +1349,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">format_underlined</span>
         </button>
-      ),
+      )
     },
     {
       id: "strikethrough",
@@ -1365,7 +1365,7 @@ export function ResponsiveToolbar({ editor }) {
             format_strikethrough
           </span>
         </button>
-      ),
+      )
     },
     {
       id: "superscript",
@@ -1379,7 +1379,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">superscript</span>
         </button>
-      ),
+      )
     },
     {
       id: "subscript",
@@ -1393,12 +1393,12 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">subscript</span>
         </button>
-      ),
+      )
     },
     {
       id: "divider1",
       type: "divider",
-      component: <div key="divider1" className="horizontalLine"></div>,
+      component: <div key="divider1" className="horizontalLine"></div>
     },
     {
       id: "align",
@@ -1410,7 +1410,7 @@ export function ResponsiveToolbar({ editor }) {
           onSelect={handleAlignmentSelect}
           defaultValue={alignmentOptions[0]}
         />
-      ),
+      )
     },
     {
       id: "list",
@@ -1422,7 +1422,7 @@ export function ResponsiveToolbar({ editor }) {
           onSelect={handleListSelect}
           defaultValue={listOptions[0]}
         />
-      ),
+      )
     },
     {
       id: "line-spacing",
@@ -1437,18 +1437,18 @@ export function ResponsiveToolbar({ editor }) {
           onChange={handleSpaceSelect}
           placeholder="12"
         />
-      ),
+      )
     },
     {
       id: "divider2",
       type: "divider",
-      component: <div key="divider2" className="horizontalLine"></div>,
+      component: <div key="divider2" className="horizontalLine"></div>
     },
 
     {
       id: "divider3",
       type: "divider",
-      component: <div key="divider3" className="horizontalLine"></div>,
+      component: <div key="divider3" className="horizontalLine"></div>
     },
     {
       id: "attach",
@@ -1462,7 +1462,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">attach_file</span>
         </button>
-      ),
+      )
     },
     {
       id: "image",
@@ -1476,12 +1476,12 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">image</span>
         </button>
-      ),
+      )
     },
     {
       id: "divider4",
       type: "divider",
-      component: <div key="divider4" className="horizontalLine"></div>,
+      component: <div key="divider4" className="horizontalLine"></div>
     },
     {
       id: "text-color",
@@ -1502,7 +1502,7 @@ export function ResponsiveToolbar({ editor }) {
             title="Text Color"
           />
         </div>
-      ),
+      )
     },
     {
       id: "bg-color",
@@ -1526,12 +1526,12 @@ export function ResponsiveToolbar({ editor }) {
             title="Highlight Color"
           />
         </div>
-      ),
+      )
     },
     {
       id: "divider5",
       type: "divider",
-      component: <div key="divider5" className="horizontalLine"></div>,
+      component: <div key="divider5" className="horizontalLine"></div>
     },
     {
       id: "paragraph",
@@ -1541,7 +1541,7 @@ export function ResponsiveToolbar({ editor }) {
           key="paragraph"
           onParagraphChange={globalThis.EditorFns?.onParagraphChange}
         />
-      ),
+      )
     },
 
     {
@@ -1552,7 +1552,7 @@ export function ResponsiveToolbar({ editor }) {
           key="font-family"
           onFontFamilyChange={handleFontFamilyChange}
         />
-      ),
+      )
     },
     {
       id: "font-style",
@@ -1562,7 +1562,7 @@ export function ResponsiveToolbar({ editor }) {
           key="font-family"
           onFontStyleChange={globalThis.EditorFns?.onFontStyleChange}
         />
-      ),
+      )
     },
     {
       id: "font-size",
@@ -1573,7 +1573,7 @@ export function ResponsiveToolbar({ editor }) {
           value={fontSize}
           onChange={handleFontSizeChange}
         />
-      ),
+      )
     },
     {
       id: "undo",
@@ -1587,7 +1587,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">undo</span>
         </button>
-      ),
+      )
     },
     {
       id: "redo",
@@ -1601,7 +1601,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">redo</span>
         </button>
-      ),
+      )
     },
     {
       id: "clear",
@@ -1615,7 +1615,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">format_clear</span>
         </button>
-      ),
+      )
     },
     {
       id: "print",
@@ -1629,7 +1629,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">print</span>
         </button>
-      ),
+      )
     },
 
     {
@@ -1649,7 +1649,7 @@ export function ResponsiveToolbar({ editor }) {
           }}
           placeholder="Vertical"
         />
-      ),
+      )
     },
     {
       id: "margin2",
@@ -1668,22 +1668,22 @@ export function ResponsiveToolbar({ editor }) {
           }}
           placeholder="Horizontal"
         />
-      ),
+      )
     },
     {
       id: "divider6",
       type: "divider",
-      component: <div key="divider6" className="horizontalLine"></div>,
+      component: <div key="divider6" className="horizontalLine"></div>
     },
     {
       id: "ai-prompt",
       type: "component",
-      component: <AIPromptInput key="ai-prompt" onAIPrompt={handleAIPrompt} />,
+      component: <AIPromptInput key="ai-prompt" onAIPrompt={handleAIPrompt} />
     },
     {
       id: "divider7",
       type: "divider",
-      component: <div key="divider7" className="horizontalLine"></div>,
+      component: <div key="divider7" className="horizontalLine"></div>
     },
     {
       id: "download",
@@ -1697,7 +1697,7 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">file_download</span>
         </button>
-      ),
+      )
     },
     {
       id: "upload",
@@ -1711,8 +1711,8 @@ export function ResponsiveToolbar({ editor }) {
         >
           <span className="material-symbols-outlined">upload_file</span>
         </button>
-      ),
-    },
+      )
+    }
   ];
 
   const calculateVisibleItems = () => {
@@ -1815,7 +1815,7 @@ function TextSelect({ selectedText, onTextSelect }) {
         borderRadius: "6px",
         border: "1px solid #ccc",
         fontSize: "14px",
-        minWidth: "80px",
+        minWidth: "80px"
       }}
     >
       <option value="all">All text</option>
@@ -1836,7 +1836,7 @@ function ParagraphSelect({ onParagraphChange }) {
         border: "1px solid #ccc",
         outline: "none",
         borderRadius: "6px",
-        fontSize: "12px",
+        fontSize: "12px"
       }}
     >
       <option value="p">P</option>
@@ -1854,7 +1854,7 @@ function FontFamilySelect({ onFontFamilyChange }) {
     "Times New Roman",
     "Courier New",
     "Georgia",
-    "Verdana",
+    "Verdana"
   ];
 
   return (
@@ -1867,7 +1867,7 @@ function FontFamilySelect({ onFontFamilyChange }) {
         border: "1px solid #ccc",
         outline: "none",
         borderRadius: "6px",
-        fontSize: "12px",
+        fontSize: "12px"
       }}
     >
       {fonts.map((font) => (
@@ -1890,7 +1890,7 @@ function FontStyleSelect({ onFontStyleChange }) {
         border: "1px solid #ccc",
         outline: "none",
         borderRadius: "6px",
-        fontSize: "12px",
+        fontSize: "12px"
       }}
     >
       <option value="normal">Normal</option>
@@ -1932,7 +1932,7 @@ function AIPromptInput({ onAIPrompt }) {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         transition: "all 0.2s ease",
         border: "none",
-        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)"
       }}
     >
       <input
@@ -1952,7 +1952,7 @@ function AIPromptInput({ onAIPrompt }) {
           lineHeight: "1.2",
           flex: 1,
           fontFamily: "inherit",
-          padding: "8px 12px",
+          padding: "8px 12px"
         }}
       />
       <div
@@ -1966,7 +1966,7 @@ function AIPromptInput({ onAIPrompt }) {
           backgroundColor: "#f9d5cc",
           borderRadius: "50%",
           flexShrink: 0,
-          cursor: "pointer",
+          cursor: "pointer"
         }}
       >
         <svg
@@ -2017,7 +2017,7 @@ function Counter({ value, onChange, min = 8, max = 72 }) {
         borderRadius: "50px",
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
         border: "1px solid #DADADA",
-        padding: "2px",
+        padding: "2px"
       }}
     >
       <button
@@ -2034,7 +2034,7 @@ function Counter({ value, onChange, min = 8, max = 72 }) {
           borderRadius: "50%",
           cursor: "pointer",
           fontSize: "14px",
-          fontWeight: "300",
+          fontWeight: "300"
         }}
       >
         −
@@ -2046,7 +2046,7 @@ function Counter({ value, onChange, min = 8, max = 72 }) {
           color: "#5F5E5C",
           minWidth: "40px",
           textAlign: "center",
-          userSelect: "none",
+          userSelect: "none"
         }}
       >
         {fontSize}
@@ -2065,7 +2065,7 @@ function Counter({ value, onChange, min = 8, max = 72 }) {
           borderRadius: "50%",
           cursor: "pointer",
           fontSize: "14px",
-          fontWeight: "300",
+          fontWeight: "300"
         }}
       >
         +
@@ -2085,7 +2085,7 @@ function InputWithIcon({ icon, value, onChange, placeholder = "" }) {
         border: "1px solid #ccc",
         borderRadius: "6px",
         backgroundColor: "white",
-        minWidth: "60px",
+        minWidth: "60px"
       }}
     >
       <div style={{ fontSize: "16px", color: "#666" }}>{icon}</div>
@@ -2099,7 +2099,7 @@ function InputWithIcon({ icon, value, onChange, placeholder = "" }) {
           outline: "none",
           width: "40px",
           fontSize: "14px",
-          textAlign: "center",
+          textAlign: "center"
         }}
       />
     </div>
@@ -2110,7 +2110,7 @@ function CustomDropdown({
   options = [],
   onSelect,
   label = "Select",
-  defaultValue,
+  defaultValue
 }) {
   const [selected, setSelected] = useState(defaultValue || options[0]);
   const [open, setOpen] = useState(false);
@@ -2134,7 +2134,7 @@ function CustomDropdown({
           borderRadius: "6px",
           cursor: "pointer",
           // backgroundColor: 'white',
-          minWidth: "40px",
+          minWidth: "40px"
         }}
       >
         {selected?.icon && (
@@ -2165,7 +2165,7 @@ function CustomDropdown({
             borderRadius: "6px",
             boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
             zIndex: 1000,
-            marginTop: "2px",
+            marginTop: "2px"
           }}
         >
           {options.map((option) => (
@@ -2182,7 +2182,7 @@ function CustomDropdown({
                 padding: "8px 12px",
                 cursor: "pointer",
                 fontSize: "14px",
-                borderBottom: "1px solid #eee",
+                borderBottom: "1px solid #eee"
               }}
             >
               {option.icon && (

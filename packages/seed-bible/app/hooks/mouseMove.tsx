@@ -24,7 +24,7 @@ export function MouseMoveProvider({ children }) {
         isDragging,
         setIsDragging,
         Element,
-        setElement,
+        setElement
       }}
     >
       {isDragging && (
@@ -34,7 +34,7 @@ export function MouseMoveProvider({ children }) {
             left: position.x,
             top: position.y,
             zIndex: "10000",
-            "pointer-events": "none",
+            "pointer-events": "none"
           }}
         >
           {Element.App}
@@ -44,7 +44,7 @@ export function MouseMoveProvider({ children }) {
         style={{
           width: "100%",
           height: "100%",
-          "pointer-events": isAbleToRightClick ? "none" : "",
+          "pointer-events": isAbleToRightClick ? "none" : ""
         }}
       >
         {children}

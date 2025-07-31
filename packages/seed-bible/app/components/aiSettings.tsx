@@ -10,7 +10,7 @@ import {
   ToolbarIcon,
   Panal,
   Playlist,
-  AiChatIcon,
+  AiChatIcon
 } from "app.components.icons";
 import { useTabsContext } from "app.hooks.tabs";
 import { useSideBarContext } from "app.hooks.sideBar";
@@ -43,7 +43,7 @@ const AiSettings = () => {
     try {
       setLoading(true);
       const result = await ai.generateImage({
-        prompt: imagePrompt,
+        prompt: imagePrompt
       });
       setImageResult(result.images[0].url);
       setLoading(false);

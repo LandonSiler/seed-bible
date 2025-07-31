@@ -65,11 +65,11 @@ return {
       isCustomColor,
       description,
       isCustomIcon,
-      selectedTags,
+      selectedTags
     });
     resetState();
   },
   onClose: () => {
     resetState();
-  },
+  }
 };
