@@ -3,7 +3,7 @@ const { useRef, useState, useLayoutEffect } = os.appHooks;
 
 thisBot.CloseFloatingApp();
 
-function VideoPlayerApp() {
+const VideoPlayerApp = () => {
   const videoRef = useRef(null);
   const seekRef = useRef(null);
   const [playing, setPlaying] = useState(true);
@@ -136,7 +136,7 @@ function VideoPlayerApp() {
 }
 
 globalThis.Previous_ID_Floading_App_PL = globalThis.AddFloatingApp({
-  App: <VideoPlayerApp />,
+  App: VideoPlayerApp,
   title: `Video Playlist`,
   position: { x: 200, y: 150 },
   size: { width: 500, height: 330 },
