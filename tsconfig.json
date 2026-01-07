@@ -3780,7 +3780,10 @@
       ],
       "tabernacle.walls.onClick": [
         "./packages/Tabernacle/tabernacle/walls/onClick.tsx"
-      ]
+      ],
+      "store.abstract.BaseStore": ["./packages/store/abstract/BaseStore.tsx"],
+      "store.impl.MemoryStore": ["./packages/store/impl/MemoryStore.tsx"],
+      "store.struct.store": ["./packages/store/struct/store.tsx"]
     },
     "noImplicitAny": true,
     "noImplicitThis": true,
